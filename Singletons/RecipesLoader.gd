@@ -8,7 +8,7 @@ The  get_recipe  function receives a list of ingredients and returns the recipe 
 """
 extends Node
 
-var recipes = {}
+var recipes: Dictionary = {}
 
 const FILE_PATH = "res://data/recipes/recipes.csv"
 
