@@ -16,6 +16,7 @@ func _ready():
 		await RecipesLoader.ready
 	var recipes = RecipesLoader.recipes
 	print(recipes)
-	for recipe in recipes:
+	for recipe in recipes.values():
+		print(recipe)
 		var plant = load("res://Inventory/Plants/"+ recipe["name"])
 		ALL_ITEMS.append(plant)
