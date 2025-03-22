@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctr78uqgnngos"]
+[gd_scene load_steps=3 format=3 uid="uid://ctr78uqgnngos"]
 
 [ext_resource type="Texture2D" uid="uid://bkpn4dwbky80q" path="res://Assets/icon.svg" id="1_jjgbg"]
+
+[sub_resource type="Theme" id="Theme_jjgbg"]
+MarginContainer/constants/margin_bottom = 20
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 20
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -22,10 +28,126 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.8
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_jjgbg")
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer/AspectRatioContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AspectRatioContainer5" type="AspectRatioContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer/AspectRatioContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AspectRatioContainer6" type="AspectRatioContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer/AspectRatioContainer6"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AspectRatioContainer7" type="AspectRatioContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer/AspectRatioContainer7"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AspectRatioContainer8" type="AspectRatioContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer/AspectRatioContainer8"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Panel2" type="Panel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -118,6 +240,7 @@ layout_mode = 2
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("1_jjgbg")
+stretch_mode = 0
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -129,6 +252,7 @@ layout_mode = 2
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("1_jjgbg")
+stretch_mode = 0
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
@@ -140,6 +264,7 @@ layout_mode = 2
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 texture_normal = ExtResource("1_jjgbg")
+stretch_mode = 0
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
@@ -151,6 +276,7 @@ layout_mode = 2
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
 texture_normal = ExtResource("1_jjgbg")
+stretch_mode = 0
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
