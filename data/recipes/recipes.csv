@@ -1,0 +1,37 @@
+category,name,ingredient1,ingredient2,ingredient3
+1,Earth,X,X,X
+1,Fire,X,X,X
+1,Water,X,X,X
+1,Air,X,X,X
+1,Ice,Water,Water,Air
+1,Wood,Water,Earth,Air
+1,Green,Water,Water,Wood
+1,White,Earth,Water,Wood
+1,Red,Green,White,Fire
+1,Yellow,Green,White,Sand
+1,Blue,Green,White,Water
+2,Clay,Water,Earth,Red
+2,Sand,Earth,Earth,Air
+2,Lava,Earth,Fire,Fire
+2,Coal,Wood,Wood,Fire
+2,Stone,Earth,Ice,Clay
+2,Gravier,Sand,Stone,Water
+2,Iron,Stone,Coal,White
+2,Copper,Iron,Red,Yellow
+2,Silver,Iron,Copper,White
+2,Gold,Copper,Silver,Yellow
+2,Silicon,Fire,Sand,Gold
+3,Glass,Sand,Fire,Ice
+3,Amethyst,Glass,Red,Blue
+3,Amber,Glass,Red,Yellow
+3,Obsidian,Lava,Water,Amethyst
+3,Quartz,Amber,Silicon,White
+3,Ruby,Amethyst,Glass,Red
+3,Diamond,Ruby,Coal,Blue
+3,Emerald,Ruby,Obsidian,Green
+4,Energy,Quartz,Silicon,Diamond
+4,Light,Energy,Glass,Copper
+4,Plasma,Energy,Light,Water
+4,Time,Light,Quartz,Gold
+4,Dark Matter,Plasma,Energy,Obsidian
+4,Singularity,Dark Matter,Dark Matter,Time

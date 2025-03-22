@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Pot" load_steps=2 format=3 uid="uid://c7x2kod3k05f1"]
+
+[ext_resource type="Script" uid="uid://ckujxsknd0hvd" path="res://Scripts/pot.gd" id="1_vjg7l"]
+
+[resource]
+script = ExtResource("1_vjg7l")
+type_plant = 1
+name = "pot_tier1"
+metadata/_custom_type_script = "uid://ckujxsknd0hvd"

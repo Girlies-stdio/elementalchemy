@@ -19,6 +19,7 @@ config/icon="res://Assets/icon.svg"
 
 Global="*res://Scenes/global.tscn"
 GlobalScript="*res://Scripts/global_script.gd"
+RecipesLoader="*res://Singletons/RecipesLoader.gd"
 
 [input]
 
