@@ -15,7 +15,6 @@ func insert(isg: ItemStackGUI):
 	#func not done yet
 
 func takeItem() -> ItemGUI:
-	print("slot.take item")
 	var inventorySlot = inventory.slots[itemStackGui.item]
 	if inventorySlot.amount >= 1:
 		inventorySlot.amount -=1

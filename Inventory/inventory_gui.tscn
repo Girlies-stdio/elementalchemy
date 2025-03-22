@@ -1,15 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqyw0eywwhni8"]
+[gd_scene load_steps=3 format=3 uid="uid://bqyw0eywwhni8"]
 
 [ext_resource type="Script" uid="uid://df35ypj7oxhnt" path="res://Inventory/inventory_gui.gd" id="1_t08cw"]
 [ext_resource type="Texture2D" uid="uid://dttcj2egblkav" path="res://Assets/background_5.png" id="2_1fqm0"]
-[ext_resource type="PackedScene" uid="uid://b6ybqrs6nkmw6" path="res://Inventory/slot.tscn" id="3_lsdv4"]
 
 [node name="InventoryGUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -904.0
+offset_right = -824.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -17,7 +16,7 @@ script = ExtResource("1_t08cw")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 248.0
+offset_right = 328.0
 offset_bottom = 646.0
 texture = ExtResource("2_1fqm0")
 patch_margin_left = 64
@@ -41,43 +40,4 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 8
-columns = 3
-
-[node name="Slot" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot2" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot3" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot4" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot5" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot6" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot7" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot8" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot9" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot10" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot11" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot12" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
-
-[node name="Slot13" parent="NinePatchRect/ScrollContainer/GridContainer" instance=ExtResource("3_lsdv4")]
-layout_mode = 2
+columns = 4
