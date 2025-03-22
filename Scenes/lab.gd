@@ -1,9 +1,9 @@
 extends NinePatchRect
 
-@onready var input_slot_1 = $InputSlot1
-@onready var input_slot_2 = $InputSlot2
-@onready var input_slot_3 = $InputSlot3
-@onready var output_slot = $OutputSlot
+@onready var input_slot_1 = $Brewing/InputSlot1
+@onready var input_slot_2 = $Brewing/InputSlot2
+@onready var input_slot_3 = $Brewing/InputSlot3
+@onready var output_slot = $Brewing/OutputSlot
 @onready var combine_button = $CombineButton
 
 func _ready():

@@ -157,48 +157,73 @@ patch_margin_bottom = 20
 script = ExtResource("2_bo1nx")
 metadata/_tab_index = 0
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab"]
+[node name="Brewing" type="TextureRect" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_6bp64")
-expand_mode = 1
+expand_mode = 3
 stretch_mode = 5
 
-[node name="InputSlot1" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
-layout_mode = 0
-offset_left = 154.0
-offset_top = 159.0
-offset_right = 226.0
-offset_bottom = 229.0
+[node name="InputSlot1" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab/Brewing" instance=ExtResource("5_21xkr")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.102658
+anchor_top = 0.536
+anchor_right = 0.211658
+anchor_bottom = 0.777
+offset_left = -0.112003
+offset_top = 0.0240021
+offset_right = -0.308014
+offset_bottom = -0.10701
 stretch_mode = 5
+metadata/_edit_use_anchors_ = true
 
-[node name="InputSlot2" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
-layout_mode = 0
-offset_left = 264.0
-offset_top = 34.0
-offset_right = 340.0
-offset_bottom = 109.0
+[node name="InputSlot2" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab/Brewing" instance=ExtResource("5_21xkr")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.279658
+anchor_top = 0.124
+anchor_right = 0.388
+anchor_bottom = 0.364436
+offset_left = -0.100006
+offset_top = -0.0840034
+offset_right = 0.127991
+offset_bottom = -0.0510101
 stretch_mode = 5
+metadata/_edit_use_anchors_ = true
 
-[node name="InputSlot3" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
-layout_mode = 0
-offset_left = 393.0
-offset_top = 124.0
-offset_right = 469.0
-offset_bottom = 199.0
+[node name="InputSlot3" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab/Brewing" instance=ExtResource("5_21xkr")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.481
+anchor_top = 0.433
+anchor_right = 0.59
+anchor_bottom = 0.674
+offset_left = 0.235962
+offset_top = -0.00300598
+offset_right = 0.039978
+offset_bottom = -0.134003
 stretch_mode = 5
+metadata/_edit_use_anchors_ = true
 
-[node name="OutputSlot" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
-layout_mode = 0
-offset_left = 589.0
-offset_top = 197.0
-offset_right = 656.0
-offset_bottom = 263.0
+[node name="OutputSlot" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab/Brewing" instance=ExtResource("5_21xkr")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.778
+anchor_top = 0.67
+anchor_right = 0.887
+anchor_bottom = 0.911
+offset_left = -0.0320435
+offset_top = 0.030014
+offset_right = -0.228027
+offset_bottom = -0.101013
 stretch_mode = 5
+metadata/_edit_use_anchors_ = true
 
 [node name="CombineButton" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab"]
 layout_mode = 1
