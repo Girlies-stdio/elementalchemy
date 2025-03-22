@@ -56,7 +56,6 @@ func updateItemInHand():
 	if !GlobalScript.itemInHand : return
 	GlobalScript.itemInHand.global_position = get_global_mouse_position() - GlobalScript.itemInHand.size/2
 	#TODO
-	print(GlobalScript.itemInHand.scale)
 	#itemInHand.update()
 	
 func putItemBack():
@@ -64,8 +63,8 @@ func putItemBack():
 	var targetSlot = slots.filter(func(slot): return slot.itemStackGui.item == GlobalScript.itemInHand.item)[0]
 		
 	var tween = create_tween()
-	var targetPosition = targetSlot.global_position + targetSlot.size/2
-	tween.tween_property(GlobalScript.itemInHand,"global_position", targetPosition, 0.1)
+	var targetPosition = targetSlot.global_position #+ targetSlot.size/2
+	tween.tween_property(GlobalScript.itemInHand,"global_position", targetPosition, 0.2)
 	
 	await tween.finished
 	insertItemInSlot(targetSlot)
@@ -74,6 +73,7 @@ func putItemBack():
 func insertItemInSlot(slot: Slot):
 	inventory.insert(GlobalScript.itemInHand.item)
 	slot.itemStackGui.update()
+	GlobalScript.itemInHand.queue_free()
 	GlobalScript.itemInHand = null
 	
 func _input(event):
