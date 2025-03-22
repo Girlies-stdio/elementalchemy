@@ -15,8 +15,8 @@ category,name,ingredient1,ingredient2,ingredient3
 2,Lava,Earth,Fire,Fire
 2,Coal,Wood,Wood,Fire
 2,Stone,Earth,Ice,Clay
-2,Gravier,Sand,Stone,Water
-2,Iron,Stone,Coal,White
+2,Gravel,Sand,Stone,Water
+2,Iron,Gravel,Coal,White
 2,Copper,Iron,Red,Yellow
 2,Silver,Iron,Copper,White
 2,Gold,Copper,Silver,Yellow
