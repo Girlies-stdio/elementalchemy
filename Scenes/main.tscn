@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctr78uqgnngos"]
+[gd_scene load_steps=8 format=3 uid="uid://ctr78uqgnngos"]
 
+[ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://bkpn4dwbky80q" path="res://Assets/icon.svg" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://Scenes/lab.gd" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://bny66qf2eo775" path="res://Assets/background_framed.png" id="3_kry3j"]
+[ext_resource type="PackedScene" uid="uid://cyktua4fqunq0" path="res://Workbench/item_slot.tscn" id="5_21xkr"]
 
 [sub_resource type="Theme" id="Theme_jjgbg"]
 MarginContainer/constants/margin_bottom = 20
 MarginContainer/constants/margin_left = 20
 MarginContainer/constants/margin_right = 20
 MarginContainer/constants/margin_top = 20
+
+[sub_resource type="Theme" id="Theme_6bp64"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -31,6 +37,7 @@ size_flags_horizontal = 3
 [node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+texture = ExtResource("1_8gbba")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect"]
 layout_mode = 1
@@ -149,68 +156,64 @@ texture_normal = ExtResource("1_jjgbg")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Panel2" type="Panel" parent="HBoxContainer/VBoxContainer"]
+[node name="Workbench" type="Panel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TabContainer" type="TabContainer" parent="HBoxContainer/VBoxContainer/Panel2"]
+[node name="WorkbenchTabs" type="TabContainer" parent="HBoxContainer/VBoxContainer/Workbench"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 1
+theme = SubResource("Theme_6bp64")
+current_tab = 0
 
-[node name="Lab" type="NinePatchRect" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer"]
-visible = false
+[node name="Lab" type="NinePatchRect" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs"]
 layout_mode = 2
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
+texture = ExtResource("3_kry3j")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+script = ExtResource("2_bo1nx")
 metadata/_tab_index = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/Lab"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -196.0
-offset_top = -81.5
-offset_right = 196.0
-offset_bottom = 81.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="InputSlot1" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
+layout_mode = 0
+offset_right = 143.0
+offset_bottom = 141.0
+stretch_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/Lab/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
+[node name="InputSlot2" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
+layout_mode = 0
+offset_right = 143.0
+offset_bottom = 141.0
+stretch_mode = 4
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/Lab/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("1_jjgbg")
+[node name="InputSlot3" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
+layout_mode = 0
+offset_right = 143.0
+offset_bottom = 141.0
+stretch_mode = 4
 
-[node name="TextureButton4" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/Lab/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("1_jjgbg")
+[node name="OutputSlot" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
+layout_mode = 0
+offset_right = 143.0
+offset_bottom = 141.0
+stretch_mode = 4
 
-[node name="TextureButton5" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/Lab/VBoxContainer/HBoxContainer"]
+[node name="CombineButton" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab"]
 layout_mode = 2
-texture_normal = ExtResource("1_jjgbg")
-
-[node name="TextureButton6" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/Lab/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("1_jjgbg")
-
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/Lab/VBoxContainer"]
-layout_mode = 2
+offset_left = 204.0
+offset_top = 219.0
+offset_right = 596.0
+offset_bottom = 250.0
 text = "Combine"
 
-[node name="PotShop" type="NinePatchRect" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer"]
+[node name="PotShop" type="NinePatchRect" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs"]
+visible = false
 layout_mode = 2
 patch_margin_left = 8
 patch_margin_top = 8
@@ -218,7 +221,7 @@ patch_margin_right = 8
 patch_margin_bottom = 8
 metadata/_tab_index = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -234,51 +237,51 @@ grow_vertical = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("1_jjgbg")
 stretch_mode = 0
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Buy"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer2"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("1_jjgbg")
 stretch_mode = 0
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer2"]
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "Buy"
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer3"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 texture_normal = ExtResource("1_jjgbg")
 stretch_mode = 0
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer3"]
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 text = "Buy"
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer4"]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
 texture_normal = ExtResource("1_jjgbg")
 stretch_mode = 0
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Panel2/TabContainer/PotShop/HBoxContainer/VBoxContainer4"]
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
 text = "Buy"
 
