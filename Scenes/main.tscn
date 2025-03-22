@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctr78uqgnngos"]
+[gd_scene load_steps=9 format=3 uid="uid://ctr78uqgnngos"]
 
 [ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://bkpn4dwbky80q" path="res://Assets/icon.svg" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://Scenes/lab.gd" id="2_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://bny66qf2eo775" path="res://Assets/background_framed.png" id="3_kry3j"]
+[ext_resource type="Texture2D" uid="uid://drnxwjo7hd82j" path="res://Assets/brewing.png" id="5_6bp64"]
 [ext_resource type="PackedScene" uid="uid://cyktua4fqunq0" path="res://Workbench/item_slot.tscn" id="5_21xkr"]
 
 [sub_resource type="Theme" id="Theme_jjgbg"]
@@ -156,45 +157,58 @@ patch_margin_bottom = 20
 script = ExtResource("2_bo1nx")
 metadata/_tab_index = 0
 
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_6bp64")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="InputSlot1" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
 layout_mode = 0
-offset_left = 33.0
-offset_top = 50.0
-offset_right = 176.0
-offset_bottom = 191.0
-stretch_mode = 4
+offset_left = 154.0
+offset_top = 159.0
+offset_right = 226.0
+offset_bottom = 229.0
+stretch_mode = 5
 
 [node name="InputSlot2" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 46.0
-offset_right = 368.0
-offset_bottom = 187.0
-stretch_mode = 4
+offset_left = 264.0
+offset_top = 34.0
+offset_right = 340.0
+offset_bottom = 109.0
+stretch_mode = 5
 
 [node name="InputSlot3" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
 layout_mode = 0
-offset_left = 422.0
-offset_top = 42.0
-offset_right = 565.0
-offset_bottom = 183.0
-stretch_mode = 4
+offset_left = 393.0
+offset_top = 124.0
+offset_right = 469.0
+offset_bottom = 199.0
+stretch_mode = 5
 
 [node name="OutputSlot" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" instance=ExtResource("5_21xkr")]
 layout_mode = 0
-offset_left = 611.0
-offset_top = 45.0
-offset_right = 754.0
-offset_bottom = 186.0
-stretch_mode = 4
+offset_left = 589.0
+offset_top = 197.0
+offset_right = 656.0
+offset_bottom = 263.0
+stretch_mode = 5
 
 [node name="CombineButton" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab"]
-layout_mode = 2
-offset_left = 204.0
-offset_top = 219.0
-offset_right = 596.0
-offset_bottom = 250.0
-text = "Combine"
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -184.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "COMBINE"
 
 [node name="PotShop" type="NinePatchRect" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs"]
 visible = false
