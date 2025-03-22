@@ -40,4 +40,4 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 8
-columns = 3
+columns = 4

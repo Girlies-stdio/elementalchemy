@@ -12,6 +12,9 @@ func _ready():
 	update()
 	#TODO: remove after tests
 	inventory.insert(slots[0].itemStackGui.item)
+	inventory.insert(slots[4].itemStackGui.item)
+	inventory.insert(slots[5].itemStackGui.item)
+	inventory.insert(slots[7].itemStackGui.item)
 	
 func update():
 	for i in range(slots.size()):
@@ -48,15 +51,12 @@ func onSlotClicked(slot: Slot):
 		return
 		
 func takeItemFromSlot(slot: Slot):
-	print("taking item from slot")
 	GlobalScript.itemInHand = await slot.takeItem()
 	updateItemInHand()
 
 func updateItemInHand():
 	if !GlobalScript.itemInHand : return
 	GlobalScript.itemInHand.global_position = get_global_mouse_position() - GlobalScript.itemInHand.size/2
-	#TODO
-	#itemInHand.update()
 	
 func putItemBack():
 	locked = true
