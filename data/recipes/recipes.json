@@ -143,9 +143,9 @@
             "Ice"
         ]
     },
-    "Gravier": {
+    "Gravel": {
         "category": "2",
-        "name": "Gravier",
+        "name": "Gravel",
         "ingredients": [
             "Sand",
             "Stone",
@@ -157,7 +157,7 @@
         "name": "Iron",
         "ingredients": [
             "Coal",
-            "Stone",
+            "Gravel",
             "White"
         ]
     },
