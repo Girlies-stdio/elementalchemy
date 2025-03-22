@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhvcfu311yeaa"]
+
+[ext_resource type="Script" uid="uid://upowvcvg56jk" path="res://Scripts/garden_grid.gd" id="1_ynvo8"]
+
+[node name="Garden" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -392.0
+offset_bottom = -397.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 9
+script = ExtResource("1_ynvo8")
