@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://d4iam6thdndoa"]
+
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://Scripts/plant.gd" id="1_gpiey"]
+[ext_resource type="Texture2D" uid="uid://1c8v3aa2xyl4" path="res://Assets/Growing/sand.png" id="1_v3y4m"]
+[ext_resource type="Texture2D" uid="uid://cqf8qyjfwo1t3" path="res://Assets/Items/sand.png" id="3_aa3w1"]
+
+[resource]
+script = ExtResource("1_gpiey")
+garden_texture = ExtResource("1_v3y4m")
+nb_cycle = 10
+type_plant = 2
+name = "Sand"
+texture = ExtResource("3_aa3w1")
+metadata/_custom_type_script = "uid://bwlidev7ac800"

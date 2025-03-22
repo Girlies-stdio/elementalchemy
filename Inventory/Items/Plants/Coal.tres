@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://c2rbx8shf3tme"]
+
+[ext_resource type="Texture2D" uid="uid://cwn2dv6v4xvvd" path="res://Assets/Growing/coal.png" id="1_0m7mo"]
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://Scripts/plant.gd" id="1_wf4cp"]
+[ext_resource type="Texture2D" uid="uid://3w0py2qo00yg" path="res://Assets/Items/coal.png" id="3_e57xl"]
+
+[resource]
+script = ExtResource("1_wf4cp")
+garden_texture = ExtResource("1_0m7mo")
+nb_cycle = 10
+type_plant = 2
+name = "Coal"
+texture = ExtResource("3_e57xl")
+metadata/_custom_type_script = "uid://bwlidev7ac800"

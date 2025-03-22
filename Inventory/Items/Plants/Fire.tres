@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://deyng7bae6h0j"]
+
+[ext_resource type="Texture2D" uid="uid://crib2x83lmu5l" path="res://Assets/Growing/fire.png" id="1_2kbyu"]
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://Scripts/plant.gd" id="1_koer4"]
+[ext_resource type="Texture2D" uid="uid://bv8ncxu7bicfh" path="res://Assets/Items/fire.png" id="3_cjirj"]
+
+[resource]
+script = ExtResource("1_koer4")
+garden_texture = ExtResource("1_2kbyu")
+nb_cycle = 5
+type_plant = 1
+name = "Fire"
+texture = ExtResource("3_cjirj")
+metadata/_custom_type_script = "uid://bwlidev7ac800"
