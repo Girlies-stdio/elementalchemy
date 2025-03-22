@@ -52,13 +52,69 @@ theme = SubResource("Theme_jjgbg")
 layout_mode = 2
 columns = 5
 
+[node name="TextureButton1" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton4" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton5" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton6" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton7" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
 [node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource("1_jjgbg")
 ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 4
 
 [node name="TextureButton9" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -66,7 +122,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource("1_jjgbg")
 ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 4
 
 [node name="TextureButton10" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
 layout_mode = 2
@@ -74,63 +130,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture_normal = ExtResource("1_jjgbg")
 ignore_texture_size = true
-stretch_mode = 3
-
-[node name="TextureButton11" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("1_jjgbg")
-ignore_texture_size = true
-stretch_mode = 3
-
-[node name="TextureButton12" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("1_jjgbg")
-ignore_texture_size = true
-stretch_mode = 3
-
-[node name="TextureButton13" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("1_jjgbg")
-ignore_texture_size = true
-stretch_mode = 3
-
-[node name="TextureButton14" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("1_jjgbg")
-ignore_texture_size = true
-stretch_mode = 3
-
-[node name="TextureButton15" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("1_jjgbg")
-ignore_texture_size = true
-stretch_mode = 3
-
-[node name="TextureButton16" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("1_jjgbg")
-ignore_texture_size = true
-stretch_mode = 3
-
-[node name="TextureButton17" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = ExtResource("1_jjgbg")
-ignore_texture_size = true
-stretch_mode = 3
+stretch_mode = 4
 
 [node name="Workbench" type="Panel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
