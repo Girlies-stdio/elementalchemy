@@ -1,6 +1,6 @@
 {
     "Earth": {
-        "category": "Base",
+        "category": "1",
         "name": "Earth",
         "ingredients": [
             "X",
@@ -9,7 +9,7 @@
         ]
     },
     "Fire": {
-        "category": "Base",
+        "category": "1",
         "name": "Fire",
         "ingredients": [
             "X",
@@ -18,7 +18,7 @@
         ]
     },
     "Water": {
-        "category": "Base",
+        "category": "1",
         "name": "Water",
         "ingredients": [
             "X",
@@ -27,7 +27,7 @@
         ]
     },
     "Air": {
-        "category": "Base",
+        "category": "1",
         "name": "Air",
         "ingredients": [
             "X",
@@ -36,7 +36,7 @@
         ]
     },
     "Ice": {
-        "category": "Plant",
+        "category": "1",
         "name": "Ice",
         "ingredients": [
             "Air",
@@ -45,7 +45,7 @@
         ]
     },
     "Wood": {
-        "category": "Plant",
+        "category": "1",
         "name": "Wood",
         "ingredients": [
             "Air",
@@ -54,7 +54,7 @@
         ]
     },
     "Green": {
-        "category": "Plant",
+        "category": "1",
         "name": "Green",
         "ingredients": [
             "Water",
@@ -63,7 +63,7 @@
         ]
     },
     "White": {
-        "category": "Plant",
+        "category": "1",
         "name": "White",
         "ingredients": [
             "Earth",
@@ -72,7 +72,7 @@
         ]
     },
     "Red": {
-        "category": "Plant",
+        "category": "1",
         "name": "Red",
         "ingredients": [
             "Fire",
@@ -81,7 +81,7 @@
         ]
     },
     "Yellow": {
-        "category": "Plant",
+        "category": "1",
         "name": "Yellow",
         "ingredients": [
             "Green",
@@ -90,7 +90,7 @@
         ]
     },
     "Blue": {
-        "category": "Plant",
+        "category": "1",
         "name": "Blue",
         "ingredients": [
             "Green",
@@ -99,7 +99,7 @@
         ]
     },
     "Clay": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Clay",
         "ingredients": [
             "Earth",
@@ -108,7 +108,7 @@
         ]
     },
     "Sand": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Sand",
         "ingredients": [
             "Air",
@@ -117,7 +117,7 @@
         ]
     },
     "Lava": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Lava",
         "ingredients": [
             "Earth",
@@ -126,7 +126,7 @@
         ]
     },
     "Coal": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Coal",
         "ingredients": [
             "Fire",
@@ -135,7 +135,7 @@
         ]
     },
     "Stone": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Stone",
         "ingredients": [
             "Clay",
@@ -144,7 +144,7 @@
         ]
     },
     "Gravier": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Gravier",
         "ingredients": [
             "Sand",
@@ -153,7 +153,7 @@
         ]
     },
     "Iron": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Iron",
         "ingredients": [
             "Coal",
@@ -162,7 +162,7 @@
         ]
     },
     "Copper": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Copper",
         "ingredients": [
             "Iron",
@@ -171,7 +171,7 @@
         ]
     },
     "Silver": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Silver",
         "ingredients": [
             "Copper",
@@ -180,7 +180,7 @@
         ]
     },
     "Gold": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Gold",
         "ingredients": [
             "Copper",
@@ -189,7 +189,7 @@
         ]
     },
     "Silicon": {
-        "category": "Mineral",
+        "category": "2",
         "name": "Silicon",
         "ingredients": [
             "Fire",
@@ -198,7 +198,7 @@
         ]
     },
     "Glass": {
-        "category": "Crystal",
+        "category": "3",
         "name": "Glass",
         "ingredients": [
             "Fire",
@@ -207,7 +207,7 @@
         ]
     },
     "Amethyst": {
-        "category": "Crystal",
+        "category": "3",
         "name": "Amethyst",
         "ingredients": [
             "Blue",
@@ -216,7 +216,7 @@
         ]
     },
     "Amber": {
-        "category": "Crystal",
+        "category": "3",
         "name": "Amber",
         "ingredients": [
             "Glass",
@@ -225,7 +225,7 @@
         ]
     },
     "Obsidian": {
-        "category": "Crystal",
+        "category": "3",
         "name": "Obsidian",
         "ingredients": [
             "Amethyst",
@@ -234,7 +234,7 @@
         ]
     },
     "Quartz": {
-        "category": "Crystal",
+        "category": "3",
         "name": "Quartz",
         "ingredients": [
             "Amber",
@@ -243,7 +243,7 @@
         ]
     },
     "Ruby": {
-        "category": "Crystal",
+        "category": "3",
         "name": "Ruby",
         "ingredients": [
             "Amethyst",
@@ -252,7 +252,7 @@
         ]
     },
     "Diamond": {
-        "category": "Crystal",
+        "category": "3",
         "name": "Diamond",
         "ingredients": [
             "Blue",
@@ -261,7 +261,7 @@
         ]
     },
     "Emerald": {
-        "category": "Crystal",
+        "category": "3",
         "name": "Emerald",
         "ingredients": [
             "Green",
@@ -270,7 +270,7 @@
         ]
     },
     "Energy": {
-        "category": "Endgame",
+        "category": "4",
         "name": "Energy",
         "ingredients": [
             "Diamond",
@@ -279,7 +279,7 @@
         ]
     },
     "Light": {
-        "category": "Endgame",
+        "category": "4",
         "name": "Light",
         "ingredients": [
             "Copper",
@@ -288,7 +288,7 @@
         ]
     },
     "Plasma": {
-        "category": "Endgame",
+        "category": "4",
         "name": "Plasma",
         "ingredients": [
             "Energy",
@@ -297,7 +297,7 @@
         ]
     },
     "Time": {
-        "category": "Endgame",
+        "category": "4",
         "name": "Time",
         "ingredients": [
             "Gold",
@@ -306,7 +306,7 @@
         ]
     },
     "Dark Matter": {
-        "category": "Endgame",
+        "category": "4",
         "name": "Dark Matter",
         "ingredients": [
             "Energy",
@@ -315,7 +315,7 @@
         ]
     },
     "Singularity": {
-        "category": "Endgame",
+        "category": "4",
         "name": "Singularity",
         "ingredients": [
             "Dark Matter",

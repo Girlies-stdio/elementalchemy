@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bv283i1lu754f"
+
+[deps]
+
+files=["res://data/recipes/recipes.name.translation", "res://data/recipes/recipes.ingredient1.translation", "res://data/recipes/recipes.ingredient2.translation", "res://data/recipes/recipes.ingredient3.translation"]
+
+source_file="res://data/recipes/recipes.csv"
+dest_files=["res://data/recipes/recipes.name.translation", "res://data/recipes/recipes.ingredient1.translation", "res://data/recipes/recipes.ingredient2.translation", "res://data/recipes/recipes.ingredient3.translation"]
+
+[params]
+
+compress=true
+delimiter=0
