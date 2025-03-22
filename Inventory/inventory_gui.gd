@@ -10,6 +10,8 @@ func _ready():
 	connectSlots()
 	inventory.updated.connect(update)
 	update()
+	#TODO: remove after tests
+	inventory.insert(slots[0].itemStackGui.item)
 	
 func update():
 	for i in range(slots.size()):
@@ -22,15 +24,14 @@ func connectSlots():
 	if not inventory.is_node_ready():
 		await inventory.ready
 	for i in range(GlobalScript.ALL_ITEMS.size()):
-		var slot = Slot.new()
+		var slot = preload("res://Inventory/slot.tscn").instantiate()
 		$NinePatchRect/ScrollContainer/GridContainer.add_child(slot)
-		
 		slots.append(slot)
 		var isg = preload("res://Inventory/item_stack_gui.tscn").instantiate()
-		slot.add_child(isg)
-		slot.itemStackGui = isg
+		slot.insert(isg)
 		isg.item = GlobalScript.ALL_ITEMS[i]
-		await isg.ready
+		if !isg.is_node_ready():
+			await isg.ready
 		isg.itemSprite.set_texture(isg.item.texture)
 		isg.update()
 		
@@ -40,29 +41,28 @@ func connectSlots():
 		callable = callable.bind(slot)
 		slot.pressed.connect(callable)
 		
-func onSlotClicked(slot):
+func onSlotClicked(slot: Slot):
 	if locked: return
 	if !GlobalScript.itemInHand:
 		takeItemFromSlot(slot)
 		return
 		
-func takeItemFromSlot(slot):
-	GlobalScript.itemInHand = slot.takeItem()
-	Global.add_child(GlobalScript.itemInHand)
+func takeItemFromSlot(slot: Slot):
+	print("taking item from slot")
+	GlobalScript.itemInHand = await slot.takeItem()
 	updateItemInHand()
 
 func updateItemInHand():
 	if !GlobalScript.itemInHand : return
 	GlobalScript.itemInHand.global_position = get_global_mouse_position() - GlobalScript.itemInHand.size/2
 	#TODO
+	print(GlobalScript.itemInHand.scale)
 	#itemInHand.update()
 	
 func putItemBack():
 	locked = true
-	var index = slots.filter(func(slot): return slot.itemStackGui.item == GlobalScript.itemInHand.item)[0]
+	var targetSlot = slots.filter(func(slot): return slot.itemStackGui.item == GlobalScript.itemInHand.item)[0]
 		
-	var targetSlot = slots[index]
-	
 	var tween = create_tween()
 	var targetPosition = targetSlot.global_position + targetSlot.size/2
 	tween.tween_property(GlobalScript.itemInHand,"global_position", targetPosition, 0.1)

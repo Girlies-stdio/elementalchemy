@@ -5,4 +5,5 @@ var itemInHand: ItemStackGUI
 
 func _ready():
 	var test = preload("res://Inventory/test.tres")
-	ALL_ITEMS.append(test)
+	for i in range(12):
+		ALL_ITEMS.append(test)
