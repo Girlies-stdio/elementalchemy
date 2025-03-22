@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="OGJ25"
+run/main_scene="uid://bqyw0eywwhni8"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+Global="*res://Scenes/global.tscn"
+GlobalScript="*res://Scripts/global_script.gd"
 
 [rendering]
 
