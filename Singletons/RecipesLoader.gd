@@ -10,7 +10,7 @@ extends Node
 
 var recipes: Dictionary = {}
 
-const FILE_PATH = "res://data/recipes/recipes.csv"
+const FILE_PATH = "res://data/recipes/recipes.json"
 
 func _ready():
 	recipes = load_recipes(FILE_PATH)

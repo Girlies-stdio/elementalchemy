@@ -21,17 +21,3 @@ category,name,ingredient1,ingredient2,ingredient3
 2,Silver,Iron,Copper,White
 2,Gold,Copper,Silver,Yellow
 2,Silicon,Fire,Sand,Gold
-3,Glass,Sand,Fire,Ice
-3,Amethyst,Glass,Red,Blue
-3,Amber,Glass,Red,Yellow
-3,Obsidian,Lava,Water,Amethyst
-3,Quartz,Amber,Silicon,White
-3,Ruby,Amethyst,Glass,Red
-3,Diamond,Ruby,Coal,Blue
-3,Emerald,Ruby,Obsidian,Green
-4,Energy,Quartz,Silicon,Diamond
-4,Light,Energy,Glass,Copper
-4,Plasma,Energy,Light,Water
-4,Time,Light,Quartz,Gold
-4,Dark Matter,Plasma,Energy,Obsidian
-4,Singularity,Dark Matter,Dark Matter,Time
