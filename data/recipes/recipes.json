@@ -1,0 +1,326 @@
+{
+    "Earth": {
+        "category": "Base",
+        "name": "Earth",
+        "ingredients": [
+            "X",
+            "X",
+            "X"
+        ]
+    },
+    "Fire": {
+        "category": "Base",
+        "name": "Fire",
+        "ingredients": [
+            "X",
+            "X",
+            "X"
+        ]
+    },
+    "Water": {
+        "category": "Base",
+        "name": "Water",
+        "ingredients": [
+            "X",
+            "X",
+            "X"
+        ]
+    },
+    "Air": {
+        "category": "Base",
+        "name": "Air",
+        "ingredients": [
+            "X",
+            "X",
+            "X"
+        ]
+    },
+    "Ice": {
+        "category": "Plant",
+        "name": "Ice",
+        "ingredients": [
+            "Air",
+            "Water",
+            "Water"
+        ]
+    },
+    "Wood": {
+        "category": "Plant",
+        "name": "Wood",
+        "ingredients": [
+            "Air",
+            "Earth",
+            "Water"
+        ]
+    },
+    "Green": {
+        "category": "Plant",
+        "name": "Green",
+        "ingredients": [
+            "Water",
+            "Water",
+            "Wood"
+        ]
+    },
+    "White": {
+        "category": "Plant",
+        "name": "White",
+        "ingredients": [
+            "Earth",
+            "Water",
+            "Wood"
+        ]
+    },
+    "Red": {
+        "category": "Plant",
+        "name": "Red",
+        "ingredients": [
+            "Fire",
+            "Green",
+            "White"
+        ]
+    },
+    "Yellow": {
+        "category": "Plant",
+        "name": "Yellow",
+        "ingredients": [
+            "Green",
+            "Sand",
+            "White"
+        ]
+    },
+    "Blue": {
+        "category": "Plant",
+        "name": "Blue",
+        "ingredients": [
+            "Green",
+            "Water",
+            "White"
+        ]
+    },
+    "Clay": {
+        "category": "Mineral",
+        "name": "Clay",
+        "ingredients": [
+            "Earth",
+            "Red",
+            "Water"
+        ]
+    },
+    "Sand": {
+        "category": "Mineral",
+        "name": "Sand",
+        "ingredients": [
+            "Air",
+            "Earth",
+            "Earth"
+        ]
+    },
+    "Lava": {
+        "category": "Mineral",
+        "name": "Lava",
+        "ingredients": [
+            "Earth",
+            "Fire",
+            "Fire"
+        ]
+    },
+    "Coal": {
+        "category": "Mineral",
+        "name": "Coal",
+        "ingredients": [
+            "Fire",
+            "Wood",
+            "Wood"
+        ]
+    },
+    "Stone": {
+        "category": "Mineral",
+        "name": "Stone",
+        "ingredients": [
+            "Clay",
+            "Earth",
+            "Ice"
+        ]
+    },
+    "Gravier": {
+        "category": "Mineral",
+        "name": "Gravier",
+        "ingredients": [
+            "Sand",
+            "Stone",
+            "Water"
+        ]
+    },
+    "Iron": {
+        "category": "Mineral",
+        "name": "Iron",
+        "ingredients": [
+            "Coal",
+            "Stone",
+            "White"
+        ]
+    },
+    "Copper": {
+        "category": "Mineral",
+        "name": "Copper",
+        "ingredients": [
+            "Iron",
+            "Red",
+            "Yellow"
+        ]
+    },
+    "Silver": {
+        "category": "Mineral",
+        "name": "Silver",
+        "ingredients": [
+            "Copper",
+            "Iron",
+            "White"
+        ]
+    },
+    "Gold": {
+        "category": "Mineral",
+        "name": "Gold",
+        "ingredients": [
+            "Copper",
+            "Silver",
+            "Yellow"
+        ]
+    },
+    "Silicon": {
+        "category": "Mineral",
+        "name": "Silicon",
+        "ingredients": [
+            "Fire",
+            "Gold",
+            "Sand"
+        ]
+    },
+    "Glass": {
+        "category": "Crystal",
+        "name": "Glass",
+        "ingredients": [
+            "Fire",
+            "Ice",
+            "Sand"
+        ]
+    },
+    "Amethyst": {
+        "category": "Crystal",
+        "name": "Amethyst",
+        "ingredients": [
+            "Blue",
+            "Glass",
+            "Red"
+        ]
+    },
+    "Amber": {
+        "category": "Crystal",
+        "name": "Amber",
+        "ingredients": [
+            "Glass",
+            "Red",
+            "Yellow"
+        ]
+    },
+    "Obsidian": {
+        "category": "Crystal",
+        "name": "Obsidian",
+        "ingredients": [
+            "Amethyst",
+            "Lava",
+            "Water"
+        ]
+    },
+    "Quartz": {
+        "category": "Crystal",
+        "name": "Quartz",
+        "ingredients": [
+            "Amber",
+            "Silicon",
+            "White"
+        ]
+    },
+    "Ruby": {
+        "category": "Crystal",
+        "name": "Ruby",
+        "ingredients": [
+            "Amethyst",
+            "Glass",
+            "Red"
+        ]
+    },
+    "Diamond": {
+        "category": "Crystal",
+        "name": "Diamond",
+        "ingredients": [
+            "Blue",
+            "Coal",
+            "Ruby"
+        ]
+    },
+    "Emerald": {
+        "category": "Crystal",
+        "name": "Emerald",
+        "ingredients": [
+            "Green",
+            "Obsidian",
+            "Ruby"
+        ]
+    },
+    "Energy": {
+        "category": "Endgame",
+        "name": "Energy",
+        "ingredients": [
+            "Diamond",
+            "Quartz",
+            "Silicon"
+        ]
+    },
+    "Light": {
+        "category": "Endgame",
+        "name": "Light",
+        "ingredients": [
+            "Copper",
+            "Energy",
+            "Glass"
+        ]
+    },
+    "Plasma": {
+        "category": "Endgame",
+        "name": "Plasma",
+        "ingredients": [
+            "Energy",
+            "Light",
+            "Water"
+        ]
+    },
+    "Time": {
+        "category": "Endgame",
+        "name": "Time",
+        "ingredients": [
+            "Gold",
+            "Light",
+            "Quartz"
+        ]
+    },
+    "Dark Matter": {
+        "category": "Endgame",
+        "name": "Dark Matter",
+        "ingredients": [
+            "Energy",
+            "Obsidian",
+            "Plasma"
+        ]
+    },
+    "Singularity": {
+        "category": "Endgame",
+        "name": "Singularity",
+        "ingredients": [
+            "Dark Matter",
+            "Dark Matter",
+            "Time"
+        ]
+    }
+}

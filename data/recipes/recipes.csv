@@ -1,0 +1,37 @@
+category,name,ingredient1,ingredient2,ingredient3
+Base,Earth,X,X,X
+Base,Fire,X,X,X
+Base,Water,X,X,X
+Base,Air,X,X,X
+Plant,Ice,Water,Water,Air
+Plant,Wood,Water,Earth,Air
+Plant,Green,Water,Water,Wood
+Plant,White,Earth,Water,Wood
+Plant,Red,Green,White,Fire
+Plant,Yellow,Green,White,Sand
+Plant,Blue,Green,White,Water
+Mineral,Clay,Water,Earth,Red
+Mineral,Sand,Earth,Earth,Air
+Mineral,Lava,Earth,Fire,Fire
+Mineral,Coal,Wood,Wood,Fire
+Mineral,Stone,Earth,Ice,Clay
+Mineral,Gravier,Sand,Stone,Water
+Mineral,Iron,Stone,Coal,White
+Mineral,Copper,Iron,Red,Yellow
+Mineral,Silver,Iron,Copper,White
+Mineral,Gold,Copper,Silver,Yellow
+Mineral,Silicon,Fire,Sand,Gold
+Crystal,Glass,Sand,Fire,Ice
+Crystal,Amethyst,Glass,Red,Blue
+Crystal,Amber,Glass,Red,Yellow
+Crystal,Obsidian,Lava,Water,Amethyst
+Crystal,Quartz,Amber,Silicon,White
+Crystal,Ruby,Amethyst,Glass,Red
+Crystal,Diamond,Ruby,Coal,Blue
+Crystal,Emerald,Ruby,Obsidian,Green
+Endgame,Energy,Quartz,Silicon,Diamond
+Endgame,Light,Energy,Glass,Copper
+Endgame,Plasma,Energy,Light,Water
+Endgame,Time,Light,Quartz,Gold
+Endgame,Dark Matter,Plasma,Energy,Obsidian
+Endgame,Singularity,Dark Matter,Dark Matter,Time
