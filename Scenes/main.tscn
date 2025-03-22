@@ -22,10 +22,68 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.8
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 67.0
+offset_right = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_jjgbg")
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_jjgbg")
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_jjgbg")
+
+[node name="TextureButton4" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_jjgbg")
+
+[node name="TextureButton5" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_jjgbg")
+
+[node name="TextureButton6" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_jjgbg")
+
+[node name="TextureButton7" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_jjgbg")
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_jjgbg")
 
 [node name="Panel2" type="Panel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
