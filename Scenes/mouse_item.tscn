@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw2a1kitnoe2j"]
+
+[ext_resource type="Script" uid="uid://bt7b1gxt4k4fp" path="res://Scenes/mouse_item.gd" id="1_137rf"]
+
+[node name="MouseItem" type="AspectRatioContainer"]
+custom_minimum_size = Vector2(150, 150)
+offset_right = 100.0
+offset_bottom = 100.0
+mouse_filter = 2
+script = ExtResource("1_137rf")
