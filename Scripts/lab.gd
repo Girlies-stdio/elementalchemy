@@ -5,21 +5,18 @@ extends NinePatchRect
 @onready var input_slot_3 : ItemSlot = $Brewing/InputSlot3
 @onready var output_slot : ItemSlot = $Brewing/OutputSlot
 @onready var combine_button = $CombineButton
+var slots: Array[ItemSlot]
 
 func _ready():
 	# No need to connect gui_input signals, just connect the cook button
 	combine_button.pressed.connect(_combine_pressed)
+	slots = [input_slot_1, input_slot_2, input_slot_3, output_slot]
 	
 	# Initialize slots
-	input_slot_1.item = null
-	input_slot_2.item = null
-	input_slot_3.item = null
-	output_slot.item = null
-	
-	input_slot_1.connect("pressed", func() -> void : handle_slot_interaction(input_slot_1))
-	input_slot_2.connect("pressed", func() -> void : handle_slot_interaction(input_slot_2))
-	input_slot_3.connect("pressed", func() -> void : handle_slot_interaction(input_slot_3))
-	output_slot.connect("pressed", func() -> void : handle_slot_interaction(output_slot))
+	for slot in slots:
+		slot.item = null
+		slot.connect("pressed", func() -> void : handle_slot_interaction(slot))
+		slot.connect("right_clicked", func() -> void : handle_right_click(slot))
 	
 	# Update UI
 	update_slot_visuals()
@@ -43,6 +40,12 @@ func handle_slot_interaction(slot: ItemSlot):
 			GlobalScript.itemInHand.queue_free()
 			GlobalScript.itemInHand = null
 	update_slot_visuals()
+	
+func handle_right_click(slot: ItemSlot) -> void:
+	if slot.item:
+		Global.get_node("Inventory").insert(slot.item)
+		slot.item = null
+		update_slot_visuals()
 
 # Handle cook button press
 func _combine_pressed():
@@ -86,19 +89,14 @@ func handle_failed_recipe():
 	# TODO : give hint
 
 # Update visual representation of slots
-func update_slot_visuals():
-	update_slot_visual(input_slot_1)
-	update_slot_visual(input_slot_2)
-	update_slot_visual(input_slot_3)
-	update_slot_visual(output_slot)
 
-# Update visual representation of a single slot
-func update_slot_visual(slot: ItemSlot):
+func update_slot_visuals():
+	for slot in slots:
 	#TODO: center item correctly
-	var sprite = slot.get_node("ItemSprite")
-	if slot.item:
-		sprite.texture = slot.item.texture
-		var current_size = sprite.texture.get_size()
-		sprite.scale = Vector2(60,60) / current_size
-	else:
-		sprite.texture = null
+		var sprite = slot.get_node("ItemSprite")
+		if slot.item:
+			sprite.texture = slot.item.texture
+			var current_size = sprite.texture.get_size()
+			sprite.scale = Vector2(60,60) / current_size
+		else:
+			sprite.texture = null

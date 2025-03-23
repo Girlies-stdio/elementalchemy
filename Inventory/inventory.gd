@@ -48,7 +48,6 @@ func enough(elements: Array[String]) -> bool:
 		return false
 	for item in items:
 		if slots[item].amount < 1:
-			print("too poor")
 			return false
 	return true
 	
@@ -59,5 +58,3 @@ func buy(potType: int, elements: Array[String]) -> void:
 			remove(item)
 		var pot = GlobalScript.ALL_ITEMS[potType - 1]
 		insert(pot)
-		print("sold")		
-	

@@ -12,12 +12,21 @@ var jar_slots: Array[JarSlot] = []
 
 # Initialize the garden with empty jar slots.
 func _ready() -> void:
+	var jar1 = GlobalScript.ALL_ITEMS[0]
 	for i in range(0, GARDEN_SLOTS):
-		var jar_slot = $JarSlot if i == 0 else get_node("JarSlot" + str(i + 1))
+		var jar_slot : JarSlot = $JarSlot if i == 0 else get_node("JarSlot" + str(i + 1))
 		jar_slot.jar = null
 		jar_slot.plant = null
 		jar_slots.append(jar_slot)
 		jar_slot.connect("pressed", func() -> void : handle_interaction(jar_slot))
+		if i < 4:
+			jar_slot.jar = jar1
+			jar_slot.plant = GlobalScript.ALL_ITEMS[i + 4]
+			timer(jar_slot)
+		else:
+			jar_slot.connect("right_clicked", func() -> void : handleRightClick(jar_slot))
+
+		updateGUI()
 
 	
 func handle_interaction(jar_slot: JarSlot): 
@@ -33,13 +42,10 @@ func handle_interaction(jar_slot: JarSlot):
 		elif jar_slot.jar && jar_slot.plant:
 			#if grown, harvest
 			if jar_slot.get_node("CenterContainer/PotSprite").texture == jar_slot.jar.texture_ready:
-				print("harvesting")
-				#TODO: edit this with the actual thing we want to insert
 				GlobalScript.insertInHand(jar_slot.plant)
 				await fakeRightClick()
-				Global.get_node("Inventory").insert(jar_slot.plant, 1)
+				timer(jar_slot)
 				jar_slot.harvestable = false
-				jar_slot.plant = null
 	else:
 		if jar_slot.jar && !jar_slot.plant && iih.item is Plant:
 			if jar_slot.jar.type_plant == iih.item.type_plant:
@@ -47,9 +53,7 @@ func handle_interaction(jar_slot: JarSlot):
 				jar_slot.plant = iih.item
 				GlobalScript.itemInHand.queue_free()
 				GlobalScript.itemInHand = null
-				get_tree().create_timer(jar_slot.plant.nb_cycle).connect("timeout",func() -> void: 
-					jar_slot.harvestable = true
-					updateGUI())
+				timer(jar_slot)
 			else: 
 				#back in inventory
 				await fakeRightClick()
@@ -60,6 +64,11 @@ func handle_interaction(jar_slot: JarSlot):
 			GlobalScript.itemInHand.queue_free()
 			GlobalScript.itemInHand = null
 	updateGUI()
+	
+func timer(jar_slot: JarSlot):
+	get_tree().create_timer(jar_slot.plant.nb_cycle).connect("timeout",func() -> void: 
+					jar_slot.harvestable = true
+					updateGUI())
 	
 			
 func updateGUI():
@@ -81,6 +90,16 @@ func updateGUI():
 			plantSprite.scale = Vector2(100,100) / current_size
 		else:
 			plantSprite.texture = null
+			
+func handleRightClick(slot: JarSlot) -> void:
+	var inventory: Inventory = Global.get_node("Inventory")
+	if slot.plant:
+		inventory.insert(slot.plant)
+		slot.plant = null
+	if slot.jar:
+		inventory.insert(slot.jar)
+		slot.jar = null
+	updateGUI()
 			
 #We simulate a right click to have the animation that takes the item back in its slot from the Inventory GUI
 func fakeRightClick() -> void:
