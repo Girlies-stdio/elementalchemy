@@ -7,7 +7,8 @@ var item: Item
 
 const TARGET_SIZE = Vector2(60,60)
 
-func _ready():
+
+func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _process(delta):
