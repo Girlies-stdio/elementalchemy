@@ -17,11 +17,22 @@ func _make_custom_tooltip(for_text):
 	
 	if show_tooltip:
 		var text = format_tooltip(RecipesLoader.recipes[isg.item.name])
+		var recipe = RecipesLoader.recipes[isg.item.name]
+		var ingredients = recipe["ingredients"]
+		var tooltip = preload("res://Scenes/recipe_tip.tscn").instantiate()
 		if text == null:
 			return ""
-		var label = Label.new()
-		label.text = text
-		return label
+		
+		tooltip.get_node("name").text = recipe["name"]
+		tooltip.get_node("ing1").text = ingredients[0]
+		tooltip.get_node("ing2").text = ingredients[1]
+		tooltip.get_node("ing3").text = ingredients[2]
+		
+		
+		return tooltip
+		#var label = Label.new()
+		#label.text = text
+		#return label
 	else:
 		return ""
 

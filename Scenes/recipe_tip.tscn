@@ -1,3 +1,60 @@
 [gd_scene format=3 uid="uid://bo11xpo457oqp"]
 
 [node name="RecipeTip" type="Node2D"]
+
+[node name="Panel" type="PopupPanel" parent="."]
+size = Vector2i(300, 100)
+visible = true
+
+[node name="ing1" type="RichTextLabel" parent="Panel"]
+visible = false
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 96.0
+text = "ing1"
+horizontal_alignment = 1
+
+[node name="ing2" type="RichTextLabel" parent="Panel"]
+visible = false
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 96.0
+text = "ing2"
+horizontal_alignment = 1
+
+[node name="ing3" type="RichTextLabel" parent="Panel"]
+visible = false
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 96.0
+text = "ing1"
+horizontal_alignment = 1
+
+[node name="name" type="RichTextLabel" parent="Panel"]
+visible = false
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 96.0
+text = "Name"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 96.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 96.0
