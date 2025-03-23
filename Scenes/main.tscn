@@ -1,10 +1,10 @@
 [gd_scene load_steps=25 format=3 uid="uid://ctr78uqgnngos"]
 
 [ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
-[ext_resource type="Script" uid="uid://uyjxgl41m335" path="res://Scenes/main.gd" id="1_ee4r6"]
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_ee4r6"]
 [ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://Scripts/lab.gd" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://d0o2fixek8d03" path="res://Scripts/garden.gd" id="2_ynf5e"]
-[ext_resource type="PackedScene" uid="uid://bd8gfklgd78xg" path="res://Scenes/Jar_slot.tscn" id="3_hptm8"]
+[ext_resource type="PackedScene" uid="uid://bd8gfklgd78xg" path="res://Scenes/jar_slot.tscn" id="3_hptm8"]
 [ext_resource type="Texture2D" uid="uid://bny66qf2eo775" path="res://Assets/background_framed.png" id="3_kry3j"]
 [ext_resource type="Texture2D" uid="uid://dtwtqtmd6y2ak" path="res://Assets/Pots/tier1.png" id="4_hptm8"]
 [ext_resource type="Texture2D" uid="uid://drnxwjo7hd82j" path="res://Assets/brewing.png" id="5_6bp64"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dwnq3i8spx4bf" path="res://Assets/Pots/tier2.png" id="10_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://ed4sc5to8m8h" path="res://Assets/Pots/tier3.png" id="11_wsu2k"]
 [ext_resource type="Texture2D" uid="uid://cxa7h4dy8jl8w" path="res://Assets/Pots/tier4.png" id="12_k12tt"]
-[ext_resource type="Script" path="res://Scenes/tutorial.gd" id="14_ee4r6"]
+[ext_resource type="Script" uid="uid://bwj16xdptxltw" path="res://Scenes/tutorial.gd" id="14_ee4r6"]
 [ext_resource type="AudioStream" uid="uid://d0mahrij0kw5m" path="res://Assets/Sons/plant.wav" id="14_h1bgf"]
 [ext_resource type="AudioStream" uid="uid://etsd3nuo41by" path="res://Assets/Sons/ambient.mp3" id="14_pdsj5"]
 [ext_resource type="AudioStream" uid="uid://dni3nh3vdi53d" path="res://Assets/Sons/grotte.wav" id="15_b3802"]
@@ -390,7 +390,7 @@ theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
 [node name="Panel" type="Panel" parent="Tutorial/Tuto2/MarginContainer"]
-custom_minimum_size = Vector2(900, 400)
+custom_minimum_size = Vector2(1100, 400)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
