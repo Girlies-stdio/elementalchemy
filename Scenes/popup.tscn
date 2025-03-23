@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://krayu7qgdgt0"]
+
+[ext_resource type="Script" uid="uid://cww81mivrkfyl" path="res://Scenes/popup.gd" id="1_2nprw"]
+
+[node name="PopupBox" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_2nprw")
+text = "Popup default text"
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Margin" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Text" type="RichTextLabel" parent="Panel/Margin/VBox"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+text = "Popup text"
+fit_content = true
+scroll_active = false
+
+[node name="HBox" type="HBoxContainer" parent="Panel/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/separation = 10
+
+[node name="SecondaryButton" type="Button" parent="Panel/Margin/VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Skip"
+flat = true
+
+[node name="PrimaryButton" type="Button" parent="Panel/Margin/VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Next"
