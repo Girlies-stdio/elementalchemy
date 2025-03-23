@@ -46,8 +46,8 @@ func refresh_inv_slot():
 		
 func format_tooltip(recipe: Dictionary):
 	var ingredients = recipe["ingredients"]
-	var format_string = "%s, %s, %s"
+	var format_string = "%s : %s + %s + %s"
 	if ingredients[0] == "X":
 		return null
-	var formated = format_string % [ingredients[0], ingredients[1], ingredients[2]]
+	var formated = format_string % [recipe["name"], ingredients[0], ingredients[1], ingredients[2]]
 	return formated
