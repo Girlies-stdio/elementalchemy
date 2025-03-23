@@ -1,21 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://pelfxus8jov2"]
+[gd_scene load_steps=3 format=3 uid="uid://d1x0tmtrqd5dl"]
 
 [ext_resource type="Texture2D" uid="uid://csnu5vglixrmh" path="res://Assets/intro.png" id="1_3edat"]
 [ext_resource type="Script" uid="uid://c47nc4kh1m7ik" path="res://Scripts/intro.gd" id="1_rrrc0"]
 
-[node name="Intro" type="Node2D"]
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_rrrc0")
 
-[node name="Intro" type="Sprite2D" parent="."]
-position = Vector2(576.5, 319.5)
-scale = Vector2(0.899219, 0.890278)
-texture = ExtResource("1_3edat")
+[node name="image container" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 187.0
-offset_top = 75.0
-offset_right = 958.0
-offset_bottom = 481.0
+[node name="Intro" type="TextureRect" parent="image container"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3edat")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 122.0
+offset_right = -49.0
+offset_bottom = -142.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
 theme_override_font_sizes/normal_font_size = 15
 text = "Welcome in NAME! 
 
@@ -35,12 +64,20 @@ Your last chance of surviving in this deserted Moon Base resides in its brand ne
 "
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
-offset_left = 505.0
-offset_top = 513.0
-offset_right = 622.0
-offset_bottom = 567.0
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -43.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="MarginContainer2"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "Start"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer2/Button" to="." method="_on_button_pressed"]
