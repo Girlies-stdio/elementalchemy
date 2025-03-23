@@ -35,8 +35,10 @@ func handle_interaction(jar_slot: JarSlot):
 			if jar_slot.get_node("CenterContainer/PotSprite").texture == jar_slot.jar.texture_ready:
 				print("harvesting")
 				#TODO: edit this with the actual thing we want to insert
-				Global.get_node("Inventory").insert(jar_slot.plant, 5)
-				jar_slot.jar = null
+				GlobalScript.insertInHand(jar_slot.plant)
+				await fakeRightClick()
+				Global.get_node("Inventory").insert(jar_slot.plant, 1)
+				jar_slot.harvestable = false
 				jar_slot.plant = null
 	else:
 		if jar_slot.jar && !jar_slot.plant && iih.item is Plant:
@@ -50,10 +52,7 @@ func handle_interaction(jar_slot: JarSlot):
 					updateGUI())
 			else: 
 				#back in inventory
-				#We simulate a right click to have the animation that takes the item back in its slot from the Inventory GUI
-				Input.action_press("Right_click")
-				await get_tree().create_timer(0.1).timeout
-				Input.action_release("Right_click")
+				await fakeRightClick()
 			
 		elif !jar_slot.jar && !jar_slot.plant && iih.item is Pot:
 			#insert jar in slot
@@ -64,7 +63,6 @@ func handle_interaction(jar_slot: JarSlot):
 	
 			
 func updateGUI():
-	#TODO: handle ready pots
 	#TODO: center textures correctly
 	for slot in jar_slots:
 		var potSprite = slot.get_node("CenterContainer/PotSprite")
@@ -83,4 +81,10 @@ func updateGUI():
 			plantSprite.scale = Vector2(100,100) / current_size
 		else:
 			plantSprite.texture = null
+			
+#We simulate a right click to have the animation that takes the item back in its slot from the Inventory GUI
+func fakeRightClick() -> void:
+	Input.action_press("Right_click")
+	await get_tree().create_timer(0.05).timeout
+	Input.action_release("Right_click")
 	
