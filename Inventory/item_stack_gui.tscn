@@ -2,18 +2,29 @@
 
 [ext_resource type="Script" uid="uid://1n113btpk66i" path="res://Inventory/item_stack_gui.gd" id="1_nmr1v"]
 
-[node name="Panel" type="Panel"]
+[node name="Panel" type="TextureRect"]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 4
 script = ExtResource("1_nmr1v")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-
 [node name="Label" type="Label" parent="."]
-custom_minimum_size = Vector2(10, 10)
-layout_mode = 0
-offset_left = -2.0
-offset_top = -1.0
-offset_right = 17.0
-offset_bottom = 48.0
-text = "99
-"
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -46.0
+offset_bottom = 55.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "99"
 horizontal_alignment = 2
+vertical_alignment = 2

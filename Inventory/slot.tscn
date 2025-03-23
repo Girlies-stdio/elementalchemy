@@ -4,23 +4,27 @@
 [ext_resource type="Texture2D" uid="uid://csqvsh3e7pcte" path="res://Assets/inventaireslot_hollow.png" id="1_sktnm"]
 [ext_resource type="Texture2D" uid="uid://bfndrvwgoad16" path="res://Assets/inventaireslot_filled.png" id="2_yb478"]
 
-[node name="Slot" type="TextureButton"]
+[node name="Slot" type="AspectRatioContainer"]
+clip_contents = true
 custom_minimum_size = Vector2(64, 64)
-anchors_preset = -1
-anchor_right = 0.562
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -0.424072
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture_normal = ExtResource("1_sktnm")
-texture_pressed = ExtResource("2_yb478")
-ignore_texture_size = true
-stretch_mode = 4
+stretch_mode = 0
 script = ExtResource("1_s4f18")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="SlotButton" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("2_yb478")
+texture_pressed = ExtResource("1_sktnm")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Margin" type="MarginContainer" parent="SlotButton"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
