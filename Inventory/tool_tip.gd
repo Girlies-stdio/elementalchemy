@@ -23,16 +23,16 @@ func _make_custom_tooltip(for_text):
 		if text == null:
 			return ""
 		
-		tooltip.get_node("name").text = recipe["name"]
-		tooltip.get_node("ing1").text = ingredients[0]
-		tooltip.get_node("ing2").text = ingredients[1]
-		tooltip.get_node("ing3").text = ingredients[2]
+		#tooltip.get_node("name").text = recipe["name"]
+		#tooltip.get_node("ing1").text = ingredients[0]
+		#tooltip.get_node("ing2").text = ingredients[1]
+		#tooltip.get_node("ing3").text = ingredients[2]
 		
 		
-		return tooltip
-		#var label = Label.new()
-		#label.text = text
-		#return label
+		#return tooltip
+		var label = Label.new()
+		label.text = text
+		return label
 	else:
 		return ""
 

@@ -7,7 +7,6 @@ size = Vector2i(300, 100)
 visible = true
 
 [node name="ing1" type="RichTextLabel" parent="Panel"]
-visible = false
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 296.0
@@ -16,7 +15,6 @@ text = "ing1"
 horizontal_alignment = 1
 
 [node name="ing2" type="RichTextLabel" parent="Panel"]
-visible = false
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 296.0
@@ -25,7 +23,6 @@ text = "ing2"
 horizontal_alignment = 1
 
 [node name="ing3" type="RichTextLabel" parent="Panel"]
-visible = false
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 296.0
@@ -34,7 +31,6 @@ text = "ing1"
 horizontal_alignment = 1
 
 [node name="name" type="RichTextLabel" parent="Panel"]
-visible = false
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 296.0

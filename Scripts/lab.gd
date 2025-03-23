@@ -102,10 +102,8 @@ func handle_failed_recipe():
 func update_slot_visuals():
 	for slot in slots:
 	#TODO: center item correctly
-		var sprite = slot.get_node("ItemSprite")
+		var sprite = slot.item_sprite
 		if slot.item:
 			sprite.texture = slot.item.texture
-			var current_size = sprite.texture.get_size()
-			sprite.scale = Vector2(60,60) / current_size
 		else:
 			sprite.texture = null
