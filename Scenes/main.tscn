@@ -1,6 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://ctr78uqgnngos"]
 
 [ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
+
 [ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://Scripts/lab.gd" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://d0o2fixek8d03" path="res://Scripts/garden.gd" id="2_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://d1xfvc065efuq" path="res://Scenes/jar_slot.tscn" id="3_hptm8"]
@@ -9,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://drnxwjo7hd82j" path="res://Assets/brewing.png" id="5_6bp64"]
 [ext_resource type="PackedScene" uid="uid://cyktua4fqunq0" path="res://Workbench/item_slot.tscn" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://bqyw0eywwhni8" path="res://Inventory/inventory_gui.tscn" id="7_6bp64"]
-[ext_resource type="Script" uid="uid://cnevwedyaulx1" path="res://Scripts/pot_shop.gd" id="8_fdnlq"]
+[ext_resource type="Script" path="res://Scripts/pot_shop.gd" id="8_fdnlq"]
 [ext_resource type="Texture2D" uid="uid://dwnq3i8spx4bf" path="res://Assets/Pots/tier2.png" id="10_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://ed4sc5to8m8h" path="res://Assets/Pots/tier3.png" id="11_wsu2k"]
 [ext_resource type="Texture2D" uid="uid://cxa7h4dy8jl8w" path="res://Assets/Pots/tier4.png" id="12_k12tt"]

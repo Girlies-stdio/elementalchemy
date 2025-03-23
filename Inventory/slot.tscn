@@ -19,6 +19,7 @@ script = ExtResource("1_s4f18")
 
 [node name="SlotButton" type="TextureButton" parent="."]
 layout_mode = 2
+tooltip_text = "yo"
 texture_normal = ExtResource("2_yb478")
 texture_pressed = ExtResource("1_sktnm")
 ignore_texture_size = true
