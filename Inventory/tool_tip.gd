@@ -44,5 +44,5 @@ func format_tooltip(recipe: Dictionary):
 	var format_string = "%s, %s, %s"
 	if ingredients[0] == "X":
 		return null
-	var formated = format_string % [ingredients[0], ingredients[1], ingredients[0]]
+	var formated = format_string % [ingredients[0], ingredients[1], ingredients[2]]
 	return formated
