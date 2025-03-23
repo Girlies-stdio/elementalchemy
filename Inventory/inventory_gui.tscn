@@ -40,9 +40,9 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect/MarginContainer/ScrollContainer"]
+custom_minimum_size = Vector2(0, 2000)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 8
 columns = 4
