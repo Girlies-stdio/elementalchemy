@@ -42,7 +42,6 @@ func handle_interaction(jar_slot: JarSlot):
 		elif jar_slot.jar && jar_slot.plant:
 			#if grown, harvest
 			if jar_slot.get_node("CenterContainer/PotSprite").texture == jar_slot.jar.texture_ready:
-				print("harvesting")
 				GlobalScript.insertInHand(jar_slot.plant)
 				await fakeRightClick()
 				timer(jar_slot)

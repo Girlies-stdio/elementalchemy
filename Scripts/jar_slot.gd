@@ -11,5 +11,4 @@ func _ready() -> void:
 	
 func _input(event):
 	if !GlobalScript.itemInHand && Input.is_action_pressed("Right_click"):
-		print("right click")
 		right_clicked.emit()

@@ -1,5 +1,11 @@
 extends TextureButton
 class_name ItemSlot
 
+signal right_clicked
+
 # The item currently in this slot
-var item : Item = null
+var item : Item
+
+func _input(event):
+	if !GlobalScript.itemInHand && Input.is_action_pressed("Right_click"):
+		right_clicked.emit()
