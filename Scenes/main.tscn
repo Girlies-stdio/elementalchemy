@@ -334,16 +334,19 @@ volume_db = -20.0
 
 [node name="endgame" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_hibaj")
-volume_db = -10.0
+volume_db = -20.0
 
 [node name="craft" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_hibaj")
+volume_db = -10.0
 
 [node name="brew" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_pdsj5")
+volume_db = -3.0
 
 [node name="combine" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_ee4r6")
+volume_db = -5.0
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer/Type1/Button" to="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" method="_on_button1_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer/Type2/Button" to="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" method="_on_button2_pressed"]

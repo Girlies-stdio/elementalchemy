@@ -25,7 +25,7 @@ func _ready():
 	insert(GlobalScript.ALL_ITEMS[7])
 	#TODO: Remove next line
 	devCheat()
-
+	
 func insert(item: Item, n: int = 1) -> void:
 	var slot = slots[item]
 	slot.amount += n
@@ -55,6 +55,7 @@ func buy(potType: int, elements: Array[String]) -> void:
 		var items = elements.map(func(s) -> Item: return GlobalScript.findItem(s))
 		for item in items:
 			remove(item)
+		
 		var pot = GlobalScript.ALL_ITEMS[potType - 1]
 		insert(pot)
 func devCheat() -> void:

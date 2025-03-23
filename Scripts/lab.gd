@@ -48,6 +48,7 @@ func handle_slot_interaction(slot: ItemSlot):
 			slot.item = GlobalScript.itemInHand.item
 			GlobalScript.itemInHand.queue_free()
 			GlobalScript.itemInHand = null
+			$"../../../../../brew".play(28.5)
 	update_slot_visuals()
 	
 func handle_right_click(slot: ItemSlot) -> void:
@@ -80,6 +81,7 @@ func _combine_pressed():
 		
 		# Set output slot
 		output_slot.item = recipe_result
+		$"../../../../../combine".play()
 		
 		update_slot_visuals()
 
