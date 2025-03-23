@@ -1,7 +1,7 @@
 extends TextureButton
 class_name JarSlot
 
-var jar: Jar
+var jar: Pot
 var plant: Plant
 
 func _ready() -> void:
