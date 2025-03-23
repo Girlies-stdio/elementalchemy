@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1xfvc065efuq"]
+[gd_scene load_steps=3 format=3 uid="uid://bd8gfklgd78xg"]
 
 [ext_resource type="Script" uid="uid://c5vy7ra8d7ucx" path="res://Scripts/jar_slot.gd" id="1_4u2ei"]
 [ext_resource type="Texture2D" uid="uid://dkaim24f5njnn" path="res://Assets/plantslot.png" id="1_167x6"]

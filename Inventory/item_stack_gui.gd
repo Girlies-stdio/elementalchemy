@@ -2,7 +2,6 @@ extends TextureRect
 
 class_name ItemStackGUI
 
-@onready var itemSprite: Sprite2D = $Sprite
 @onready var amountLabel: Label = $Label
 var item: Item
 var inventory: Inventory
@@ -13,7 +12,7 @@ func _ready():
 	if !inventory.is_node_ready():
 		await inventory.ready
 
-func _process(delta):
+func _process(_delta):
 	amountLabel.visible = true if amount > 1 else false
 
 #TODO: Potentiellement griser ici le sprite si on en a 0, et lock si on n'a pas débloqué
@@ -23,13 +22,13 @@ func update():
 	amountLabel.text = str(amount)
 	if slot.unlocked:
 		if amount == 0:
-			change_sprite_color(itemSprite, "gray")
+			shade("gray")
 		else:
-			change_sprite_color(itemSprite, "classic")
+			shade("classic")
 	else:
-		change_sprite_color(itemSprite, "black")
+		shade("black")
 
-func change_sprite_color(sprite: Sprite2D, mode: String) -> void:
+func shade(mode: String) -> void:
 		var shader = Shader.new()
 		var shader_material = ShaderMaterial.new()
 		var shader_code

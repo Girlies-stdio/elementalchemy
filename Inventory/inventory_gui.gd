@@ -2,7 +2,8 @@ extends Control
 
 var inventory : Inventory
 
-@onready var grid: GridContainer = $NinePatchRect/ScrollContainer/GridContainer
+@onready var margin : MarginContainer = $NinePatchRect/MarginContainer
+@onready var grid: GridContainer = $NinePatchRect/MarginContainer/ScrollContainer/GridContainer
 @onready var slots: Array[Slot] = []
 var locked: bool = false
 
@@ -11,6 +12,12 @@ func _ready():
 	connectSlots()
 	inventory.updated.connect(update)
 	update()
+	
+	var margin_value = 20
+	margin.add_theme_constant_override("margin_top", margin_value)
+	margin.add_theme_constant_override("margin_left", margin_value)
+	margin.add_theme_constant_override("margin_bottom", margin_value)
+	margin.add_theme_constant_override("margin_right", margin_value)
 	
 func update():
 	for i in range(slots.size()):
@@ -24,7 +31,7 @@ func connectSlots():
 		await inventory.ready
 	for i in range(GlobalScript.ALL_ITEMS.size()):
 		var slot = preload("res://Inventory/slot.tscn").instantiate()
-		$NinePatchRect/ScrollContainer/GridContainer.add_child(slot)
+		grid.add_child(slot)
 		slots.append(slot)
 		var isg = preload("res://Inventory/item_stack_gui.tscn").instantiate()
 		slot.insert(isg)
@@ -70,7 +77,7 @@ func insertItemInSlot():
 	GlobalScript.itemInHand = null
 	update()
 	
-func _input(event):
+func _input(_event):
 	if GlobalScript.itemInHand && !locked && Input.is_action_pressed("Right_click"):
 		putItemBack()
 	updateItemInHand()

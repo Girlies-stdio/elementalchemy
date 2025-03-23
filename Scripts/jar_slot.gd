@@ -19,20 +19,16 @@ func _ready() -> void:
 	margin.add_theme_constant_override("margin_bottom", margin_value)
 	margin.add_theme_constant_override("margin_right", margin_value)
 	
-func _gui_input(event):
+func _gui_input(_event):
 	if !GlobalScript.itemInHand && Input.is_action_pressed("Right_click"):
 		right_clicked.emit()
 
 func update_gui() :
 	if jar:
 		potSprite.texture = jar.texture if !harvestable else jar.texture_ready
-		var current_size = potSprite.texture.get_size()
-		# potSprite.scale = Vector2(120,120) / current_size
 	else:
 		potSprite.texture = null
 	if plant:
 		plantSprite.texture = plant.garden_texture
-		var current_size = plantSprite.texture.get_size()
-		# plantSprite.scale = Vector2(100,100) / current_size
 	else:
 		plantSprite.texture = null

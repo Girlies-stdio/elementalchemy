@@ -42,7 +42,7 @@ func remove(item: Item, n: int = 1) -> bool:
 	return false
 	
 func enough(elements: Array[String]) -> bool:
-	var items = elements.map(func(str) -> Item: return GlobalScript.findItem(str))
+	var items = elements.map(func(s) -> Item: return GlobalScript.findItem(s))
 	#This nullCheck is only added because we don't have all the elements in the game right now
 	if null in items:
 		return false
@@ -53,7 +53,7 @@ func enough(elements: Array[String]) -> bool:
 	
 func buy(potType: int, elements: Array[String]) -> void:
 	if enough(elements):
-		var items = elements.map(func(str) -> Item: return GlobalScript.findItem(str))
+		var items = elements.map(func(s) -> Item: return GlobalScript.findItem(s))
 		for item in items:
 			remove(item)
 		var pot = GlobalScript.ALL_ITEMS[potType - 1]
