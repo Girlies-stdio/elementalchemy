@@ -1,16 +1,24 @@
 extends NinePatchRect
 
 #QUESTION: Pourquoi c'est des boutons les images des pots ? ça pourrait pas juste être des sprites ? 
-@onready var button1 : Button = $HBoxContainer/Type1/Button
-@onready var button2 : Button = $HBoxContainer/Type2/Button
-@onready var button3 : Button = $HBoxContainer/Type3/Button
-@onready var button4 : Button = $HBoxContainer/Type4/Button
+@onready var button1 : Button = $MarginContainer/HBoxContainer/Type1/Button
+@onready var button2 : Button = $MarginContainer/HBoxContainer/Type2/Button
+@onready var button3 : Button = $MarginContainer/HBoxContainer/Type3/Button
+@onready var button4 : Button = $MarginContainer/HBoxContainer/Type4/Button
 var inventory : Inventory
+
+@onready var margin = $MarginContainer
 
 func _ready() -> void:
 	inventory = Global.get_node("Inventory")
 	inventory.connect("updated", func() -> void: checkEnough())
 	checkEnough()
+	
+	var margin_value = 40
+	margin.add_theme_constant_override("margin_top", margin_value)
+	margin.add_theme_constant_override("margin_left", margin_value)
+	margin.add_theme_constant_override("margin_bottom", margin_value)
+	margin.add_theme_constant_override("margin_right", margin_value)
 	
 func checkEnough() -> void:
 	if inventory.enough(["Clay", "Fire", "Earth"]):

@@ -4,8 +4,10 @@ extends NinePatchRect
 @onready var input_slot_2 : ItemSlot = $Brewing/InputSlot2
 @onready var input_slot_3 : ItemSlot = $Brewing/InputSlot3
 @onready var output_slot : ItemSlot = $Brewing/OutputSlot
-@onready var combine_button = $CombineButton
+@onready var combine_button = $MarginContainer/CombineButton
 var slots: Array[ItemSlot]
+
+@onready var margin = $MarginContainer
 
 func _ready():
 	# No need to connect gui_input signals, just connect the cook button
@@ -20,6 +22,12 @@ func _ready():
 	
 	# Update UI
 	update_slot_visuals()
+	
+	var margin_value = 20
+	margin.add_theme_constant_override("margin_top", margin_value)
+	margin.add_theme_constant_override("margin_left", margin_value)
+	margin.add_theme_constant_override("margin_bottom", margin_value)
+	margin.add_theme_constant_override("margin_right", margin_value)
 
 # Handle slot interaction (called from Slot._on_slot_pressed)
 func handle_slot_interaction(slot: ItemSlot):
