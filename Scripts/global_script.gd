@@ -21,9 +21,6 @@ func _ready():
 		var plant = load("res://Inventory/Items/Plants/"+ recipe["name"]+".tres")
 		ALL_ITEMS.append(plant)
 		
-	mouseItem = preload("res://Scenes/mouse_item.tscn").instantiate()
-	get_tree().current_scene.add_child(mouseItem)
-		
 func insertInHand(item: Item) -> ItemGUI:
 	if itemInHand: return null
 	var new_itemGUI = preload("res://Scenes/item_gui.tscn").instantiate()
@@ -40,3 +37,8 @@ func insertInHand(item: Item) -> ItemGUI:
 func findItem(label: String) -> Item:
 	var items = ALL_ITEMS.filter(func(item) : return item.name == label)
 	return items[0] if items else null
+	
+func createMouseItem():
+	mouseItem = preload("res://Scenes/mouse_item.tscn").instantiate()
+	get_tree().current_scene.add_child(mouseItem)
+	

@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://ctr78uqgnngos"]
+[gd_scene load_steps=24 format=3 uid="uid://ctr78uqgnngos"]
 
 [ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
+[ext_resource type="Script" uid="uid://uyjxgl41m335" path="res://Scenes/main.gd" id="1_ee4r6"]
 [ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://Scripts/lab.gd" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://d0o2fixek8d03" path="res://Scripts/garden.gd" id="2_ynf5e"]
-[ext_resource type="PackedScene" uid="uid://bd8gfklgd78xg" path="res://Scenes/jar_slot.tscn" id="3_hptm8"]
+[ext_resource type="PackedScene" uid="uid://bd8gfklgd78xg" path="res://Scenes/Jar_slot.tscn" id="3_hptm8"]
 [ext_resource type="Texture2D" uid="uid://bny66qf2eo775" path="res://Assets/background_framed.png" id="3_kry3j"]
 [ext_resource type="Texture2D" uid="uid://dtwtqtmd6y2ak" path="res://Assets/Pots/tier1.png" id="4_hptm8"]
 [ext_resource type="Texture2D" uid="uid://drnxwjo7hd82j" path="res://Assets/brewing.png" id="5_6bp64"]
@@ -35,6 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ee4r6")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Elementalchemy"
-run/main_scene="uid://ctr78uqgnngos"
+run/main_scene="uid://df8yoktdjxevk"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
