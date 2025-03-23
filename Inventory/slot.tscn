@@ -49,5 +49,6 @@ texture = ExtResource("2_s4f18")
 vframes = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0

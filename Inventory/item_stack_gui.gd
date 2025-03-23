@@ -36,7 +36,6 @@ func update():
 		change_sprite_color(itemSprite, "black")
 
 func change_sprite_color(sprite: Sprite2D, mode: String) -> void:
-	if sprite.material == null or not sprite.material is ShaderMaterial:
 		var shader = Shader.new()
 		var shader_material = ShaderMaterial.new()
 		var shader_code
@@ -67,15 +66,3 @@ func change_sprite_color(sprite: Sprite2D, mode: String) -> void:
 		shader.code = shader_code
 		shader_material.shader = shader
 		sprite.material = shader_material
-	else:
-		sprite.material = null
-				
-			
-			
-			
-			
-			
-			
-			
-	
-		

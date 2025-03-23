@@ -10,11 +10,6 @@ func _ready():
 	connectSlots()
 	inventory.updated.connect(update)
 	update()
-	#TODO: remove after tests
-	inventory.insert(slots[0].itemStackGui.item)
-	inventory.insert(slots[4].itemStackGui.item)
-	inventory.insert(slots[5].itemStackGui.item)
-	inventory.insert(slots[7].itemStackGui.item)
 	
 func update():
 	for i in range(slots.size()):
@@ -37,9 +32,7 @@ func connectSlots():
 			await isg.ready
 		isg.itemSprite.set_texture(isg.item.texture)
 		isg.update()
-		
-		slot.index = i #TODO: maybe remove index if not used
-		
+				
 		var callable = Callable(onSlotClicked)
 		callable = callable.bind(slot)
 		slot.pressed.connect(callable)
@@ -51,19 +44,19 @@ func onSlotClicked(slot: Slot):
 		return
 		
 func takeItemFromSlot(slot: Slot):
-	GlobalScript.itemInHand = await slot.takeItem()
+	await slot.takeItem()
 	updateItemInHand()
 
 func updateItemInHand():
 	if !GlobalScript.itemInHand : return
-	GlobalScript.itemInHand.global_position = get_global_mouse_position() - GlobalScript.itemInHand.size/2
+	GlobalScript.itemInHand.global_position = get_global_mouse_position()
 	
 func putItemBack():
 	locked = true
 	var targetSlot = slots.filter(func(slot): return slot.itemStackGui.item == GlobalScript.itemInHand.item)[0]
 		
 	var tween = create_tween()
-	var targetPosition = targetSlot.global_position
+	var targetPosition = targetSlot.global_position + targetSlot.size/2
 	tween.tween_property(GlobalScript.itemInHand,"global_position", targetPosition, 0.2)
 	
 	await tween.finished
