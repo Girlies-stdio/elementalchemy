@@ -41,17 +41,23 @@ func remove(item: Item, n: int = 1) -> bool:
 		return true
 	return false
 	
-func buy(potType: int, elements: Array[String]) -> bool:
+func enough(elements: Array[String]) -> bool:
 	var items = elements.map(func(str) -> Item: return GlobalScript.findItem(str))
+	#This nullCheck is only added because we don't have all the elements in the game right now
+	if null in items:
+		return false
 	for item in items:
 		if slots[item].amount < 1:
 			print("too poor")
 			return false
-	for item in items:
-		remove(item)
-	var pot = GlobalScript.ALL_ITEMS[potType - 1]
-	insert(pot)
-	print("sold")
 	return true
-		
+	
+func buy(potType: int, elements: Array[String]) -> void:
+	if enough(elements):
+		var items = elements.map(func(str) -> Item: return GlobalScript.findItem(str))
+		for item in items:
+			remove(item)
+		var pot = GlobalScript.ALL_ITEMS[potType - 1]
+		insert(pot)
+		print("sold")		
 	

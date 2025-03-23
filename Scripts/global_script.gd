@@ -32,4 +32,5 @@ func insertInHand(item: Item) -> ItemGUI:
 	return itemInHand
 	
 func findItem(name: String) -> Item:
-	return ALL_ITEMS.filter(func(item) : return item.name == name)[0]
+	var items = ALL_ITEMS.filter(func(item) : return item.name == name)
+	return items[0] if items else null

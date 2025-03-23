@@ -13,9 +13,7 @@ func insert(isg: ItemStackGUI):
 	container.add_child(itemStackGui)
 
 func takeItem() -> ItemGUI:
-	var inventorySlot = inventory.slots[itemStackGui.item]
-	if inventorySlot.amount >= 1:
-		inventorySlot.amount -=1
+	if inventory.remove(itemStackGui.item):
 		var new_itemGUI = await GlobalScript.insertInHand(itemStackGui.item)
 		itemStackGui.update()
 		return new_itemGUI
