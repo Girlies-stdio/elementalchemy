@@ -95,8 +95,9 @@ func handleRightClick(slot: JarSlot) -> void:
 	if slot.jar:
 		inventory.insert(slot.jar)
 		slot.jar = null
-	slot.timer.queue_free()
-	slot.timer = null
+	if slot.timer:
+		slot.timer.queue_free()
+		slot.timer = null
 	updateGUI()
 			
 #We simulate a right click to have the animation that takes the item back in its slot from the Inventory GUI
