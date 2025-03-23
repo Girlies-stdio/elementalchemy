@@ -6,7 +6,6 @@ class_name Slot
 
 @onready var inventory : Inventory = Global.get_node("Inventory")
 var itemStackGui: ItemStackGUI
-var index: int
 
 func insert(isg: ItemStackGUI):
 	itemStackGui = isg

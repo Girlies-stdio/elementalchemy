@@ -10,11 +10,6 @@ func _ready():
 	connectSlots()
 	inventory.updated.connect(update)
 	update()
-	#TODO: remove after tests
-	inventory.insert(slots[0].itemStackGui.item)
-	inventory.insert(slots[4].itemStackGui.item)
-	inventory.insert(slots[5].itemStackGui.item)
-	inventory.insert(slots[7].itemStackGui.item)
 	
 func update():
 	for i in range(slots.size()):
@@ -37,9 +32,7 @@ func connectSlots():
 			await isg.ready
 		isg.itemSprite.set_texture(isg.item.texture)
 		isg.update()
-		
-		slot.index = i #TODO: maybe remove index if not used
-		
+				
 		var callable = Callable(onSlotClicked)
 		callable = callable.bind(slot)
 		slot.pressed.connect(callable)
