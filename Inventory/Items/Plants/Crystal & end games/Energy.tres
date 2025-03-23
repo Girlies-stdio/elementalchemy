@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=3 format=3 uid="uid://dt2nli6hwxrm2"]
+
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://Scripts/plant.gd" id="1_k7jkn"]
+[ext_resource type="Texture2D" uid="uid://dma1cqebydhu8" path="res://Assets/Growing/energy.png" id="1_vqrv4"]
+
+[resource]
+script = ExtResource("1_k7jkn")
+garden_texture = ExtResource("1_vqrv4")
+nb_cycle = 20
+type_plant = 4
+name = "Energy"
+metadata/_custom_type_script = "uid://bwlidev7ac800"

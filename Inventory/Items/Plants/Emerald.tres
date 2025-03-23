@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://cq23g8awp7kwb"]
+
+[ext_resource type="Texture2D" uid="uid://cn60l18ec6ql2" path="res://Assets/Growing/emerald.png" id="1_5hlyh"]
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://Scripts/plant.gd" id="1_gblww"]
+[ext_resource type="Texture2D" uid="uid://cquyvwpa3eaxv" path="res://Assets/Items/émeraude.png" id="3_52k8y"]
+
+[resource]
+script = ExtResource("1_gblww")
+garden_texture = ExtResource("1_5hlyh")
+nb_cycle = 15
+type_plant = 3
+name = ""
+texture = ExtResource("3_52k8y")
+metadata/_custom_type_script = "uid://bwlidev7ac800"
