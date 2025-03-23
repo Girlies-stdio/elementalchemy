@@ -11,6 +11,3 @@ func _process(delta):
 	if itemSprite.texture:
 		var current_size = itemSprite.texture.get_size()
 		itemSprite.scale = TARGET_SIZE / current_size
-		print(itemSprite.visible)
-		print(itemSprite.texture)
-		print(itemSprite.texture.get_size())

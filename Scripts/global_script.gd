@@ -15,8 +15,18 @@ func _ready():
 	if !RecipesLoader.is_node_ready():
 		await RecipesLoader.ready
 	var recipes = RecipesLoader.recipes
-	print(recipes)
 	for recipe in recipes.values():
-		print("res://Inventory/Plants/"+ recipe["name"]+".tres")
 		var plant = load("res://Inventory/Items/Plants/"+ recipe["name"]+".tres")
 		ALL_ITEMS.append(plant)
+		
+func insertInHand(item: Item) -> ItemGUI:
+	if itemInHand: return null
+	var new_itemGUI = preload("res://Scenes/item_gui.tscn").instantiate()
+	get_tree().current_scene.add_child(new_itemGUI)
+	if !new_itemGUI.is_node_ready():
+		await new_itemGUI.ready
+	new_itemGUI.item = item
+	new_itemGUI.itemSprite.set_texture(item.texture)
+	
+	itemInHand = new_itemGUI
+	return itemInHand

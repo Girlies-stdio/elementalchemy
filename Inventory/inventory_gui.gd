@@ -44,19 +44,19 @@ func onSlotClicked(slot: Slot):
 		return
 		
 func takeItemFromSlot(slot: Slot):
-	GlobalScript.itemInHand = await slot.takeItem()
+	await slot.takeItem()
 	updateItemInHand()
 
 func updateItemInHand():
 	if !GlobalScript.itemInHand : return
-	GlobalScript.itemInHand.global_position = get_global_mouse_position() - GlobalScript.itemInHand.size/2
+	GlobalScript.itemInHand.global_position = get_global_mouse_position()
 	
 func putItemBack():
 	locked = true
 	var targetSlot = slots.filter(func(slot): return slot.itemStackGui.item == GlobalScript.itemInHand.item)[0]
 		
 	var tween = create_tween()
-	var targetPosition = targetSlot.global_position
+	var targetPosition = targetSlot.global_position + targetSlot.size/2
 	tween.tween_property(GlobalScript.itemInHand,"global_position", targetPosition, 0.2)
 	
 	await tween.finished
