@@ -13,6 +13,8 @@ func _ready():
 
 
 func _make_custom_tooltip(for_text):
+	
+	
 	if show_tooltip:
 		var text = format_tooltip(RecipesLoader.recipes[isg.item.name])
 		if text == null:
@@ -27,6 +29,9 @@ func set_isg(new_isg : ItemStackGUI):
 	isg = new_isg
 	
 	if isg.item == null:
+		show_tooltip = false
+		return
+	if isg.item.name.begins_with("pot_tier"):
 		show_tooltip = false
 		return
 
