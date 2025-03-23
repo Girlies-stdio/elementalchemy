@@ -34,11 +34,11 @@ func load_recipes(file_path : String):
 The  get_recipe  function receives a list of ingredients and returns the recipe that matches the ingredients.
 The ingredients list is sorted before searching for the recipe, so the order of the ingredients does not matter.
 
-If the recipe is not found(i.e the given set of ingredients is not valid), the function returns null.
+If the recipe is not found(i.e the given set of ingredients is not valid), the function returns "nothing".
 """
 func get_recipe(ingredients):
 	ingredients.sort()
 	for recipe in recipes:
 		if recipe["ingredients"] == ingredients:
-			return recipe
-	return null
+			return recipe["name"]
+	return "nothing"

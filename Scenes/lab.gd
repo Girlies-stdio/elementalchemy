@@ -68,7 +68,16 @@ func _combine_pressed():
 
 # Check if the current ingredients match a recipe
 func check_recipe(ingredients):
-	return true
+	var result = RecipesLoader.get_recipe(ingredients)
+	if result == "nothing":
+		handle_failed_recipe()
+	else:
+		var res_item = GlobalScript.ALL_ITEMS.filter(func(item) : return item["name"] == result)[0]
+		
+
+func handle_failed_recipe():
+	pass
+	# TODO : give hint
 
 # Update visual representation of slots
 func update_slot_visuals():
