@@ -1,4 +1,4 @@
-extends Panel
+extends TextureRect
 
 class_name ItemStackGUI
 
@@ -8,8 +8,6 @@ var item: Item
 var inventory: Inventory
 var amount: int
 
-const TARGET_SIZE = Vector2(60,60)
-
 func _ready():
 	inventory = Global.get_node("Inventory")
 	if !inventory.is_node_ready():
@@ -17,10 +15,6 @@ func _ready():
 
 func _process(delta):
 	amountLabel.visible = true if amount > 1 else false
-	if itemSprite.texture:
-		var current_size = itemSprite.texture.get_size()
-		itemSprite.scale = TARGET_SIZE / current_size
-
 
 #TODO: Potentiellement griser ici le sprite si on en a 0, et lock si on n'a pas débloqué
 func update():
@@ -61,8 +55,8 @@ func change_sprite_color(sprite: Sprite2D, mode: String) -> void:
 					}
 				"""
 			_:
-				sprite.material = null
+				material = null
 				return
 		shader.code = shader_code
 		shader_material.shader = shader
-		sprite.material = shader_material
+		material = shader_material
