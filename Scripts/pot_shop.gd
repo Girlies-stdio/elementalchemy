@@ -42,6 +42,7 @@ func checkEnough() -> void:
 		button4.disabled = true
 
 func buy(type: int):
+	$"../../../../../craft".play()
 	match type:
 		1: #Clay, Fire, Earth
 			inventory.buy(1, ["Clay", "Fire", "Earth"])

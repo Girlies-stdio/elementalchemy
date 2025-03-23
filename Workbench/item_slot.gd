@@ -10,7 +10,7 @@ var item : Item
 @onready var item_sprite = $MarginContainer/Item
 
 func _ready():
-	var margin_value = 20
+	var margin_value = 10
 	margin.add_theme_constant_override("margin_top", margin_value)
 	margin.add_theme_constant_override("margin_left", margin_value)
 	margin.add_theme_constant_override("margin_bottom", margin_value)

@@ -54,6 +54,7 @@ func buy(potType: int, elements: Array[String]) -> void:
 		var items = elements.map(func(s) -> Item: return GlobalScript.findItem(s))
 		for item in items:
 			remove(item)
+		
 		var pot = GlobalScript.ALL_ITEMS[potType - 1]
 		insert(pot)
 func devCheat() -> void:
