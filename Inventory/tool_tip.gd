@@ -13,10 +13,8 @@ func _ready():
 
 
 func _make_custom_tooltip(for_text):
-	print(show_tooltip)
 	if show_tooltip:
 		var text = format_tooltip(RecipesLoader.recipes[isg.item.name])
-		print(text)
 		var recipe = RecipesLoader.recipes[isg.item.name]
 		var ingredients = recipe["ingredients"]
 		if text == null:

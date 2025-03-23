@@ -35,7 +35,6 @@ func insertInHand(item: Item) -> ItemGUI:
 	
 	itemInHand = new_itemGUI
 	
-	print(itemInHand)
 	return itemInHand
 	
 func findItem(label: String) -> Item:

@@ -15,7 +15,6 @@ func _ready():
 func _process(_delta):
 	amountLabel.visible = true if amount > 1 else false
 
-#TODO: Potentiellement griser ici le sprite si on en a 0, et lock si on n'a pas débloqué
 func update():
 	var slot = inventory.slots[item]
 	amount = slot.amount
