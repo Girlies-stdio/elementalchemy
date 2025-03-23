@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://bo11xpo457oqp"]
+[gd_scene load_steps=3 format=3 uid="uid://bo11xpo457oqp"]
 
-[ext_resource type="Texture2D" uid="uid://ddguii78m3wyx" path="res://Assets/Items/wood.png" id="1_5evs6"]
 [ext_resource type="FontFile" uid="uid://b0bp2wrewjfxb" path="res://Assets/Fonts/Arvo-Regular.ttf" id="1_13nk4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5evs6"]
@@ -41,6 +40,17 @@ theme_override_font_sizes/font_size = 18
 text = "Name"
 horizontal_alignment = 1
 
+[node name="arrow" type="Label" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_13nk4")
+theme_override_font_sizes/font_size = 18
+text = " -> "
+horizontal_alignment = 1
+
+[node name="pot" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+expand_mode = 2
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
 alignment = 1
@@ -50,17 +60,16 @@ layout_mode = 2
 
 [node name="1" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_5evs6")
 expand_mode = 2
 
 [node name="ing1" type="Label" parent="Panel/VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_13nk4")
 theme_override_font_sizes/font_size = 18
-text = "ing3"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_13nk4")
 theme_override_font_sizes/font_size = 18
@@ -77,10 +86,10 @@ expand_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_13nk4")
 theme_override_font_sizes/font_size = 18
-text = "ing2"
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_13nk4")
 theme_override_font_sizes/font_size = 18
@@ -97,5 +106,4 @@ expand_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_13nk4")
 theme_override_font_sizes/font_size = 18
-text = "ing1"
 horizontal_alignment = 1
