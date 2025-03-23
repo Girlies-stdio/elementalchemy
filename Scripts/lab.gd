@@ -81,7 +81,7 @@ func check_recipe(ingredients) -> Item:
 		#for item in GlobalScript.ALL_ITEMS:
 		#	if item.name == result:
 		#		return item
-		return GlobalScript.ALL_ITEMS.filter(func(item) : return item.name == result)[0]
+		return GlobalScript.findItem(result)
 		
 
 func handle_failed_recipe():
@@ -97,6 +97,7 @@ func update_slot_visuals():
 
 # Update visual representation of a single slot
 func update_slot_visual(slot: ItemSlot):
+	#TODO: center item correctly
 	var sprite = slot.get_node("ItemSprite")
 	if slot.item:
 		sprite.texture = slot.item.texture

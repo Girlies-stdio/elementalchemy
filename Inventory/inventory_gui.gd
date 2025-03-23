@@ -60,10 +60,10 @@ func putItemBack():
 	tween.tween_property(GlobalScript.itemInHand,"global_position", targetPosition, 0.2)
 	
 	await tween.finished
-	insertItemInSlot(targetSlot)
+	insertItemInSlot()
 	locked = false
 	
-func insertItemInSlot(slot: Slot):
+func insertItemInSlot():
 	inventory.insert(GlobalScript.itemInHand.item)
 	GlobalScript.itemInHand.queue_free()
 	GlobalScript.itemInHand = null

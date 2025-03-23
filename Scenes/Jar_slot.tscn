@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1xfvc065efuq"]
+
+[ext_resource type="Script" uid="uid://c5vy7ra8d7ucx" path="res://Scripts/jar_slot.gd" id="1_4u2ei"]
+[ext_resource type="Texture2D" uid="uid://dkaim24f5njnn" path="res://Assets/plantslot.png" id="1_167x6"]
+
+[node name="JarSlot" type="TextureButton"]
+custom_minimum_size = Vector2(40, 40)
+texture_normal = ExtResource("1_167x6")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("1_4u2ei")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PotSprite" type="Sprite2D" parent="CenterContainer"]
+centered = false
+
+[node name="PlantSprite" type="Sprite2D" parent="CenterContainer"]
+centered = false
+offset = Vector2(10, 0)
