@@ -1,0 +1,54 @@
+[gd_scene load_steps=14 format=3 uid="uid://b6ybqrs6nkmw6"]
+
+[ext_resource type="Script" uid="uid://bii56lr4j8b15" path="res://Inventory/slot.gd" id="1_s4f18"]
+[ext_resource type="Texture2D" uid="uid://etqv7617syxl" path="res://Assets/inventaireslot.png" id="2_s4f18"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s4f18"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fqbu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sktnm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yb478"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_di0di"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_trjo0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jghhl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3iyiq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tm0vc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ah11"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tk4ti"]
+
+[node name="Slot" type="Button"]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 26.0
+offset_bottom = 26.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s4f18")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8fqbu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sktnm")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_yb478")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_di0di")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_trjo0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jghhl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3iyiq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tm0vc")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3ah11")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tk4ti")
+script = ExtResource("1_s4f18")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(32, 32)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_s4f18")
+vframes = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0

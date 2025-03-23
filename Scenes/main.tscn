@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctr78uqgnngos"]
+[gd_scene load_steps=10 format=3 uid="uid://ctr78uqgnngos"]
 
-[ext_resource type="PackedScene" uid="uid://dhvcfu311yeaa" path="res://Scenes/garden_gui.tscn" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
+[ext_resource type="Texture2D" uid="uid://bkpn4dwbky80q" path="res://Assets/icon.svg" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://Scenes/lab.gd" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://bny66qf2eo775" path="res://Assets/background_framed.png" id="3_kry3j"]
+[ext_resource type="Texture2D" uid="uid://drnxwjo7hd82j" path="res://Assets/brewing.png" id="5_6bp64"]
+[ext_resource type="PackedScene" uid="uid://cyktua4fqunq0" path="res://Workbench/item_slot.tscn" id="5_21xkr"]
+[ext_resource type="PackedScene" uid="uid://bqyw0eywwhni8" path="res://Inventory/inventory_gui.tscn" id="7_6bp64"]
+
+[sub_resource type="Theme" id="Theme_jjgbg"]
+MarginContainer/constants/margin_bottom = 20
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 20
+
+[sub_resource type="Theme" id="Theme_6bp64"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -22,16 +36,284 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Garden" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_jjgbg")]
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.8
+texture = ExtResource("1_8gbba")
 
-[node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_jjgbg")
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+columns = 5
+
+[node name="TextureButton1" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton3" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton4" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton5" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton6" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton7" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton8" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton9" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="TextureButton10" type="TextureButton" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("1_jjgbg")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Workbench" type="Panel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="WorkbenchTabs" type="TabContainer" parent="HBoxContainer/VBoxContainer/Workbench"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_6bp64")
+current_tab = 0
+
+[node name="Lab" type="NinePatchRect" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs"]
+layout_mode = 2
+texture = ExtResource("3_kry3j")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+script = ExtResource("2_bo1nx")
+metadata/_tab_index = 0
+
+[node name="Brewing" type="TextureRect" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_6bp64")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="InputSlot1" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab/Brewing" instance=ExtResource("5_21xkr")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0654846
+anchor_top = 0.536
+anchor_right = 0.174485
+anchor_bottom = 0.777
+offset_left = -0.112003
+offset_top = 0.0240021
+offset_right = -0.308014
+offset_bottom = -0.10701
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="InputSlot2" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab/Brewing" instance=ExtResource("5_21xkr")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26134
+anchor_top = 0.117127
+anchor_right = 0.369682
+anchor_bottom = 0.357563
+offset_left = -0.100006
+offset_top = -0.0840034
+offset_right = 0.127991
+offset_bottom = -0.0510101
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="InputSlot3" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab/Brewing" instance=ExtResource("5_21xkr")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.481
+anchor_top = 0.433
+anchor_right = 0.59
+anchor_bottom = 0.674
+offset_left = 0.235962
+offset_top = -0.00300598
+offset_right = 0.039978
+offset_bottom = -0.134003
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="OutputSlot" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab/Brewing" instance=ExtResource("5_21xkr")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.81277
+anchor_top = 0.666564
+anchor_right = 0.92177
+anchor_bottom = 0.907564
+offset_left = -0.0320435
+offset_top = 0.030014
+offset_right = -0.228027
+offset_bottom = -0.101013
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="CombineButton" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -184.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "COMBINE"
+
+[node name="PotShop" type="NinePatchRect" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs"]
+visible = false
+layout_mode = 2
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -81.5
+offset_right = 262.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_jjgbg")
+stretch_mode = 0
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Buy"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("1_jjgbg")
+stretch_mode = 0
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Buy"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_jjgbg")
+stretch_mode = 0
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Buy"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("1_jjgbg")
+stretch_mode = 0
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Buy"
 
 [node name="Panel" type="Panel" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.4
+
+[node name="InventoryGUI" parent="HBoxContainer/Panel" instance=ExtResource("7_6bp64")]
+layout_mode = 1
+offset_right = -328.0

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Pot" load_steps=4 format=3 uid="uid://dpgwnrl53m2kd"]
+
+[ext_resource type="Script" uid="uid://ckujxsknd0hvd" path="res://Scripts/pot.gd" id="1_7b222"]
+[ext_resource type="Texture2D" uid="uid://dwnq3i8spx4bf" path="res://Assets/Pots/tier2.png" id="2_5x5nv"]
+[ext_resource type="Texture2D" uid="uid://bo6qu8252hl5r" path="res://Assets/Pots/tier2_ready .png" id="3_cobpf"]
+
+[resource]
+script = ExtResource("1_7b222")
+type_plant = 2
+texture_ready = ExtResource("3_cobpf")
+name = "pot_tier2"
+texture = ExtResource("2_5x5nv")
+metadata/_custom_type_script = "uid://ckujxsknd0hvd"

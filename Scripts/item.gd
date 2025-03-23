@@ -1,5 +1,5 @@
-extends Node
+extends Resource
 class_name Item
 
-@export var label: String = ""
+@export var name: String = ""
 @export var texture: Texture2D
