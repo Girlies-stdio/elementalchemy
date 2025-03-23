@@ -37,7 +37,7 @@ func handle_slot_interaction(slot: ItemSlot):
 			# Take item from slot
 			GlobalScript.insertInHand(slot.item)
 			slot.item = null
-		elif GlobalScript.itemInHand and !slot.item:
+		elif GlobalScript.itemInHand  and GlobalScript.itemInHand.item is Plant and !slot.item:
 			# Place item in slot
 			slot.item = GlobalScript.itemInHand.item
 			GlobalScript.itemInHand.queue_free()
@@ -78,9 +78,6 @@ func check_recipe(ingredients) -> Item:
 		handle_failed_recipe()
 		return null
 	else:
-		#for item in GlobalScript.ALL_ITEMS:
-		#	if item.name == result:
-		#		return item
 		return GlobalScript.findItem(result)
 		
 
