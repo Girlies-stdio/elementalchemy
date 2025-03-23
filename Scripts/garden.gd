@@ -43,7 +43,7 @@ func handle_interaction(jar_slot: JarSlot):
 			jar_slot.jar = null
 		elif jar_slot.jar && jar_slot.plant:
 			#if grown, harvest
-			if jar_slot.get_node("CenterContainer/PotSprite").texture == jar_slot.jar.texture_ready:
+			if jar_slot.potSprite.texture == jar_slot.jar.texture_ready:
 				GlobalScript.insertInHand(jar_slot.plant)
 				GlobalScript.itemInHand.global_position = get_global_mouse_position()
 				await fakeRightClick()
@@ -77,22 +77,7 @@ func timer(jar_slot: JarSlot):
 func updateGUI():
 	#TODO: center textures correctly
 	for slot in jar_slots:
-		var potSprite = slot.get_node("CenterContainer/PotSprite")
-		var plantSprite = slot.get_node("CenterContainer/PlantSprite")
-		if slot.jar:
-			potSprite = slot.get_node("CenterContainer/PotSprite")
-			potSprite.texture = slot.jar.texture if !slot.harvestable else slot.jar.texture_ready
-			var current_size = potSprite.texture.get_size()
-			potSprite.scale = Vector2(120,120) / current_size
-		else:
-			potSprite.texture = null
-		if slot.plant:
-			plantSprite = slot.get_node("CenterContainer/PlantSprite")
-			plantSprite.texture = slot.plant.garden_texture
-			var current_size = plantSprite.texture.get_size()
-			plantSprite.scale = Vector2(100,100) / current_size
-		else:
-			plantSprite.texture = null
+		slot.update_gui()
 			
 func handleRightClick(slot: JarSlot) -> void:
 	var inventory: Inventory = Global.get_node("Inventory")
