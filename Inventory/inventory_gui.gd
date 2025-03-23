@@ -18,6 +18,10 @@ func _ready():
 	margin.add_theme_constant_override("margin_left", margin_value)
 	margin.add_theme_constant_override("margin_bottom", margin_value)
 	margin.add_theme_constant_override("margin_right", margin_value)
+
+func _process(delta: float) -> void:
+	var grid_min_height = (grid.size.x / grid.columns) * (GlobalScript.ALL_ITEMS.size() / grid.columns)
+	grid.custom_minimum_size.y = grid_min_height
 	
 func update():
 	for i in range(slots.size()):
@@ -59,7 +63,7 @@ func putItemBack():
 	var targetSlot = slots.filter(func(slot): return slot.itemStackGui.item == GlobalScript.itemInHand.item)[0]
 		
 	var tween = create_tween()
-	var targetPosition = targetSlot.global_position + targetSlot.size/2
+	var targetPosition = targetSlot.global_position -GlobalScript.itemInHand.size/2 + targetSlot.size/2 
 	tween.tween_property(GlobalScript.itemInHand,"global_position", targetPosition, 0.2)
 	
 	await tween.finished

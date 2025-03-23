@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
 [ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://Scripts/lab.gd" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://d0o2fixek8d03" path="res://Scripts/garden.gd" id="2_ynf5e"]
-[ext_resource type="PackedScene" path="res://Scenes/jar_slot.tscn" id="3_hptm8"]
+[ext_resource type="PackedScene" uid="uid://bd8gfklgd78xg" path="res://Scenes/jar_slot.tscn" id="3_hptm8"]
 [ext_resource type="Texture2D" uid="uid://bny66qf2eo775" path="res://Assets/background_framed.png" id="3_kry3j"]
 [ext_resource type="Texture2D" uid="uid://dtwtqtmd6y2ak" path="res://Assets/Pots/tier1.png" id="4_hptm8"]
 [ext_resource type="Texture2D" uid="uid://drnxwjo7hd82j" path="res://Assets/brewing.png" id="5_6bp64"]
@@ -330,9 +330,11 @@ stream = ExtResource("15_b3802")
 
 [node name="crystal" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_fevyy")
+volume_db = -20.0
 
 [node name="endgame" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_hibaj")
+volume_db = -10.0
 
 [node name="craft" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_hibaj")

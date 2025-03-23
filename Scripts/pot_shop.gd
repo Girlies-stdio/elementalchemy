@@ -26,7 +26,7 @@ func checkEnough() -> void:
 	else:
 		button1.disabled = true
 		
-	if inventory.enough(["Rock", "Glass", "Coal", "Gold", "Iron"]):
+	if inventory.enough(["Stone", "Glass", "Coal", "Gold", "Iron"]):
 		button2.disabled = false
 	else:
 		button2.disabled = true
@@ -46,7 +46,7 @@ func buy(type: int):
 		1: #Clay, Fire, Earth
 			inventory.buy(1, ["Clay", "Fire", "Earth"])
 		2: #Rock, glass, Coal, Gold, Iron
-			inventory.buy(2, ["Rock", "Glass", "Coal", "Gold", "Iron"])
+			inventory.buy(2, ["Stone", "Glass", "Coal", "Gold", "Iron"])
 		3: #Obsidian, Diamond, Quartz
 			inventory.buy(3, ["Obsidian", "Diamond", "Quartz"])
 		4: #Singularity, Dark Matter, Time
