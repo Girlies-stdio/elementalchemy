@@ -93,6 +93,9 @@ func check_recipe(ingredients) -> Item:
 		return null
 	elif result == "one away":
 		print("one away")
+		$NotificationPopUp.get_child(0).show()
+		$NotificationPopUp.get_child(0).get_child(-1).start()
+		
 		#TODO: UI
 		return null
 	else:

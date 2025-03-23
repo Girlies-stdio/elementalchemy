@@ -21,7 +21,9 @@ func _ready():
 func insert(item: Item, n: int = 1) -> void:
 	var slot = slots[item]
 	slot.amount += n
-	slot.unlocked = true
+	if slot.unlocked == false:
+		slot.unlocked = true
+		handle_recipe_discovery(item)
 	updated.emit()
 
 func remove(item: Item, n: int = 1) -> bool:
@@ -53,3 +55,6 @@ func buy(potType: int, elements: Array[String]) -> void:
 func devCheat() -> void:
 	for key in slots.keys():
 		insert(key)
+
+func handle_recipe_discovery(item : Item):
+	print("yaaay, you unlocked "+ item.name)
