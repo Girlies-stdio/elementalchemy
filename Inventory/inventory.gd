@@ -22,7 +22,9 @@ func _ready():
 	insert(GlobalScript.ALL_ITEMS[4])
 	insert(GlobalScript.ALL_ITEMS[5])
 	insert(GlobalScript.ALL_ITEMS[6])
-	insert(GlobalScript.ALL_ITEMS[7])		
+	insert(GlobalScript.ALL_ITEMS[7])
+	#TODO: Remove next line
+	insert(GlobalScript.ALL_ITEMS[20])
 
 func insert(item: Item, n: int = 1) -> void:
 	var slot = slots[item]

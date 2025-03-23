@@ -97,6 +97,7 @@ func update_slot_visuals():
 
 # Update visual representation of a single slot
 func update_slot_visual(slot: ItemSlot):
+	#TODO: center item correctly
 	var sprite = slot.get_node("ItemSprite")
 	if slot.item:
 		sprite.texture = slot.item.texture

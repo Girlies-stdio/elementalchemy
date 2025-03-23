@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://ctr78uqgnngos"]
+[gd_scene load_steps=13 format=3 uid="uid://ctr78uqgnngos"]
 
 [ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://bkpn4dwbky80q" path="res://Assets/icon.svg" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://dkaim24f5njnn" path="res://Assets/plantslot.png" id="2_344ge"]
 [ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://Scripts/lab.gd" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://d0o2fixek8d03" path="res://Scripts/garden.gd" id="2_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://d1xfvc065efuq" path="res://Scenes/Jar_slot.tscn" id="3_hptm8"]
@@ -61,51 +62,81 @@ script = ExtResource("2_ynf5e")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="JarSlot2" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" instance=ExtResource("3_hptm8")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="JarSlot3" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" instance=ExtResource("3_hptm8")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="JarSlot4" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" instance=ExtResource("3_hptm8")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="JarSlot5" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" instance=ExtResource("3_hptm8")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="JarSlot6" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" instance=ExtResource("3_hptm8")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="JarSlot7" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" instance=ExtResource("3_hptm8")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="JarSlot8" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" instance=ExtResource("3_hptm8")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="JarSlot9" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" instance=ExtResource("3_hptm8")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="JarSlot10" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" instance=ExtResource("3_hptm8")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+texture_normal = ExtResource("2_344ge")
+ignore_texture_size = true
+stretch_mode = 4
 
 [node name="Workbench" type="Panel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
