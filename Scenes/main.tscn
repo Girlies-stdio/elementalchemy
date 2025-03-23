@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ctr78uqgnngos"]
+[gd_scene load_steps=22 format=3 uid="uid://ctr78uqgnngos"]
 
 [ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
 [ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://Scripts/lab.gd" id="2_bo1nx"]
@@ -17,6 +17,9 @@
 [ext_resource type="AudioStream" uid="uid://dni3nh3vdi53d" path="res://Assets/Sons/grotte.wav" id="15_b3802"]
 [ext_resource type="AudioStream" uid="uid://c3p84p2s62k74" path="res://Assets/Sons/cristaux.wav" id="16_fevyy"]
 [ext_resource type="AudioStream" uid="uid://byabovbq2y15k" path="res://Assets/Sons/tier4.wav" id="17_hibaj"]
+[ext_resource type="AudioStream" uid="uid://bekx5ndawwmeo" path="res://Assets/Sons/craft.wav" id="18_hibaj"]
+[ext_resource type="AudioStream" uid="uid://ddwnca1qajwda" path="res://Assets/Sons/brew.wav" id="19_pdsj5"]
+[ext_resource type="AudioStream" uid="uid://dp3ra44dfy1ho" path="res://Assets/Sons/combine.wav" id="20_ee4r6"]
 
 [sub_resource type="Theme" id="Theme_jjgbg"]
 MarginContainer/constants/margin_bottom = 20
@@ -335,11 +338,14 @@ stream = ExtResource("16_fevyy")
 [node name="endgame" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_hibaj")
 
-[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="."]
+[node name="craft" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_hibaj")
 
-[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+[node name="brew" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_pdsj5")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="combine" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_ee4r6")
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer/Type1/Button" to="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" method="_on_button1_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer/Type2/Button" to="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" method="_on_button2_pressed"]
