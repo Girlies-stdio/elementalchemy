@@ -81,7 +81,7 @@ func check_recipe(ingredients) -> Item:
 		#for item in GlobalScript.ALL_ITEMS:
 		#	if item.name == result:
 		#		return item
-		return GlobalScript.ALL_ITEMS.filter(func(item) : return item.name == result)[0]
+		return GlobalScript.findItem(result)
 		
 
 func handle_failed_recipe():

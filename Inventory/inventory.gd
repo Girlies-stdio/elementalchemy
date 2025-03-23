@@ -25,9 +25,33 @@ func _ready():
 	insert(GlobalScript.ALL_ITEMS[7])
 	#TODO: Remove next line
 	insert(GlobalScript.ALL_ITEMS[20])
+	insert(GlobalScript.findItem("Clay"))
 
 func insert(item: Item, n: int = 1) -> void:
 	var slot = slots[item]
-	slot.amount = slot.amount + n
+	slot.amount += n
 	slot.unlocked = true
 	updated.emit()
+
+func remove(item: Item, n: int = 1) -> bool:
+	var slot = slots[item]
+	if slot.amount >= n:
+		slot.amount -= n
+		updated.emit()
+		return true
+	return false
+	
+func buy(potType: int, elements: Array[String]) -> bool:
+	var items = elements.map(func(str) -> Item: return GlobalScript.findItem(str))
+	for item in items:
+		if slots[item].amount < 1:
+			print("too poor")
+			return false
+	for item in items:
+		remove(item)
+	var pot = GlobalScript.ALL_ITEMS[potType - 1]
+	insert(pot)
+	print("sold")
+	return true
+		
+	
