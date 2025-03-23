@@ -2,8 +2,4 @@ extends TextureButton
 class_name ItemSlot
 
 # The item currently in this slot
-var item = null
-
-func _ready():
-	return
-	
+var item : Item = null

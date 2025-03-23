@@ -38,7 +38,7 @@ If the recipe is not found(i.e the given set of ingredients is not valid), the f
 """
 func get_recipe(ingredients):
 	ingredients.sort()
-	for recipe in recipes:
+	for recipe in recipes.values():
 		if recipe["ingredients"] == ingredients:
 			return recipe["name"]
 	return "nothing"
