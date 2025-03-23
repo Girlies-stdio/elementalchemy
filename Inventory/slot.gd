@@ -5,7 +5,6 @@ class_name Slot
 @onready var margin: MarginContainer = $SlotButton/Margin
 @onready var inventory : Inventory = Global.get_node("Inventory")
 var itemStackGui: ItemStackGUI
-var baseTexture: CompressedTexture2D
 
 func _ready():
 	var margin_value = 20
@@ -13,7 +12,6 @@ func _ready():
 	margin.add_theme_constant_override("margin_left", margin_value)
 	margin.add_theme_constant_override("margin_bottom", margin_value)
 	margin.add_theme_constant_override("margin_right", margin_value)
-	baseTexture = $SlotButton.texture_normal
 
 func insert(isg: ItemStackGUI):
 	itemStackGui = isg
@@ -31,6 +29,6 @@ func takeItem() -> ItemGUI:
 func _process(delta):
 	if itemStackGui:
 		if itemStackGui.amount != 0:
-			$SlotButton.texture_normal = baseTexture
+			button.disabled = false
 		else:
-			$SlotButton.texture_normal = $SlotButton.texture_disabled
+			button.disabled = true
