@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=3 format=3 uid="uid://ckfqb260kh4p0"]
+
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://Scripts/plant.gd" id="1_20t0o"]
+[ext_resource type="Texture2D" uid="uid://dmdq2ev2sby57" path="res://Assets/Growing/dark_matter.png" id="1_dly2d"]
+
+[resource]
+script = ExtResource("1_20t0o")
+garden_texture = ExtResource("1_dly2d")
+nb_cycle = 20
+type_plant = 4
+name = "Dark Matter"
+metadata/_custom_type_script = "uid://bwlidev7ac800"

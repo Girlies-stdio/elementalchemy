@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=3 format=3 uid="uid://da82saw2xuskw"]
+
+[ext_resource type="Texture2D" uid="uid://7wlmlxbifsxl" path="res://Assets/Growing/time.png" id="1_ivfqb"]
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://Scripts/plant.gd" id="1_mxnrx"]
+
+[resource]
+script = ExtResource("1_mxnrx")
+garden_texture = ExtResource("1_ivfqb")
+nb_cycle = 20
+type_plant = 4
+name = "Time"
+metadata/_custom_type_script = "uid://bwlidev7ac800"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://fhet4d44ns23"]
 
-[ext_resource type="Script" uid="uid://upowvcvg56jk" path="res://Scripts/garden_grid.gd" id="1_ynvo8"]
+[ext_resource type="Script" path="res://Scripts/garden_grid.gd" id="1_ynvo8"]
 
 [node name="Garden" type="Control"]
 layout_mode = 3

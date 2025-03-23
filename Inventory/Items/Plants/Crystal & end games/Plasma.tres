@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=3 format=3 uid="uid://b81jnih1qq3vq"]
+
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://Scripts/plant.gd" id="1_76uhk"]
+[ext_resource type="Texture2D" uid="uid://d0vq4gmmqdqg4" path="res://Assets/Growing/plasma.png" id="1_mfbby"]
+
+[resource]
+script = ExtResource("1_76uhk")
+garden_texture = ExtResource("1_mfbby")
+nb_cycle = 20
+type_plant = 4
+name = "Plasma"
+metadata/_custom_type_script = "uid://bwlidev7ac800"
