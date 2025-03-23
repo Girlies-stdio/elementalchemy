@@ -1,326 +1,326 @@
 {
-    "Earth": {
-        "category": "1",
-        "name": "Earth",
-        "ingredients": [
-            "X",
-            "X",
-            "X"
-        ]
-    },
-    "Fire": {
-        "category": "1",
-        "name": "Fire",
-        "ingredients": [
-            "X",
-            "X",
-            "X"
-        ]
-    },
-    "Water": {
-        "category": "1",
-        "name": "Water",
-        "ingredients": [
-            "X",
-            "X",
-            "X"
-        ]
-    },
-    "Air": {
-        "category": "1",
-        "name": "Air",
-        "ingredients": [
-            "X",
-            "X",
-            "X"
-        ]
-    },
-    "Ice": {
-        "category": "1",
-        "name": "Ice",
-        "ingredients": [
-            "Air",
-            "Water",
-            "Water"
-        ]
-    },
-    "Wood": {
-        "category": "1",
-        "name": "Wood",
-        "ingredients": [
-            "Air",
-            "Earth",
-            "Water"
-        ]
-    },
-    "Green": {
-        "category": "1",
-        "name": "Green",
-        "ingredients": [
-            "Water",
-            "Water",
-            "Wood"
-        ]
-    },
-    "White": {
-        "category": "1",
-        "name": "White",
-        "ingredients": [
-            "Earth",
-            "Water",
-            "Wood"
-        ]
-    },
-    "Red": {
-        "category": "1",
-        "name": "Red",
-        "ingredients": [
-            "Fire",
-            "Green",
-            "White"
-        ]
-    },
-    "Yellow": {
-        "category": "1",
-        "name": "Yellow",
-        "ingredients": [
-            "Green",
-            "Sand",
-            "White"
-        ]
-    },
-    "Blue": {
-        "category": "1",
-        "name": "Blue",
-        "ingredients": [
-            "Green",
-            "Water",
-            "White"
-        ]
-    },
-    "Clay": {
-        "category": "2",
-        "name": "Clay",
-        "ingredients": [
-            "Earth",
-            "Red",
-            "Water"
-        ]
-    },
-    "Sand": {
-        "category": "2",
-        "name": "Sand",
-        "ingredients": [
-            "Air",
-            "Earth",
-            "Earth"
-        ]
-    },
-    "Lava": {
-        "category": "2",
-        "name": "Lava",
-        "ingredients": [
-            "Earth",
-            "Fire",
-            "Fire"
-        ]
-    },
-    "Coal": {
-        "category": "2",
-        "name": "Coal",
-        "ingredients": [
-            "Fire",
-            "Wood",
-            "Wood"
-        ]
-    },
-    "Stone": {
-        "category": "2",
-        "name": "Stone",
-        "ingredients": [
-            "Clay",
-            "Earth",
-            "Ice"
-        ]
-    },
-    "Gravel": {
-        "category": "2",
-        "name": "Gravel",
-        "ingredients": [
-            "Sand",
-            "Stone",
-            "Water"
-        ]
-    },
-    "Iron": {
-        "category": "2",
-        "name": "Iron",
-        "ingredients": [
-            "Coal",
-            "Gravel",
-            "White"
-        ]
-    },
-    "Copper": {
-        "category": "2",
-        "name": "Copper",
-        "ingredients": [
-            "Iron",
-            "Red",
-            "Yellow"
-        ]
-    },
-    "Silver": {
-        "category": "2",
-        "name": "Silver",
-        "ingredients": [
-            "Copper",
-            "Iron",
-            "White"
-        ]
-    },
-    "Gold": {
-        "category": "2",
-        "name": "Gold",
-        "ingredients": [
-            "Copper",
-            "Silver",
-            "Yellow"
-        ]
-    },
-    "Silicon": {
-        "category": "2",
-        "name": "Silicon",
-        "ingredients": [
-            "Fire",
-            "Gold",
-            "Sand"
-        ]
-    },
-    "Glass": {
-        "category": "3",
-        "name": "Glass",
-        "ingredients": [
-            "Fire",
-            "Ice",
-            "Sand"
-        ]
-    },
-    "Amethyst": {
-        "category": "3",
-        "name": "Amethyst",
-        "ingredients": [
-            "Blue",
-            "Glass",
-            "Red"
-        ]
-    },
-    "Amber": {
-        "category": "3",
-        "name": "Amber",
-        "ingredients": [
-            "Glass",
-            "Red",
-            "Yellow"
-        ]
-    },
-    "Obsidian": {
-        "category": "3",
-        "name": "Obsidian",
-        "ingredients": [
-            "Amethyst",
-            "Lava",
-            "Water"
-        ]
-    },
-    "Quartz": {
-        "category": "3",
-        "name": "Quartz",
-        "ingredients": [
-            "Amber",
-            "Silicon",
-            "White"
-        ]
-    },
-    "Ruby": {
-        "category": "3",
-        "name": "Ruby",
-        "ingredients": [
-            "Amethyst",
-            "Glass",
-            "Red"
-        ]
-    },
-    "Diamond": {
-        "category": "3",
-        "name": "Diamond",
-        "ingredients": [
-            "Blue",
-            "Coal",
-            "Ruby"
-        ]
-    },
-    "Emerald": {
-        "category": "3",
-        "name": "Emerald",
-        "ingredients": [
-            "Green",
-            "Obsidian",
-            "Ruby"
-        ]
-    },
-    "Energy": {
-        "category": "4",
-        "name": "Energy",
-        "ingredients": [
-            "Diamond",
-            "Quartz",
-            "Silicon"
-        ]
-    },
-    "Light": {
-        "category": "4",
-        "name": "Light",
-        "ingredients": [
-            "Copper",
-            "Energy",
-            "Glass"
-        ]
-    },
-    "Plasma": {
-        "category": "4",
-        "name": "Plasma",
-        "ingredients": [
-            "Energy",
-            "Light",
-            "Water"
-        ]
-    },
-    "Time": {
-        "category": "4",
-        "name": "Time",
-        "ingredients": [
-            "Gold",
-            "Light",
-            "Quartz"
-        ]
-    },
-    "Dark Matter": {
-        "category": "4",
-        "name": "Dark Matter",
-        "ingredients": [
-            "Energy",
-            "Obsidian",
-            "Plasma"
-        ]
-    },
-    "Singularity": {
-        "category": "4",
-        "name": "Singularity",
-        "ingredients": [
-            "Dark Matter",
-            "Dark Matter",
-            "Time"
-        ]
-    }
+	"Earth": {
+		"category": "1",
+		"name": "Earth",
+		"ingredients": [
+			"X",
+			"X",
+			"X"
+		]
+	},
+	"Fire": {
+		"category": "1",
+		"name": "Fire",
+		"ingredients": [
+			"X",
+			"X",
+			"X"
+		]
+	},
+	"Water": {
+		"category": "1",
+		"name": "Water",
+		"ingredients": [
+			"X",
+			"X",
+			"X"
+		]
+	},
+	"Air": {
+		"category": "1",
+		"name": "Air",
+		"ingredients": [
+			"X",
+			"X",
+			"X"
+		]
+	},
+	"Ice": {
+		"category": "1",
+		"name": "Ice",
+		"ingredients": [
+			"Air",
+			"Water",
+			"Water"
+		]
+	},
+	"Wood": {
+		"category": "1",
+		"name": "Wood",
+		"ingredients": [
+			"Air",
+			"Earth",
+			"Water"
+		]
+	},
+	"Green": {
+		"category": "1",
+		"name": "Green",
+		"ingredients": [
+			"Water",
+			"Water",
+			"Wood"
+		]
+	},
+	"White": {
+		"category": "1",
+		"name": "White",
+		"ingredients": [
+			"Earth",
+			"Water",
+			"Wood"
+		]
+	},
+	"Red": {
+		"category": "1",
+		"name": "Red",
+		"ingredients": [
+			"Fire",
+			"Green",
+			"White"
+		]
+	},
+	"Yellow": {
+		"category": "1",
+		"name": "Yellow",
+		"ingredients": [
+			"Green",
+			"Sand",
+			"White"
+		]
+	},
+	"Blue": {
+		"category": "1",
+		"name": "Blue",
+		"ingredients": [
+			"Green",
+			"Water",
+			"White"
+		]
+	},
+	"Clay": {
+		"category": "2",
+		"name": "Clay",
+		"ingredients": [
+			"Earth",
+			"Red",
+			"Water"
+		]
+	},
+	"Sand": {
+		"category": "2",
+		"name": "Sand",
+		"ingredients": [
+			"Air",
+			"Earth",
+			"Earth"
+		]
+	},
+	"Lava": {
+		"category": "2",
+		"name": "Lava",
+		"ingredients": [
+			"Earth",
+			"Fire",
+			"Fire"
+		]
+	},
+	"Coal": {
+		"category": "2",
+		"name": "Coal",
+		"ingredients": [
+			"Fire",
+			"Wood",
+			"Wood"
+		]
+	},
+	"Stone": {
+		"category": "2",
+		"name": "Stone",
+		"ingredients": [
+			"Clay",
+			"Earth",
+			"Ice"
+		]
+	},
+	"Gravel": {
+		"category": "2",
+		"name": "Gravel",
+		"ingredients": [
+			"Sand",
+			"Stone",
+			"Water"
+		]
+	},
+	"Iron": {
+		"category": "2",
+		"name": "Iron",
+		"ingredients": [
+			"Coal",
+			"Gravel",
+			"White"
+		]
+	},
+	"Copper": {
+		"category": "2",
+		"name": "Copper",
+		"ingredients": [
+			"Iron",
+			"Red",
+			"Yellow"
+		]
+	},
+	"Silver": {
+		"category": "2",
+		"name": "Silver",
+		"ingredients": [
+			"Copper",
+			"Iron",
+			"White"
+		]
+	},
+	"Gold": {
+		"category": "2",
+		"name": "Gold",
+		"ingredients": [
+			"Copper",
+			"Silver",
+			"Yellow"
+		]
+	},
+	"Silicon": {
+		"category": "2",
+		"name": "Silicon",
+		"ingredients": [
+			"Fire",
+			"Gold",
+			"Sand"
+		]
+	},
+	"Glass": {
+		"category": "3",
+		"name": "Glass",
+		"ingredients": [
+			"Fire",
+			"Ice",
+			"Sand"
+		]
+	},
+	"Amethyst": {
+		"category": "3",
+		"name": "Amethyst",
+		"ingredients": [
+			"Blue",
+			"Glass",
+			"Red"
+		]
+	},
+	"Amber": {
+		"category": "3",
+		"name": "Amber",
+		"ingredients": [
+			"Glass",
+			"Red",
+			"Yellow"
+		]
+	},
+	"Obsidian": {
+		"category": "3",
+		"name": "Obsidian",
+		"ingredients": [
+			"Amethyst",
+			"Lava",
+			"Water"
+		]
+	},
+	"Quartz": {
+		"category": "3",
+		"name": "Quartz",
+		"ingredients": [
+			"Amber",
+			"Silicon",
+			"White"
+		]
+	},
+	"Ruby": {
+		"category": "3",
+		"name": "Ruby",
+		"ingredients": [
+			"Amethyst",
+			"Glass",
+			"Red"
+		]
+	},
+	"Diamond": {
+		"category": "3",
+		"name": "Diamond",
+		"ingredients": [
+			"Blue",
+			"Coal",
+			"Ruby"
+		]
+	},
+	"Emerald": {
+		"category": "3",
+		"name": "Emerald",
+		"ingredients": [
+			"Green",
+			"Obsidian",
+			"Ruby"
+		]
+	},
+	"Energy": {
+		"category": "4",
+		"name": "Energy",
+		"ingredients": [
+			"Diamond",
+			"Quartz",
+			"Silicon"
+		]
+	},
+	"Light": {
+		"category": "4",
+		"name": "Light",
+		"ingredients": [
+			"Copper",
+			"Energy",
+			"Glass"
+		]
+	},
+	"Plasma": {
+		"category": "4",
+		"name": "Plasma",
+		"ingredients": [
+			"Energy",
+			"Light",
+			"Water"
+		]
+	},
+	"Time": {
+		"category": "4",
+		"name": "Time",
+		"ingredients": [
+			"Gold",
+			"Light",
+			"Quartz"
+		]
+	},
+	"Dark Matter": {
+		"category": "4",
+		"name": "Dark Matter",
+		"ingredients": [
+			"Energy",
+			"Obsidian",
+			"Plasma"
+		]
+	},
+	"Singularity": {
+		"category": "4",
+		"name": "Singularity",
+		"ingredients": [
+			"Dark Matter",
+			"Dark Matter",
+			"Time"
+		]
+	}
 }
