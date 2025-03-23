@@ -10,6 +10,8 @@ signal right_clicked
 @onready var potSprite = $MarginContainer/PotSprite
 @onready var plantSprite = $MarginContainer/PlantSprite
 
+var timer: Timer
+
 func _ready() -> void:
 	custom_minimum_size.y = custom_minimum_size.x * 2
 	

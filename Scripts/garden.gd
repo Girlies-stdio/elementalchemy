@@ -69,12 +69,16 @@ func handle_interaction(jar_slot: JarSlot):
 	updateGUI()
 	
 func timer(jar_slot: JarSlot):
-	get_tree().create_timer(jar_slot.plant.nb_cycle).connect("timeout",func() -> void:
+	jar_slot.timer = Timer.new()
+	add_child(jar_slot.timer)
+	jar_slot.timer.start(jar_slot.plant.nb_cycle)
+	jar_slot.timer.connect("timeout", func() -> void:
 					if jar_slot.plant: 
 						jar_slot.harvestable = true
-						updateGUI())
-	
-			
+						updateGUI()
+						jar_slot.timer.queue_free()
+						jar_slot.timer = null)
+
 func updateGUI():
 	#TODO: center textures correctly
 	for slot in jar_slots:
@@ -91,6 +95,8 @@ func handleRightClick(slot: JarSlot) -> void:
 	if slot.jar:
 		inventory.insert(slot.jar)
 		slot.jar = null
+	slot.timer.queue_free()
+	slot.timer = null
 	updateGUI()
 			
 #We simulate a right click to have the animation that takes the item back in its slot from the Inventory GUI
