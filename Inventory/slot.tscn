@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bii56lr4j8b15" path="res://Inventory/slot.gd" id="1_s4f18"]
 [ext_resource type="Texture2D" uid="uid://csqvsh3e7pcte" path="res://Assets/inventaireslot_hollow.png" id="1_sktnm"]
 [ext_resource type="Texture2D" uid="uid://bfndrvwgoad16" path="res://Assets/inventaireslot_filled.png" id="2_yb478"]
-[ext_resource type="Script" path="res://Inventory/tool_tip.gd" id="4_sktnm"]
+[ext_resource type="Script" uid="uid://1xubuovx00o8" path="res://Inventory/tool_tip.gd" id="4_sktnm"]
 [ext_resource type="Texture2D" uid="uid://ic23hytwo78l" path="res://Assets/inventaireslot_hollow_dark.png" id="4_yb478"]
 
 [node name="Slot" type="AspectRatioContainer"]
