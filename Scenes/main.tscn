@@ -295,14 +295,10 @@ stretch_mode = 0
 layout_mode = 2
 text = "Buy"
 
-[node name="Panel" type="Panel" parent="HBoxContainer"]
+[node name="InventoryGUI" parent="HBoxContainer" instance=ExtResource("7_6bp64")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.4
-
-[node name="InventoryGUI" parent="HBoxContainer/Panel" instance=ExtResource("7_6bp64")]
-layout_mode = 1
-offset_right = -328.0
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/Type1/Button" to="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop" method="_on_button1_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop/HBoxContainer/Type2/Button" to="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/PotShop" method="_on_button2_pressed"]

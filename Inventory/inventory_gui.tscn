@@ -8,16 +8,20 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -824.0
-offset_bottom = -2.0
+offset_right = -812.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_t08cw")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_right = 328.0
-offset_bottom = 646.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_1fqm0")
 patch_margin_left = 64
 patch_margin_top = 64
@@ -29,15 +33,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = 57.0
-offset_right = -11.0
-offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect/ScrollContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 8
 columns = 4

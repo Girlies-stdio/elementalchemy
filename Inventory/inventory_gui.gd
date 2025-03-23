@@ -2,6 +2,7 @@ extends Control
 
 var inventory : Inventory
 
+@onready var grid: GridContainer = $NinePatchRect/ScrollContainer/GridContainer
 @onready var slots: Array[Slot] = []
 var locked: bool = false
 
@@ -30,12 +31,12 @@ func connectSlots():
 		isg.item = GlobalScript.ALL_ITEMS[i]
 		if !isg.is_node_ready():
 			await isg.ready
-		isg.itemSprite.set_texture(isg.item.texture)
+		isg.set_texture(isg.item.texture)
 		isg.update()
 				
 		var callable = Callable(onSlotClicked)
 		callable = callable.bind(slot)
-		slot.pressed.connect(callable)
+		slot.button.pressed.connect(callable)
 		
 func onSlotClicked(slot: Slot):
 	if locked: return
