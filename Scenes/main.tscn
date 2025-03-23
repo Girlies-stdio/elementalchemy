@@ -411,6 +411,7 @@ theme_override_constants/margin_bottom = 40
 layout_mode = 2
 text = "These growth jars on these shelves allow you to generate atoms. Click on a jar when it glows to collect the Atoms! 
 You will soon be able to craft more Tier 1 flower pots. More advanced atoms will require better generators.
+Right click on a generator to remove it (and its atom).
 "
 
 [node name="Button" type="Button" parent="Tutorial/Tuto2/MarginContainer/Panel/MarginContainer"]
