@@ -16,6 +16,8 @@ func _ready():
 func insert(isg: ItemStackGUI):
 	itemStackGui = isg
 	margin.add_child(itemStackGui)
+	var button = get_child(0)
+	button.set_isg(isg)
 
 func takeItem() -> ItemGUI:
 	if inventory.remove(itemStackGui.item):
