@@ -11,6 +11,8 @@ const GARDEN_SLOTS = 10
 var jar_slots: Array[JarSlot] = []
 var sound_type: Array[AudioStreamPlayer] = []
 
+signal putItemBack
+
 # Initialize the garden with empty jar slots.
 func _ready() -> void:
 	sound_type = [$"../../../../../plant",$"../../../../../cave",$"../../../../../crystal",$"../../../../../endgame"]
@@ -48,7 +50,7 @@ func handle_interaction(jar_slot: JarSlot):
 			if jar_slot.potSprite.texture == jar_slot.jar.texture_ready:
 				GlobalScript.insertInHand(jar_slot.plant)
 				GlobalScript.itemInHand.global_position = get_global_mouse_position()
-				await fakeRightClick()
+				putItemBack.emit()
 				timer(jar_slot)
 				jar_slot.harvestable = false
 	else:
@@ -61,7 +63,7 @@ func handle_interaction(jar_slot: JarSlot):
 				timer(jar_slot)
 			else: 
 				#back in inventory
-				await fakeRightClick()
+				putItemBack.emit()
 			
 		elif !jar_slot.jar && !jar_slot.plant && iih.item is Pot:
 			#insert jar in slot
@@ -83,7 +85,6 @@ func timer(jar_slot: JarSlot):
 						jar_slot.timer = null)
 
 func updateGUI():
-	#TODO: center textures correctly
 	for slot in jar_slots:
 		slot.update_gui()
 			
@@ -102,10 +103,3 @@ func handleRightClick(slot: JarSlot) -> void:
 		slot.timer.queue_free()
 		slot.timer = null
 	updateGUI()
-			
-#We simulate a right click to have the animation that takes the item back in its slot from the Inventory GUI
-func fakeRightClick() -> void:
-	Input.action_press("Right_click")
-	await get_tree().create_timer(0.05).timeout
-	Input.action_release("Right_click")
-	

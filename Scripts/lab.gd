@@ -103,7 +103,6 @@ func handle_failed_recipe():
 
 func update_slot_visuals():
 	for slot in slots:
-	#TODO: center item correctly
 		var sprite = slot.item_sprite
 		if slot.item:
 			sprite.texture = slot.item.texture

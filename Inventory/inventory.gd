@@ -23,9 +23,8 @@ func _ready():
 	insert(GlobalScript.ALL_ITEMS[5])
 	insert(GlobalScript.ALL_ITEMS[6])
 	insert(GlobalScript.ALL_ITEMS[7])
-	#TODO: Remove next line
-	devCheat()
-	
+	#devCheat()
+
 func insert(item: Item, n: int = 1) -> void:
 	var slot = slots[item]
 	slot.amount += n
