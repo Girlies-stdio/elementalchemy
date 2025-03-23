@@ -13,26 +13,30 @@ func _ready():
 
 
 func _make_custom_tooltip(for_text):
-	
-	
+	print(show_tooltip)
 	if show_tooltip:
 		var text = format_tooltip(RecipesLoader.recipes[isg.item.name])
+		print(text)
 		var recipe = RecipesLoader.recipes[isg.item.name]
 		var ingredients = recipe["ingredients"]
-		var tooltip = preload("res://Scenes/recipe_tip.tscn").instantiate()
 		if text == null:
 			return ""
 		
-		#tooltip.get_node("name").text = recipe["name"]
-		#tooltip.get_node("ing1").text = ingredients[0]
-		#tooltip.get_node("ing2").text = ingredients[1]
-		#tooltip.get_node("ing3").text = ingredients[2]
+		var tooltip = preload("res://Scenes/recipe_tip.tscn").instantiate()
+		tooltip.get_node("Panel/VBoxContainer/HBoxContainer2/name").text = recipe["name"]
+		tooltip.get_node("Panel/VBoxContainer/HBoxContainer2/name_text").texture = GlobalScript.findItem(recipe["name"]).texture
+		tooltip.get_node("Panel/VBoxContainer/HBoxContainer/HBoxContainer/ing1").text = ingredients[0]
+		tooltip.get_node("Panel/VBoxContainer/HBoxContainer/HBoxContainer2/ing2").text = ingredients[1]
+		tooltip.get_node("Panel/VBoxContainer/HBoxContainer/HBoxContainer3/ing3").text = ingredients[2]
+		tooltip.get_node("Panel/VBoxContainer/HBoxContainer/HBoxContainer/1").texture = GlobalScript.findItem(ingredients[0]).texture
+		tooltip.get_node("Panel/VBoxContainer/HBoxContainer/HBoxContainer2/2").texture = GlobalScript.findItem(ingredients[1]).texture
+		tooltip.get_node("Panel/VBoxContainer/HBoxContainer/HBoxContainer3/3").texture = GlobalScript.findItem(ingredients[2]).texture
 		
-		
-		#return tooltip
-		var label = Label.new()
-		label.text = text
-		return label
+		#tooltip.visible = true
+		return tooltip
+		#var label = Label.new()
+		#label.text = text
+		#return label
 	else:
 		return ""
 
