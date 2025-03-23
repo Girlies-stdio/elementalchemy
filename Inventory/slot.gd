@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 class_name Slot
 
 @onready var backgroundSprite: Sprite2D = $Background
@@ -9,7 +9,6 @@ var itemStackGui: ItemStackGUI
 
 func insert(isg: ItemStackGUI):
 	itemStackGui = isg
-	backgroundSprite.frame = 1
 	container.add_child(itemStackGui)
 
 func takeItem() -> ItemGUI:
