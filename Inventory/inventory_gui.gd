@@ -59,7 +59,7 @@ func putItemBack():
 	var targetSlot = slots.filter(func(slot): return slot.itemStackGui.item == GlobalScript.itemInHand.item)[0]
 		
 	var tween = create_tween()
-	var targetPosition = targetSlot.global_position + targetSlot.size/2
+	var targetPosition = targetSlot.global_position -GlobalScript.itemInHand.size/2 + targetSlot.size/2 
 	tween.tween_property(GlobalScript.itemInHand,"global_position", targetPosition, 0.2)
 	
 	await tween.finished
