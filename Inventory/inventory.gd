@@ -16,13 +16,6 @@ func _ready():
 		slot.amount = 0
 		slot.unlocked = false
 		slots[GlobalScript.ALL_ITEMS[i]] = slot
-	
-	#init base items
-	insert(GlobalScript.ALL_ITEMS[0])
-	insert(GlobalScript.ALL_ITEMS[4])
-	insert(GlobalScript.ALL_ITEMS[5])
-	insert(GlobalScript.ALL_ITEMS[6])
-	insert(GlobalScript.ALL_ITEMS[7])
 	#devCheat()
 
 func insert(item: Item, n: int = 1) -> void:
