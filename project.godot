@@ -21,10 +21,6 @@ RecipesLoader="*res://Singletons/RecipesLoader.gd"
 Global="*res://Scenes/global.tscn"
 GlobalScript="*res://Scripts/global_script.gd"
 
-[display]
-
-window/stretch/mode="canvas_items"
-
 [gui]
 
 theme/custom="uid://b714aumedekal"
