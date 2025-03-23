@@ -33,6 +33,7 @@ func handle_slot_interaction(slot: ItemSlot):
 		if !GlobalScript.itemInHand and slot.item:
 			# Take item from slot
 			GlobalScript.insertInHand(slot.item)
+			GlobalScript.itemInHand.global_position = get_global_mouse_position()
 			slot.item = null
 		elif GlobalScript.itemInHand  and GlobalScript.itemInHand.item is Plant and !slot.item:
 			# Place item in slot

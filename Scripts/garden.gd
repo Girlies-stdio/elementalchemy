@@ -1,4 +1,4 @@
-extends Node
+extends GridContainer
 
 # A garden is a collection of jar slots.
 # Each slot can contain a jar, and possibly a plant.
@@ -38,11 +38,14 @@ func handle_interaction(jar_slot: JarSlot):
 		if jar_slot.jar && !jar_slot.plant:
 			#put jar in hand
 			GlobalScript.insertInHand(jar_slot.jar)
+			GlobalScript.itemInHand.global_position = get_global_mouse_position()
+
 			jar_slot.jar = null
 		elif jar_slot.jar && jar_slot.plant:
 			#if grown, harvest
 			if jar_slot.get_node("CenterContainer/PotSprite").texture == jar_slot.jar.texture_ready:
 				GlobalScript.insertInHand(jar_slot.plant)
+				GlobalScript.itemInHand.global_position = get_global_mouse_position()
 				await fakeRightClick()
 				timer(jar_slot)
 				jar_slot.harvestable = false
