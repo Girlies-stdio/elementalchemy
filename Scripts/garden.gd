@@ -69,9 +69,10 @@ func handle_interaction(jar_slot: JarSlot):
 	updateGUI()
 	
 func timer(jar_slot: JarSlot):
-	get_tree().create_timer(jar_slot.plant.nb_cycle).connect("timeout",func() -> void: 
-					jar_slot.harvestable = true
-					updateGUI())
+	get_tree().create_timer(jar_slot.plant.nb_cycle).connect("timeout",func() -> void:
+					if jar_slot.plant: 
+						jar_slot.harvestable = true
+						updateGUI())
 	
 			
 func updateGUI():
