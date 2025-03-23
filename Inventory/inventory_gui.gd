@@ -53,12 +53,7 @@ func onSlotClicked(slot: Slot):
 		
 func takeItemFromSlot(slot: Slot):
 	await slot.takeItem()
-	updateItemInHand()
 
-func updateItemInHand():
-	if !GlobalScript.itemInHand : return
-	GlobalScript.itemInHand.global_position = get_global_mouse_position()
-	
 func putItemBack():
 	locked = true
 	var targetSlot = slots.filter(func(slot): return slot.itemStackGui.item == GlobalScript.itemInHand.item)[0]
@@ -80,4 +75,3 @@ func insertItemInSlot():
 func _input(_event):
 	if GlobalScript.itemInHand && !locked && Input.is_action_pressed("Right_click"):
 		putItemBack()
-	updateItemInHand()

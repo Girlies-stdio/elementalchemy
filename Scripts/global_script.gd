@@ -3,6 +3,8 @@ extends Node
 var ALL_ITEMS : Array[Item]
 var itemInHand: ItemGUI
 
+var mouseItem: MouseItem
+
 func _ready():
 	var tier1 = preload("res://Inventory/Items/Pots/pot_tier1.tres")
 	var tier2 = preload("res://Inventory/Items/Pots/pot_tier2.tres")
@@ -19,16 +21,21 @@ func _ready():
 		var plant = load("res://Inventory/Items/Plants/"+ recipe["name"]+".tres")
 		ALL_ITEMS.append(plant)
 		
+	mouseItem = preload("res://Scenes/mouse_item.tscn").instantiate()
+	get_tree().current_scene.add_child(mouseItem)
+		
 func insertInHand(item: Item) -> ItemGUI:
 	if itemInHand: return null
 	var new_itemGUI = preload("res://Scenes/item_gui.tscn").instantiate()
-	get_tree().current_scene.add_child(new_itemGUI)
+	mouseItem.add_child(new_itemGUI)
 	if !new_itemGUI.is_node_ready():
 		await new_itemGUI.ready
 	new_itemGUI.item = item
-	new_itemGUI.itemSprite.set_texture(item.texture)
+	new_itemGUI.set_texture(item.texture)
 	
 	itemInHand = new_itemGUI
+	
+	print(itemInHand)
 	return itemInHand
 	
 func findItem(label: String) -> Item:
