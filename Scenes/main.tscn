@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ctr78uqgnngos"]
+[gd_scene load_steps=13 format=3 uid="uid://ctr78uqgnngos"]
 
 [ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://bkpn4dwbky80q" path="res://Assets/icon.svg" id="1_jjgbg"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/lab.gd" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://d0o2fixek8d03" path="res://Scripts/garden.gd" id="2_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://bny66qf2eo775" path="res://Assets/background_framed.png" id="3_kry3j"]
+[ext_resource type="Texture2D" uid="uid://dtwtqtmd6y2ak" path="res://Assets/Pots/tier1.png" id="4_hptm8"]
 [ext_resource type="Texture2D" uid="uid://drnxwjo7hd82j" path="res://Assets/brewing.png" id="5_6bp64"]
 [ext_resource type="PackedScene" uid="uid://cyktua4fqunq0" path="res://Workbench/item_slot.tscn" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://bqyw0eywwhni8" path="res://Inventory/inventory_gui.tscn" id="7_6bp64"]
@@ -136,6 +137,11 @@ size_flags_vertical = 3
 texture_normal = ExtResource("2_344ge")
 ignore_texture_size = true
 stretch_mode = 4
+
+[node name="Pot1" type="Sprite2D" parent="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden"]
+position = Vector2(69, 66)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_hptm8")
 
 [node name="Workbench" type="Panel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -321,4 +327,4 @@ size_flags_stretch_ratio = 0.4
 layout_mode = 1
 offset_right = -328.0
 
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden/slot1" to="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" method="call_interraction"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden/slot1" to="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" method="_on_slot_1_pressed"]

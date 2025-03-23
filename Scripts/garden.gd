@@ -9,7 +9,6 @@ extends Node
 const GARDEN_SLOTS = 10
 
 var jar_slots: Array[JarSlot] = []
-var jar1 = load("res://Inventory/Items/Pots/pot_tier1.tres")
 
 # Initialize the garden with empty jar slots.
 func _ready() -> void:
@@ -19,17 +18,57 @@ func _ready() -> void:
 		jar_slot.plant = null
 		add_child(jar_slot)
 		jar_slots.append(jar_slot)
-	print(jar_slots)
+	
+	$Pot1.visible = false;
 
-func handle_interraction(i):
+func handle_interraction(i): 
+	#TODO: remplacer pot_tier1 par tout les types de pots et faire apparaite le sprit correctement
 	if(jar_slots[i].jar == null && GlobalScript.itemInHand.item.name == "pot_tier1"):
 		jar_slots[i].jar = GlobalScript.itemInHand.item
+		GlobalScript.itemInHand.queue_free()
 		GlobalScript.itemInHand = null
-		jar_slots[i].add_child(jar1)
-	pass;
+		$"../../../../Panel/InventoryGUI".updateItemInHand()
+		#TODO:trouver comment afficher proprement les items, la cest en shlag
+		$Pot1.visible = true
 
-func call_interraction():
-	if($slot1.pressed):
-		handle_interraction(0)
 	
-	
+
+
+func _on_slot_1_pressed() -> void:
+	handle_interraction(0)
+
+
+func _on_slot_2_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_slot_3_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_slot_4_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_slot_5_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_slot_6_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_slot_7_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_slot_8_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_slot_9_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_slot_10_pressed() -> void:
+	pass # Replace with function body.
