@@ -345,6 +345,7 @@ stream = ExtResource("19_pdsj5")
 [node name="combine" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_ee4r6")
 
+[connection signal="putItemBack" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="HBoxContainer/InventoryGUI" method="putItemBack"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer/Type1/Button" to="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" method="_on_button1_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer/Type2/Button" to="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" method="_on_button2_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer/Type3/Button" to="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" method="_on_button3_pressed"]
