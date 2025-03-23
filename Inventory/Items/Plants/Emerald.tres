@@ -9,6 +9,6 @@ script = ExtResource("1_gblww")
 garden_texture = ExtResource("1_5hlyh")
 nb_cycle = 15
 type_plant = 3
-name = ""
+name = "Emerald"
 texture = ExtResource("3_52k8y")
 metadata/_custom_type_script = "uid://bwlidev7ac800"
