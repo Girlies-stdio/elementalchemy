@@ -36,9 +36,26 @@ The ingredients list is sorted before searching for the recipe, so the order of 
 
 If the recipe is not found(i.e the given set of ingredients is not valid), the function returns "nothing".
 """
-func get_recipe(ingredients):
+func get_recipe(ingredients) -> String:
+	var one_away: bool = false
 	ingredients.sort()
 	for recipe in recipes.values():
 		if recipe["ingredients"] == ingredients:
 			return recipe["name"]
-	return "nothing"
+		else : 
+			if checkOneAway(recipe["ingredients"], ingredients.duplicate()):
+				one_away = true
+	return "one away" if one_away else "nothing"
+	
+func checkOneAway(recipe, ingredients) -> bool:
+	var count: int = 0
+	for ingredient in recipe:
+		var item = GlobalScript.findItem(ingredient)
+		if !item: break
+		if !Global.get_node("Inventory").slots[item].unlocked:
+			return false
+		if ingredient in ingredients:
+			count +=1
+			ingredients.erase(ingredient)
+	return count == 2
+			

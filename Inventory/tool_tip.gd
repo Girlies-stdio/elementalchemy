@@ -2,7 +2,7 @@ extends TextureButton
 
 var inv_slot : InventorySlot
 @onready var parent = get_parent()
-@onready var isg = parent.itemStackGui
+@onready var isg : ItemStackGUI = parent.itemStackGui
 @onready var show_tooltip = false
 
 func _ready():

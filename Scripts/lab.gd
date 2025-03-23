@@ -91,6 +91,10 @@ func check_recipe(ingredients) -> Item:
 	if result == "nothing":
 		handle_failed_recipe()
 		return null
+	elif result == "one away":
+		print("one away")
+		#TODO: UI
+		return null
 	else:
 		return GlobalScript.findItem(result)
 		
