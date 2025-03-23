@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ctr78uqgnngos"]
+[gd_scene load_steps=27 format=3 uid="uid://ctr78uqgnngos"]
 
 [ext_resource type="Texture2D" uid="uid://dinniq4jdk8le" path="res://Assets/garden_double_shelf.png" id="1_8gbba"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_ee4r6"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dwnq3i8spx4bf" path="res://Assets/Pots/tier2.png" id="10_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://ed4sc5to8m8h" path="res://Assets/Pots/tier3.png" id="11_wsu2k"]
 [ext_resource type="Texture2D" uid="uid://cxa7h4dy8jl8w" path="res://Assets/Pots/tier4.png" id="12_k12tt"]
+[ext_resource type="PackedScene" uid="uid://di1ry0hal8m3v" path="res://Scenes/NotificationPopUp.tscn" id="14_3pmx8"]
 [ext_resource type="Script" uid="uid://bwj16xdptxltw" path="res://Scenes/tutorial.gd" id="14_ee4r6"]
 [ext_resource type="AudioStream" uid="uid://d0mahrij0kw5m" path="res://Assets/Sons/plant.wav" id="14_h1bgf"]
 [ext_resource type="AudioStream" uid="uid://etsd3nuo41by" path="res://Assets/Sons/ambient.mp3" id="14_pdsj5"]
@@ -338,7 +339,6 @@ layout_mode = 2
 size_flags_stretch_ratio = 0.4
 
 [node name="Tutorial" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -348,7 +348,6 @@ grow_vertical = 2
 script = ExtResource("14_ee4r6")
 
 [node name="Tuto1" parent="Tutorial" instance=ExtResource("16_3pmx8")]
-visible = false
 layout_mode = 1
 text = "Elementalchemy starts with the 4 basic atoms of our reality : Earth, Water, Fire and Air (as you learnt in science class of course)."
 
