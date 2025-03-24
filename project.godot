@@ -18,8 +18,8 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 RecipesLoader="*res://singletons/recipe_loader.gd"
-Global="*res://scenes/global.tscn"
 GlobalScript="*res://scripts/global_script.gd"
+GlobalInventory="*res://inventory/inventory.gd"
 
 [display]
 

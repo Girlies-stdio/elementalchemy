@@ -10,12 +10,13 @@ var slots: Dictionary[Item, InventorySlot] = {}
 
 #Add all possible items to the inventory
 func _ready():
-	await GlobalScript.ready
-	for i in range(GlobalScript.ALL_ITEMS.size()):
+	if !GlobalScript.is_node_ready():
+		await GlobalScript.ready
+	for item in GlobalScript.ALL_ITEMS:
 		var slot = InventorySlot.new()
 		slot.amount = 0
 		slot.unlocked = false
-		slots[GlobalScript.ALL_ITEMS[i]] = slot
+		slots[item] = slot
 	#devCheat()
 
 func insert(item: Item, n: int = 1) -> void:
@@ -34,22 +35,27 @@ func remove(item: Item, n: int = 1) -> bool:
 		return true
 	return false
 	
-func enough(elements: Array[String]) -> bool:
-	var items = elements.map(func(s) -> Item: return GlobalScript.findItem(s))
-	#This nullCheck is only added because we don't have all the elements in the game right now
-	if null in items:
-		return false
+func get_item(item) -> InventorySlot:
+	if item is Item:
+		return slots[item]
+	elif item is String:
+		return slots[GlobalScript.findItem(item)]
+	else:
+		return null
+
+func enough(elements: Array) -> bool:
+	var items = elements.map(func(s: String) -> Item: return GlobalScript.findItem(s))
 	for item in items:
 		if slots[item].amount < 1:
 			return false
 	return true
 	
-func buy(potType: int, elements: Array[String]) -> void:
+func buy(potType: int, elements: Array) -> void:
 	if enough(elements):
-		var items = elements.map(func(s) -> Item: return GlobalScript.findItem(s))
+		var items = elements.map(func(s: String) -> Item: return GlobalScript.findItem(s))
 		for item in items:
 			remove(item)
-		
+			
 		var pot = GlobalScript.ALL_ITEMS[potType - 1]
 		insert(pot)
 func devCheat() -> void:

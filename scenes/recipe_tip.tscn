@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bo11xpo457oqp"]
 
-[ext_resource type="FontFile" uid="uid://b0bp2wrewjfxb" path="res://Assets/Fonts/Arvo-Regular.ttf" id="1_13nk4"]
+[ext_resource type="FontFile" uid="uid://b0bp2wrewjfxb" path="res://assets/fonts/Arvo-Regular.ttf" id="1_13nk4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5evs6"]
 

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=13 format=3 uid="uid://b714aumedekal"]
 
-[ext_resource type="FontFile" uid="uid://c3emp1kiy0loq" path="res://Assets/Fonts/ChakraPetch-SemiBold.ttf" id="1_ofusn"]
+[ext_resource type="FontFile" uid="uid://c3emp1kiy0loq" path="res://assets/fonts/ChakraPetch-SemiBold.ttf" id="1_ofusn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vp42j"]
 content_margin_left = 10.0

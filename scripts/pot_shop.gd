@@ -5,12 +5,20 @@ extends NinePatchRect
 @onready var button2 : Button = $MarginContainer/HBoxContainer/Type2/Button
 @onready var button3 : Button = $MarginContainer/HBoxContainer/Type3/Button
 @onready var button4 : Button = $MarginContainer/HBoxContainer/Type4/Button
+@onready var buttons: Array[Button] = [button1, button2, button3, button4]
+
+signal buying
+
 var inventory : Inventory
+
+var pot_costs: Dictionary[int, Array] = {1: ["Clay", "Fire", "Earth"], 2: ["Stone", "Glass", "Coal"], 3: ["Obsidian", "Diamond", "Quartz"], 4: ["Singularity", "Dark Matter", "Time"]}
 
 @onready var margin = $MarginContainer
 
 func _ready() -> void:
-	inventory = Global.get_node("Inventory")
+	inventory = GlobalInventory
+	if !inventory.is_node_ready():
+		await inventory.ready
 	inventory.connect("updated", func() -> void: checkEnough())
 	checkEnough()
 	
@@ -20,48 +28,16 @@ func _ready() -> void:
 	margin.add_theme_constant_override("margin_bottom", margin_value)
 	margin.add_theme_constant_override("margin_right", margin_value)
 	
+	for i in range(buttons.size()):
+		buttons[i].connect("pressed", func() -> void: buy(i+1))
+	
 func checkEnough() -> void:
-	if inventory.enough(["Clay", "Fire", "Earth"]):
-		button1.disabled = false
-	else:
-		button1.disabled = true
-		
-	if inventory.enough(["Stone", "Glass", "Coal"]):
-		button2.disabled = false
-	else:
-		button2.disabled = true
-		
-	if inventory.enough(["Obsidian", "Diamond", "Quartz"]):
-		button3.disabled = false
-	else:
-		button3.disabled = true
-		
-	if inventory.enough(["Singularity", "Dark Matter", "Time"]):
-		button4.disabled = false
-	else:
-		button4.disabled = true
+	for i in range(buttons.size()):
+		if inventory.enough(pot_costs[i+1]):
+			buttons[i].disabled = false
+		else: 
+			buttons[i].disabled = true
 
 func buy(type: int):
-	$"../../../../../craft".play()
-	match type:
-		1: #Clay, Fire, Earth
-			inventory.buy(1, ["Clay", "Fire", "Earth"])
-		2: #Rock, glass, Coal
-			inventory.buy(2, ["Stone", "Glass", "Coal"])
-		3: #Obsidian, Diamond, Quartz
-			inventory.buy(3, ["Obsidian", "Diamond", "Quartz"])
-		4: #Singularity, Dark Matter, Time
-			inventory.buy(4, ["Singularity", "Dark Matter", "Time"])
-
-
-func _on_button1_pressed():
-	buy(1)
-
-func _on_button2_pressed():
-	buy(2)
-
-func _on_button3_pressed():
-	buy(3)
-
-func _on_button4_pressed():
-	buy(4)
+	buying.emit()
+	inventory.buy(type, pot_costs[type])
