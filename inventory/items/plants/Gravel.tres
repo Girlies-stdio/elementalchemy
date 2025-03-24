@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://dtsdsjqc4h5qw"]
+
+[ext_resource type="Texture2D" uid="uid://cqjkfj4yuf5gf" path="res://assets/growing/gravel.png" id="1_42a7v"]
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://scripts/plant.gd" id="1_64wtu"]
+[ext_resource type="Texture2D" uid="uid://ce8yj8kysc6g7" path="res://assets/items/gravel.png" id="3_2irnj"]
+
+[resource]
+script = ExtResource("1_64wtu")
+garden_texture = ExtResource("1_42a7v")
+nb_cycle = 10
+type_plant = 2
+name = "Gravel"
+texture = ExtResource("3_2irnj")
+metadata/_custom_type_script = "uid://bwlidev7ac800"

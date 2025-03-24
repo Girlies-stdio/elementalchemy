@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://b0hompo8g42pv"]
+
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://scripts/plant.gd" id="1_6wpd1"]
+[ext_resource type="Texture2D" uid="uid://cs8frp1meyeos" path="res://assets/growing/quartz.png" id="1_tgurj"]
+[ext_resource type="Texture2D" uid="uid://dujcjlclagwdy" path="res://assets/items/quartz.png" id="3_hkhjv"]
+
+[resource]
+script = ExtResource("1_6wpd1")
+garden_texture = ExtResource("1_tgurj")
+nb_cycle = 15
+type_plant = 3
+name = "Quartz"
+texture = ExtResource("3_hkhjv")
+metadata/_custom_type_script = "uid://bwlidev7ac800"

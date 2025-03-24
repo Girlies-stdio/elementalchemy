@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://cw75mor5hx3av"]
+
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://scripts/plant.gd" id="1_0qt40"]
+[ext_resource type="Texture2D" uid="uid://dcvt2so44hj76" path="res://assets/growing/amethyst.png" id="1_18g5p"]
+[ext_resource type="Texture2D" uid="uid://chbin6d53e2io" path="res://assets/items/amethyste.png" id="3_t524t"]
+
+[resource]
+script = ExtResource("1_0qt40")
+garden_texture = ExtResource("1_18g5p")
+nb_cycle = 15
+type_plant = 3
+name = "Amethyst"
+texture = ExtResource("3_t524t")
+metadata/_custom_type_script = "uid://bwlidev7ac800"

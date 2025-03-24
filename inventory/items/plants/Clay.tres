@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://cjwvi4menu1me"]
+
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://scripts/plant.gd" id="1_2eapj"]
+[ext_resource type="Texture2D" uid="uid://jlbb61efqgor" path="res://assets/growing/clay.png" id="1_guyau"]
+[ext_resource type="Texture2D" uid="uid://do4ucnkwapnjq" path="res://assets/items/clay.png" id="3_6keco"]
+
+[resource]
+script = ExtResource("1_2eapj")
+garden_texture = ExtResource("1_guyau")
+nb_cycle = 10
+type_plant = 2
+name = "Clay"
+texture = ExtResource("3_6keco")
+metadata/_custom_type_script = "uid://bwlidev7ac800"

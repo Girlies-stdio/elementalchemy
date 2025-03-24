@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://pelfxus8jov2"]
+
+[ext_resource type="Texture2D" uid="uid://csnu5vglixrmh" path="res://assets/intro.png" id="1_3edat"]
+[ext_resource type="Script" uid="uid://c47nc4kh1m7ik" path="res://scripts/intro.gd" id="1_rrrc0"]
+[ext_resource type="FontFile" uid="uid://ch3ekr0voh2qe" path="res://assets/fonts/Arvo-Bold.ttf" id="3_vmpge"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rrrc0")
+
+[node name="image container" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Intro" type="TextureRect" parent="image container"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3edat")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 122.0
+offset_right = -49.0
+offset_bottom = -142.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_vmpge")
+theme_override_font_sizes/normal_font_size = 20
+text = "Welcome in Elementalchemy! 
+
+You are part of a secret NASA mission to set up the first human outpost on the Moon. The last communication you received from Earth was a disturbing distress call: 
+… 
+Tonald Drump found a big red button. He couldn’t resist pressing it. The Russians are retaliating. Hang on up there 
+…
+You could see some suspicious dust mushrooms going up in the atmosphere from your shuttle.
+
+Oh well.
+
+Your shuttle just landed on the Moon Base, which was sent there piece per piece over the last decade.
+
+Unfortunately, the greenhouse module seems to be defective, and you won’t be able to live off of your dehydrated food rations forever. 
+
+Your last chance of surviving in this deserted Moon Base resides in its brand new Atomic Alchemy Lab! Let’s head over there to see what we have…
+"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -33.5
+offset_top = -43.0
+offset_right = 33.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_vmpge")
+theme_override_font_sizes/font_size = 25
+text = "Start"
+
+[connection signal="pressed" from="MarginContainer2/Button" to="." method="_on_button_pressed"]

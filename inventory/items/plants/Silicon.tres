@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://dfrfqiibqagii"]
+
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://scripts/plant.gd" id="1_ficdx"]
+[ext_resource type="Texture2D" uid="uid://dlvoht731hy12" path="res://assets/growing/silicon.png" id="1_go588"]
+[ext_resource type="Texture2D" uid="uid://hj0kocrf4bdu" path="res://assets/items/silicon.png" id="3_sj2m2"]
+
+[resource]
+script = ExtResource("1_ficdx")
+garden_texture = ExtResource("1_go588")
+nb_cycle = 10
+type_plant = 2
+name = "Silicon"
+texture = ExtResource("3_sj2m2")
+metadata/_custom_type_script = "uid://bwlidev7ac800"

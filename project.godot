@@ -17,9 +17,9 @@ config/icon="res://Assets/icon.svg"
 
 [autoload]
 
-RecipesLoader="*res://Singletons/RecipesLoader.gd"
-Global="*res://Scenes/global.tscn"
-GlobalScript="*res://Scripts/global_script.gd"
+RecipesLoader="*res://singletons/recipe_loader.gd"
+Global="*res://scenes/global.tscn"
+GlobalScript="*res://scripts/global_script.gd"
 
 [display]
 

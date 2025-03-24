@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://csyulnd77klsj"]
+
+[ext_resource type="Texture2D" uid="uid://drmkodo1finyl" path="res://assets/growing/green.png" id="1_an3no"]
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://scripts/plant.gd" id="1_sfmvl"]
+[ext_resource type="Texture2D" uid="uid://dehu88iv35wvs" path="res://assets/items/green.png" id="3_0xh3r"]
+
+[resource]
+script = ExtResource("1_sfmvl")
+garden_texture = ExtResource("1_an3no")
+nb_cycle = 5
+type_plant = 1
+name = "Green"
+texture = ExtResource("3_0xh3r")
+metadata/_custom_type_script = "uid://bwlidev7ac800"

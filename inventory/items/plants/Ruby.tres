@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Plant" load_steps=4 format=3 uid="uid://cxaqsxdousdes"]
+
+[ext_resource type="Texture2D" uid="uid://c3micgq2xvl3v" path="res://assets/growing/ruby.png" id="1_lr76h"]
+[ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://scripts/plant.gd" id="1_r2e0h"]
+[ext_resource type="Texture2D" uid="uid://di75un4jw77px" path="res://assets/items/ruby.png" id="3_865sw"]
+
+[resource]
+script = ExtResource("1_r2e0h")
+garden_texture = ExtResource("1_lr76h")
+nb_cycle = 15
+type_plant = 3
+name = "Ruby"
+texture = ExtResource("3_865sw")
+metadata/_custom_type_script = "uid://bwlidev7ac800"
