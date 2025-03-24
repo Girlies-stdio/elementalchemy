@@ -409,5 +409,9 @@ volume_db = -3.0
 stream = ExtResource("20_ee4r6")
 volume_db = -5.0
 
+[connection signal="play_cave" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="cave" method="play"]
+[connection signal="play_crystal" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="crystal" method="play"]
+[connection signal="play_endgame" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="endgame" method="play"]
+[connection signal="play_plant" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="plant" method="play"]
 [connection signal="putItemBack" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="HBoxContainer/InventoryGUI" method="putItemBack"]
 [connection signal="buying" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" to="craft" method="play"]

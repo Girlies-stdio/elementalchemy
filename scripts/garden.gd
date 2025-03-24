@@ -9,13 +9,18 @@ extends GridContainer
 const GARDEN_SLOTS = 10
 
 var jar_slots: Array[JarSlot] = []
-var sound_type: Array[AudioStreamPlayer] = []
+
+signal play_plant
+signal play_cave
+signal play_crystal
+signal play_endgame
+
+var sound_signals = [play_plant, play_cave, play_crystal, play_endgame]
 
 signal putItemBack
 
 # Initialize the garden with empty jar slots.
 func _ready() -> void:
-	sound_type = [$"../../../../../plant",$"../../../../../cave",$"../../../../../crystal",$"../../../../../endgame"]
 	var jar1 = GlobalScript.ALL_ITEMS[0]
 	for i in range(0, GARDEN_SLOTS):
 		var jar_slot : JarSlot = $JarSlot if i == 0 else get_node("JarSlot" + str(i + 1))
@@ -79,7 +84,7 @@ func timer(jar_slot: JarSlot):
 	jar_slot.timer.connect("timeout", func() -> void:
 					if jar_slot.plant: 
 						jar_slot.harvestable = true
-						sound_type[jar_slot.jar.type_plant - 1].play()
+						sound_signals[jar_slot.jar.type_plant - 1].emit()
 						updateGUI()
 						jar_slot.timer.queue_free()
 						jar_slot.timer = null)
