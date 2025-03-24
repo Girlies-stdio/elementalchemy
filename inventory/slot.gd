@@ -3,7 +3,7 @@ class_name Slot
 
 @onready var button: TextureButton = $SlotButton
 @onready var margin: MarginContainer = $SlotButton/Margin
-@onready var inventory : Inventory = Global.get_node("Inventory")
+@onready var inventory : Inventory = GlobalInventory
 var itemStackGui: ItemStackGUI
 
 func _ready():
@@ -16,7 +16,6 @@ func _ready():
 func insert(isg: ItemStackGUI):
 	itemStackGui = isg
 	margin.add_child(itemStackGui)
-	var button = get_child(0)
 	button.set_isg(isg)
 
 func takeItem() -> ItemGUI:

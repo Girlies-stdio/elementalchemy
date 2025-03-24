@@ -9,7 +9,7 @@ func _ready():
 	if !parent.is_node_ready():
 		await parent.ready
 		
-	Global.get_node("Inventory").connect("updated", func() -> void :refresh_inv_slot())
+	GlobalInventory.connect("updated", func() -> void :refresh_inv_slot())
 		
 
 
@@ -60,7 +60,7 @@ func set_isg(new_isg : ItemStackGUI):
 		return
 
 		
-	inv_slot = Global.get_node("Inventory").slots[isg.item]
+	inv_slot = GlobalInventory.get_item(isg.item)
 	show_tooltip = inv_slot
 
 func refresh_inv_slot():

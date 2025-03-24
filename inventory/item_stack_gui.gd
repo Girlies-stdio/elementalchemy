@@ -8,7 +8,7 @@ var inventory: Inventory
 var amount: int
 
 func _ready():
-	inventory = Global.get_node("Inventory")
+	inventory = GlobalInventory
 	if !inventory.is_node_ready():
 		await inventory.ready
 
@@ -16,7 +16,7 @@ func _process(_delta):
 	amountLabel.visible = true if amount > 1 else false
 
 func update():
-	var slot = inventory.slots[item]
+	var slot = inventory.get_item(item)
 	amount = slot.amount
 	amountLabel.text = str(amount)
 	if slot.unlocked:

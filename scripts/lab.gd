@@ -34,7 +34,7 @@ func handle_slot_interaction(slot: ItemSlot):
 	if slot == output_slot:
 		# Output slot can only give items
 		if !GlobalScript.itemInHand and slot.item:
-			Global.get_node("Inventory").insert(slot.item)
+			GlobalInventory.insert(slot.item)
 			slot.item = null
 	else:
 		# Input slots can give and receive items
@@ -53,7 +53,7 @@ func handle_slot_interaction(slot: ItemSlot):
 	
 func handle_right_click(slot: ItemSlot) -> void:
 	if slot.item:
-		Global.get_node("Inventory").insert(slot.item)
+		GlobalInventory.insert(slot.item)
 		slot.item = null
 		update_slot_visuals()
 

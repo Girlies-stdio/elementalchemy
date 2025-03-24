@@ -89,7 +89,7 @@ func updateGUI():
 		slot.update_gui()
 			
 func handleRightClick(slot: JarSlot) -> void:
-	var inventory: Inventory = Global.get_node("Inventory")
+	var inventory: Inventory = GlobalInventory
 	if slot.plant:
 		if slot.harvestable:
 			inventory.insert(slot.plant)

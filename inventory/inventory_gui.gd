@@ -8,7 +8,7 @@ var inventory : Inventory
 var locked: bool = false
 
 func _ready():
-	inventory = Global.get_node("Inventory")
+	inventory = GlobalInventory
 	connectSlots()
 	inventory.updated.connect(update)
 	update()
@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 func update():
 	for i in range(slots.size()):
 		var isg : ItemStackGUI = slots[i].itemStackGui
-		isg.amount = inventory.slots[isg.item].amount
+		isg.amount = inventory.get_item(isg.item).amount
 		isg.update()
 		
 
