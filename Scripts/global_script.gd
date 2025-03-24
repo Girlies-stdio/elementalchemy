@@ -39,6 +39,6 @@ func findItem(label: String) -> Item:
 	return items[0] if items else null
 	
 func createMouseItem():
-	mouseItem = preload("res://Scenes/mouse_item.tscn").instantiate()
+	mouseItem = preload("res://components/mouse_item/mouse_item.tscn").instantiate()
 	get_tree().current_scene.add_child(mouseItem)
 	
