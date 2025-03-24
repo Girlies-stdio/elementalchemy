@@ -53,6 +53,15 @@ func handle_slot_interaction(slot: ItemSlot):
 			GlobalScript.itemInHand.queue_free()
 			GlobalScript.itemInHand = null
 			sound_brew.emit()
+		elif GlobalScript.itemInHand  and GlobalScript.itemInHand.item is Plant and slot.item:
+			#Swap items
+			var temp_item : Item = slot.item
+			slot.item = GlobalScript.itemInHand.item
+			#Note: Here we edit item in hand, but we could also free it and insert a new one
+			GlobalScript.itemInHand.item = temp_item
+			GlobalScript.itemInHand.set_texture(temp_item.texture)
+			sound_brew.emit()
+
 	update_slot_visuals()
 	
 func handle_right_click(slot: ItemSlot) -> void:
