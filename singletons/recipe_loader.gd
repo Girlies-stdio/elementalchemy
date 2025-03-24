@@ -60,8 +60,4 @@ func checkOneAway(recipe, ingredients) -> bool:
 		if ingredient in ingredients:
 			count +=1
 			ingredients.erase(ingredient)
-	if count == 2:
-		print(recipe)
-		return true
-	return false
-			
+	return count == 2
