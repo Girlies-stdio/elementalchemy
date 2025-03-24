@@ -5,7 +5,11 @@ extends NinePatchRect
 @onready var input_slot_3 : ItemSlot = $Brewing/InputSlot3
 @onready var output_slot : ItemSlot = $Brewing/OutputSlot
 @onready var combine_button = $MarginContainer/CombineButton
+@onready var notification_popup = $NotificationPopUp
 var slots: Array[ItemSlot]
+
+signal sound_combine
+signal sound_brew
 
 @onready var margin = $MarginContainer
 
@@ -48,7 +52,16 @@ func handle_slot_interaction(slot: ItemSlot):
 			slot.item = GlobalScript.itemInHand.item
 			GlobalScript.itemInHand.queue_free()
 			GlobalScript.itemInHand = null
-			$"../../../../../brew".play(28.5)
+			sound_brew.emit()
+		elif GlobalScript.itemInHand  and GlobalScript.itemInHand.item is Plant and slot.item:
+			#Swap items
+			var temp_item : Item = slot.item
+			slot.item = GlobalScript.itemInHand.item
+			#Note: Here we edit item in hand, but we could also free it and insert a new one
+			GlobalScript.itemInHand.item = temp_item
+			GlobalScript.itemInHand.set_texture(temp_item.texture)
+			sound_brew.emit()
+
 	update_slot_visuals()
 	
 func handle_right_click(slot: ItemSlot) -> void:
@@ -61,6 +74,7 @@ func handle_right_click(slot: ItemSlot) -> void:
 func _combine_pressed():
 	if output_slot.item:
 		# Cannot cook if output slot is occupied
+		notification_popup.show_text("You need to collect the newly synthesized atom first", 1.1)
 		return
 	
 	# Get current ingredients
@@ -68,6 +82,7 @@ func _combine_pressed():
 	
 	# Check if all slots have ingredients
 	if null in ingredients:
+		notification_popup.show_text("You need 3 atoms to synthesize a new one", 1.0)
 		return
 	ingredients = ingredients.map(func(item): return item.name)
 	
@@ -81,7 +96,7 @@ func _combine_pressed():
 		
 		# Set output slot
 		output_slot.item = recipe_result
-		$"../../../../../combine".play()
+		sound_combine.emit()
 		
 		update_slot_visuals()
 
@@ -93,8 +108,7 @@ func check_recipe(ingredients) -> Item:
 		return null
 	elif result == "one away":
 		print("one away")
-		$NotificationPopUp.get_child(0).show()
-		$NotificationPopUp.get_child(0).get_child(-1).start()
+		notification_popup.show_text("One away from a new recipe...")
 		
 		#TODO: UI
 		return null
