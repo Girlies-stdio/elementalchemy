@@ -43,12 +43,15 @@ func get_recipe(ingredients) -> String:
 		if recipe["ingredients"] == ingredients:
 			return recipe["name"]
 		else : 
-			if checkOneAway(recipe["ingredients"], ingredients.duplicate()):
-				one_away = true
+			if Global.get_node("Inventory").slots[GlobalScript.findItem(recipe["name"])].unlocked:
+				continue # Ignore recipes already unlocked when checking for one_away
+			one_away = one_away or checkOneAway(recipe["ingredients"], ingredients.duplicate()) 
+			# short-circuit eval : stops checking if one away is alkready true
 	return "one away" if one_away else "nothing"
 	
 func checkOneAway(recipe, ingredients) -> bool:
 	var count: int = 0
+	
 	for ingredient in recipe:
 		var item = GlobalScript.findItem(ingredient)
 		if !item: break
@@ -57,5 +60,8 @@ func checkOneAway(recipe, ingredients) -> bool:
 		if ingredient in ingredients:
 			count +=1
 			ingredients.erase(ingredient)
-	return count == 2
+	if count == 2:
+		print(recipe)
+		return true
+	return false
 			
