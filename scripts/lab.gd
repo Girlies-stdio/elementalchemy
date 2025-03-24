@@ -5,6 +5,7 @@ extends NinePatchRect
 @onready var input_slot_3 : ItemSlot = $Brewing/InputSlot3
 @onready var output_slot : ItemSlot = $Brewing/OutputSlot
 @onready var combine_button = $MarginContainer/CombineButton
+@onready var notification_popup = $NotificationPopUp
 var slots: Array[ItemSlot]
 
 @onready var margin = $MarginContainer
@@ -61,6 +62,7 @@ func handle_right_click(slot: ItemSlot) -> void:
 func _combine_pressed():
 	if output_slot.item:
 		# Cannot cook if output slot is occupied
+		notification_popup.show_text("You need to collect the newly synthetized atom first")
 		return
 	
 	# Get current ingredients
@@ -68,6 +70,7 @@ func _combine_pressed():
 	
 	# Check if all slots have ingredients
 	if null in ingredients:
+		notification_popup.show_text("You need 3 atoms to synthetize a new one")
 		return
 	ingredients = ingredients.map(func(item): return item.name)
 	
@@ -93,8 +96,7 @@ func check_recipe(ingredients) -> Item:
 		return null
 	elif result == "one away":
 		print("one away")
-		$NotificationPopUp.get_child(0).show()
-		$NotificationPopUp.get_child(0).get_child(-1).start()
+		notification_popup.show_text("One away from a new recipe...")
 		
 		#TODO: UI
 		return null
