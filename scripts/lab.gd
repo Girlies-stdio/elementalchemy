@@ -8,6 +8,9 @@ extends NinePatchRect
 @onready var notification_popup = $NotificationPopUp
 var slots: Array[ItemSlot]
 
+signal sound_combine
+signal sound_brew
+
 @onready var margin = $MarginContainer
 
 func _ready():
@@ -49,7 +52,7 @@ func handle_slot_interaction(slot: ItemSlot):
 			slot.item = GlobalScript.itemInHand.item
 			GlobalScript.itemInHand.queue_free()
 			GlobalScript.itemInHand = null
-			$"../../../../../brew".play(28.5)
+			sound_brew.emit()
 	update_slot_visuals()
 	
 func handle_right_click(slot: ItemSlot) -> void:
@@ -84,7 +87,7 @@ func _combine_pressed():
 		
 		# Set output slot
 		output_slot.item = recipe_result
-		$"../../../../../combine".play()
+		sound_combine.emit()
 		
 		update_slot_visuals()
 

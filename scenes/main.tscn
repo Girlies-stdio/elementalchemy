@@ -414,4 +414,6 @@ volume_db = -5.0
 [connection signal="play_endgame" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="endgame" method="play"]
 [connection signal="play_plant" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="plant" method="play"]
 [connection signal="putItemBack" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="HBoxContainer/InventoryGUI" method="putItemBack"]
+[connection signal="sound_brew" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" to="brew" method="play" binds= [28.5]]
+[connection signal="sound_combine" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" to="combine" method="play"]
 [connection signal="buying" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" to="craft" method="play"]
