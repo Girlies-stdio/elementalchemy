@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://krayu7qgdgt0"]
 
-[ext_resource type="Script" uid="uid://cww81mivrkfyl" path="res://Scenes/popup.gd" id="1_2nprw"]
+[ext_resource type="Script" uid="uid://cww81mivrkfyl" path="res://components/popup/popup.gd" id="1_2nprw"]
 
 [node name="PopupBox" type="MarginContainer"]
 anchors_preset = 15
