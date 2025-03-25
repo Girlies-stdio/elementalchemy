@@ -28,13 +28,12 @@ func _ready() -> void:
 		jar_slot.plant = null
 		jar_slots.append(jar_slot)
 		jar_slot.connect("pressed", func() -> void : handle_interaction(jar_slot))
+		jar_slot.connect("right_clicked", func() -> void : handleRightClick(jar_slot))
 		if i < 4:
+			jar_slot.locked = true
 			jar_slot.jar = jar1
 			jar_slot.plant = GlobalScript.ALL_ITEMS[i + 4]
 			timer(jar_slot)
-		else:
-			jar_slot.connect("right_clicked", func() -> void : handleRightClick(jar_slot))
-
 		updateGUI()
 
 	
@@ -52,7 +51,7 @@ func handle_interaction(jar_slot: JarSlot):
 			jar_slot.jar = null
 		elif jar_slot.jar && jar_slot.plant:
 			#if grown, harvest
-			if jar_slot.potSprite.texture == jar_slot.jar.texture_ready:
+			if jar_slot.harvestable:
 				GlobalScript.insertInHand(jar_slot.plant)
 				GlobalScript.itemInHand.global_position = get_global_mouse_position()
 				putItemBack.emit()
@@ -63,12 +62,26 @@ func handle_interaction(jar_slot: JarSlot):
 			if jar_slot.jar.type_plant == iih.item.type_plant:
 				#insert plant in slot, then start timer
 				jar_slot.plant = iih.item
-				GlobalScript.itemInHand.queue_free()
+				iih.queue_free()
 				GlobalScript.itemInHand = null
 				timer(jar_slot)
 			else: 
 				#back in inventory
 				putItemBack.emit()
+		elif !jar_slot.locked && jar_slot.jar && jar_slot.plant && iih.item is Plant:
+			if jar_slot.jar.type_plant == iih.item.type_plant:
+				#Swap plants in pot
+				#First check growth stage
+				if jar_slot.harvestable:
+					GlobalInventory.insert(jar_slot.plant)
+					jar_slot.harvestable = false
+				var temp_item: Item = jar_slot.plant
+				jar_slot.plant = iih.item
+				if jar_slot.timer:
+					jar_slot.timer.queue_free()
+				timer(jar_slot)
+				GlobalScript.itemInHand.item = temp_item
+				GlobalScript.itemInHand.set_texture(temp_item.texture)
 			
 		elif !jar_slot.jar && !jar_slot.plant && iih.item is Pot:
 			#insert jar in slot
@@ -94,6 +107,7 @@ func updateGUI():
 		slot.update_gui()
 			
 func handleRightClick(slot: JarSlot) -> void:
+	if slot.locked: return
 	var inventory: Inventory = GlobalInventory
 	if slot.plant:
 		if slot.harvestable:
