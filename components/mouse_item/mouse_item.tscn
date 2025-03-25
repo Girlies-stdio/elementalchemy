@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bt7b1gxt4k4fp" path="res://components/mouse_item/mouse_item.gd" id="1_137rf"]
 
 [node name="MouseItem" type="AspectRatioContainer"]
-custom_minimum_size = Vector2(150, 150)
+custom_minimum_size = Vector2(100, 100)
 offset_right = 100.0
 offset_bottom = 100.0
 mouse_filter = 2
