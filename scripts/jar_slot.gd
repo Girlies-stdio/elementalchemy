@@ -4,6 +4,7 @@ class_name JarSlot
 var jar: Pot
 var plant: Plant
 var harvestable: bool = false
+var locked: bool = false
 signal right_clicked
 
 @onready var margin = $MarginContainer
