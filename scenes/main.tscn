@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://uyjxgl41m335" path="res://scenes/main.gd" id="1_ee4r6"]
 [ext_resource type="Script" uid="uid://88ysp7capcmn" path="res://scripts/lab.gd" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://d0o2fixek8d03" path="res://scripts/garden.gd" id="2_ynf5e"]
-[ext_resource type="PackedScene" uid="uid://bd8gfklgd78xg" path="res://scenes/Jar_slot.tscn" id="3_hptm8"]
+[ext_resource type="PackedScene" uid="uid://bd8gfklgd78xg" path="res://scenes/jar_slot.tscn" id="3_hptm8"]
 [ext_resource type="Texture2D" uid="uid://bny66qf2eo775" path="res://assets/background_framed.png" id="3_kry3j"]
 [ext_resource type="Texture2D" uid="uid://dtwtqtmd6y2ak" path="res://assets/jars/tier1.png" id="4_hptm8"]
 [ext_resource type="Texture2D" uid="uid://drnxwjo7hd82j" path="res://assets/brewing.png" id="5_6bp64"]
