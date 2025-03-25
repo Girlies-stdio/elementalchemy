@@ -78,11 +78,14 @@ offset_top = -43.0
 offset_right = 33.5
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="Button" type="Button" parent="MarginContainer2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_vmpge")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "Start"
 
 [connection signal="pressed" from="MarginContainer2/Button" to="." method="_on_button_pressed"]
