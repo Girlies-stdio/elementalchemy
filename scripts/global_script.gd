@@ -7,10 +7,10 @@ var itemInHand: ItemGUI
 var mouseItem: MouseItem
 
 func _ready():
-	var tier1 = preload("res://inventory/items/pots/jar_tier1.tres")
-	var tier2 = preload("res://inventory/items/pots/jar_tier2.tres")
-	var tier3 = preload("res://inventory/items/pots/jar_tier3.tres")
-	var tier4 = preload("res://inventory/items/pots/jar_tier4.tres")
+	var tier1 = preload("res://inventory/items/jars/jar_tier1.tres")
+	var tier2 = preload("res://inventory/items/jars/jar_tier2.tres")
+	var tier3 = preload("res://inventory/items/jars/jar_tier3.tres")
+	var tier4 = preload("res://inventory/items/jars/jar_tier4.tres")
 	ALL_ITEMS.append(tier1)
 	name_to_item[tier1.name] = tier1
 	ALL_ITEMS.append(tier2)
