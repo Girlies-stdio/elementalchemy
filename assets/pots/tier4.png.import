@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo6qu8252hl5r"
-path="res://.godot/imported/tier2_ready .png-1056c4d643a9fb9b502cb021d8f2422c.ctex"
+uid="uid://cxa7h4dy8jl8w"
+path="res://.godot/imported/tier4.png-633a11d5e2b58510866727b90e7baacf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/jars/tier2_ready .png"
-dest_files=["res://.godot/imported/tier2_ready .png-1056c4d643a9fb9b502cb021d8f2422c.ctex"]
+source_file="res://assets/pots/tier4.png"
+dest_files=["res://.godot/imported/tier4.png-633a11d5e2b58510866727b90e7baacf.ctex"]
 
 [params]
 
