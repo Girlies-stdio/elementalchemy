@@ -353,29 +353,29 @@ script = ExtResource("14_ee4r6")
 
 [node name="Tuto1" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
-text = "Elementalchemy starts with the 4 basic atoms of our reality : Earth, Water, Fire and Air (as you learnt in science class of course)."
+text = "Elementalchemy starts with the 4 basic elements of our reality : Earth, Water, Fire and Air (as you learnt in science class of course)."
 
 [node name="Tuto2" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
 panel_horizontal = 0
 panel_vertical = 0
-text = "These growth jars on these shelves allow you to generate atoms. Click on a jar when it glows to collect the Atoms!
-You will soon be able to craft more Tier 1 flower pots. More advanced atoms will require better generators.
-Right click on a generator to remove it (and its atom)."
+text = "These growth jars on these shelves allow you to generate elements. Click on a jar when it glows to collect the element!
+You will soon be able to craft more Tier 1 flower pots. More advanced elements will require better generators.
+Right click on a generator to remove it (and its element)."
 
 [node name="Tuto3" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
 panel_horizontal = 8
 panel_vertical = 8
-text = "The atoms you collect are stored here. They can be used to generate more of the same atom by growing them in the appropriate generator."
+text = "The elements you collect are stored here. They can be used to generate more of the same element by growing them in the appropriate generator."
 
 [node name="Tuto4" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
 panel_horizontal = 0
 panel_vertical = 8
-text = "The Synthesizer is the heart of the lab! It can synthesize a new atom by combining 3 atoms. 
+text = "The Synthesizer is the heart of the lab! It can synthesize a new element by combining 3 elements. 
 Find out which combinations work !
-In the Pot Crafting tab, you can also craft new pots with the required atoms."
+In the Pot Crafting tab, you can also craft new pots with the required elements."
 
 [node name="Tuto5" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1

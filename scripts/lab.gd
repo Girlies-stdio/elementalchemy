@@ -77,7 +77,7 @@ func handle_right_click(slot: ItemSlot) -> void:
 func _combine_pressed():
 	if output_slot.item:
 		# Cannot cook if output slot is occupied
-		notification_popup.show_text("You need to collect the newly synthesized atom first", 1.1)
+		notification_popup.show_text("You need to collect the newly synthesized element first", 1.1)
 		return
 	
 	# Get current ingredients
@@ -85,7 +85,7 @@ func _combine_pressed():
 	
 	# Check if all slots have ingredients
 	if null in ingredients:
-		notification_popup.show_text("You need 3 atoms to synthesize a new one", 1.0)
+		notification_popup.show_text("You need 3 elements to synthesize a new one", 1.0)
 		return
 	ingredients = ingredients.map(func(item): return item.name)
 	
