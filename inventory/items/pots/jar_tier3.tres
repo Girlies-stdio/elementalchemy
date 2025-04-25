@@ -8,6 +8,6 @@
 script = ExtResource("1_bdnkm")
 type_plant = 3
 texture_ready = ExtResource("3_ucmv5")
-name = "pot_tier3"
+name = "jar_tier3"
 texture = ExtResource("2_mldul")
 metadata/_custom_type_script = "uid://ckujxsknd0hvd"
