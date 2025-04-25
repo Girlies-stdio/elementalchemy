@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yr5ejrhrebg2"
-path="res://.godot/imported/diamant.png-c242f67fe3ca715e44a3b8209f2baf1a.ctex"
+uid="uid://c3fwdf74fwmc7"
+path="res://.godot/imported/singularity.png-4d33881ed4781c8cf401ca9d41ca8230.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/diamant.png"
-dest_files=["res://.godot/imported/diamant.png-c242f67fe3ca715e44a3b8209f2baf1a.ctex"]
+source_file="res://assets/items/singularity.png"
+dest_files=["res://.godot/imported/singularity.png-4d33881ed4781c8cf401ca9d41ca8230.ctex"]
 
 [params]
 

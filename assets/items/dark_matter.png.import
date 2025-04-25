@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chbin6d53e2io"
-path="res://.godot/imported/amethyste.png-606150160e55df701856837126bf606b.ctex"
+uid="uid://bb4nxuya6ftnk"
+path="res://.godot/imported/dark_matter.png-90abb73332c479e4b01f1c6c98d63e3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/amethyste.png"
-dest_files=["res://.godot/imported/amethyste.png-606150160e55df701856837126bf606b.ctex"]
+source_file="res://assets/items/dark_matter.png"
+dest_files=["res://.godot/imported/dark_matter.png-90abb73332c479e4b01f1c6c98d63e3a.ctex"]
 
 [params]
 

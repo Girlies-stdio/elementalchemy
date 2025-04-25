@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds72cx7h3dlkq"
-path="res://.godot/imported/energie.png-47dbf755b78fe9279f991b2a628dc03a.ctex"
+uid="uid://bns32hy8cc53s"
+path="res://.godot/imported/red_old.png-480a35bc9307003e1394091c8f3e2992.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/energie.png"
-dest_files=["res://.godot/imported/energie.png-47dbf755b78fe9279f991b2a628dc03a.ctex"]
+source_file="res://assets/growing/red_old.png"
+dest_files=["res://.godot/imported/red_old.png-480a35bc9307003e1394091c8f3e2992.ctex"]
 
 [params]
 

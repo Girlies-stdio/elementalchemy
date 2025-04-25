@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cquyvwpa3eaxv"
-path="res://.godot/imported/émeraude.png-bbfa84c92702e84f49ff93b932f529e3.ctex"
+path="res://.godot/imported/emerald.png-7141b012dbead8bceef1335df1ad21a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/émeraude.png"
-dest_files=["res://.godot/imported/émeraude.png-bbfa84c92702e84f49ff93b932f529e3.ctex"]
+source_file="res://assets/items/emerald.png"
+dest_files=["res://.godot/imported/emerald.png-7141b012dbead8bceef1335df1ad21a4.ctex"]
 
 [params]
 

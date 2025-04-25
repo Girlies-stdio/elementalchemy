@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb4nxuya6ftnk"
-path="res://.godot/imported/darkmatter.png-0b0bcecc8518a4f782fab17183b34e63.ctex"
+uid="uid://cu0jwmxwa0i3b"
+path="res://.godot/imported/light.png-e477d4321f052854436f05e42972456b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/darkmatter.png"
-dest_files=["res://.godot/imported/darkmatter.png-0b0bcecc8518a4f782fab17183b34e63.ctex"]
+source_file="res://assets/items/light.png"
+dest_files=["res://.godot/imported/light.png-e477d4321f052854436f05e42972456b.ctex"]
 
 [params]
 

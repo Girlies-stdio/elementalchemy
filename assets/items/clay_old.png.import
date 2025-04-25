@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dinweu7tv6juh"
-path="res://.godot/imported/verre.png-77fe576476f1c4ddc7a40c71e195bfd2.ctex"
+uid="uid://do4ucnkwapnjq"
+path="res://.godot/imported/clay_old.png-9ab0e12f4c74478cc71931bcf8795944.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/verre.png"
-dest_files=["res://.godot/imported/verre.png-77fe576476f1c4ddc7a40c71e195bfd2.ctex"]
+source_file="res://assets/items/clay_old.png"
+dest_files=["res://.godot/imported/clay_old.png-9ab0e12f4c74478cc71931bcf8795944.ctex"]
 
 [params]
 

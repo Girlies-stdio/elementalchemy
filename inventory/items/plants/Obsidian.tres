@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cgeqjqh71d5n4" path="res://assets/growing/obsidian.png" id="1_6ar2a"]
 [ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://scripts/plant.gd" id="1_jyyyy"]
-[ext_resource type="Texture2D" uid="uid://ddwj3agwonh7v" path="res://assets/items/obsidienne.png" id="3_qgr28"]
+[ext_resource type="Texture2D" uid="uid://ddwj3agwonh7v" path="res://assets/items/obsidian.png" id="3_qgr28"]
 
 [resource]
 script = ExtResource("1_jyyyy")

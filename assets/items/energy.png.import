@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u7exjkxoyytc"
-path="res://.godot/imported/ambre.png-6a67015e8ae75d02d29aa6ede9953902.ctex"
+uid="uid://ds72cx7h3dlkq"
+path="res://.godot/imported/energy.png-2f5694d46f0f4e29315dc03923c8a7c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/ambre.png"
-dest_files=["res://.godot/imported/ambre.png-6a67015e8ae75d02d29aa6ede9953902.ctex"]
+source_file="res://assets/items/energy.png"
+dest_files=["res://.godot/imported/energy.png-2f5694d46f0f4e29315dc03923c8a7c2.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3fwdf74fwmc7"
-path="res://.godot/imported/singularity (2).png-30c17115d15cc5baf37e83d986244700.ctex"
+uid="uid://x4w1dow0nyyc"
+path="res://.godot/imported/time.png-3f9f794dd8b21544bc00572981802898.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/singularity (2).png"
-dest_files=["res://.godot/imported/singularity (2).png-30c17115d15cc5baf37e83d986244700.ctex"]
+source_file="res://assets/items/time.png"
+dest_files=["res://.godot/imported/time.png-3f9f794dd8b21544bc00572981802898.ctex"]
 
 [params]
 

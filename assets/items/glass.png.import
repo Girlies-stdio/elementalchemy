@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgr47wfbbkbal"
-path="res://.godot/imported/plasma (2).png-dd9ddd5533e085fb51baa527b316b565.ctex"
+uid="uid://dinweu7tv6juh"
+path="res://.godot/imported/glass.png-878334f56dbb78012fa968543b8ec855.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/plasma (2).png"
-dest_files=["res://.godot/imported/plasma (2).png-dd9ddd5533e085fb51baa527b316b565.ctex"]
+source_file="res://assets/items/glass.png"
+dest_files=["res://.godot/imported/glass.png-878334f56dbb78012fa968543b8ec855.ctex"]
 
 [params]
 

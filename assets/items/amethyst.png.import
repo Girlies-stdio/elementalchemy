@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu0jwmxwa0i3b"
-path="res://.godot/imported/lumiere.png-0f46759163d0a72933f647c9f5cdf9ad.ctex"
+uid="uid://chbin6d53e2io"
+path="res://.godot/imported/amethyst.png-38533f58fe5a6431e76b941b3dc25744.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/lumiere.png"
-dest_files=["res://.godot/imported/lumiere.png-0f46759163d0a72933f647c9f5cdf9ad.ctex"]
+source_file="res://assets/items/amethyst.png"
+dest_files=["res://.godot/imported/amethyst.png-38533f58fe5a6431e76b941b3dc25744.ctex"]
 
 [params]
 
