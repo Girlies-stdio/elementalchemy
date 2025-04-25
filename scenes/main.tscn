@@ -266,6 +266,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Earth, Fire, Clay"
 texture_normal = ExtResource("4_hptm8")
 ignore_texture_size = true
 stretch_mode = 5
@@ -274,7 +275,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-tooltip_text = "Clay, Fire, Earth"
+tooltip_text = "Earth, Fire, Clay"
 text = "Craft"
 
 [node name="Type2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer"]
@@ -285,6 +286,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Coal, Stone, Glass"
 texture_normal = ExtResource("10_jkdf5")
 ignore_texture_size = true
 stretch_mode = 5
@@ -293,7 +295,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-tooltip_text = "Rock, Glass, Coal"
+tooltip_text = "Coal, Stone, Glass"
 text = "Craft"
 
 [node name="Type3" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer"]
@@ -304,6 +306,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Obsidian, Quartz, Diamond"
 texture_normal = ExtResource("11_wsu2k")
 ignore_texture_size = true
 stretch_mode = 5
@@ -312,7 +315,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-tooltip_text = "Obsidian, Diamond, Quartz"
+tooltip_text = "Obsidian, Quartz, Diamond"
 text = "Craft"
 
 [node name="Type4" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer"]
@@ -323,6 +326,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Time, Dark Matter, Singularity"
 texture_normal = ExtResource("12_k12tt")
 ignore_texture_size = true
 stretch_mode = 5
@@ -331,7 +335,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-tooltip_text = "Singularity, Dark Matter, Time"
+tooltip_text = "Time, Dark Matter, Singularity"
 text = "Craft"
 
 [node name="InventoryGUI" parent="HBoxContainer" instance=ExtResource("7_6bp64")]
