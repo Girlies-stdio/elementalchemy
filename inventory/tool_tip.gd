@@ -30,7 +30,7 @@ func _make_custom_tooltip(for_text):
 		tooltip.get_node("Panel/VBoxContainer/HBoxContainer2/name").text = recipe["name"]
 		tooltip.get_node("Panel/VBoxContainer/HBoxContainer2/name_text").texture = GlobalScript.findItem(recipe["name"]).texture
 		var res = load("res://inventory/items/jars/jar_tier"+type+".tres")
-		tooltip.get_node("Panel/VBoxContainer/HBoxContainer2/pot").texture = res.texture
+		tooltip.get_node("Panel/VBoxContainer/HBoxContainer2/jar").texture = res.texture
 		tooltip.custom_minimum_size = Vector2(300.,25.)
 		
 		#If ingredient unlocked (and with a recipe) show the recipee too

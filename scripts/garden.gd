@@ -68,7 +68,7 @@ func handle_interaction(jar_slot: JarSlot):
 			else: 
 				#back in inventory
 				putItemBack.emit()
-		#Swap plants in pot
+		#Swap plants in jar
 		elif !jar_slot.locked && jar_slot.jar && jar_slot.plant && iih.item is Plant:
 			if jar_slot.jar.type_plant == iih.item.type_plant:
 				#First check growth stage
@@ -83,15 +83,15 @@ func handle_interaction(jar_slot: JarSlot):
 				GlobalScript.itemInHand.item = temp_item
 				GlobalScript.itemInHand.set_texture(temp_item.texture)
 		
-		#If holding pot, either insert it or swap
-		elif iih.item is Pot:
+		#If holding jar, either insert it or swap
+		elif iih.item is Jar:
 			#Empty slot case
 			if !jar_slot.jar:
 				#insert jar in slot
 				jar_slot.jar = iih.item
 				GlobalScript.itemInHand.queue_free()
 				GlobalScript.itemInHand = null
-			#Non-locked slot with pot case
+			#Non-locked slot with jar case
 			elif !jar_slot.locked:
 				#First harvest the plant if any
 				if jar_slot.plant:
@@ -125,7 +125,7 @@ func updateGUI():
 	for slot in jar_slots:
 		slot.update_gui()
 
-#For non-locked pots: If pot + plant, remove plant. If only pot, remove pot.
+#For non-locked jars: If jar + plant, remove plant. If only jar, remove jar.
 func handleRightClick(slot: JarSlot) -> void:
 	if slot.locked: return
 	var inventory: Inventory = GlobalInventory
@@ -136,7 +136,7 @@ func handleRightClick(slot: JarSlot) -> void:
 			slot.harvestable = false
 		inventory.insert(slot.plant)
 		slot.plant = null
-	#Else if pot, remove pot
+	#Else if jar, remove jar
 	elif slot.jar:
 		inventory.insert(slot.jar)
 		slot.jar = null

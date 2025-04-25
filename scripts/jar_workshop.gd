@@ -1,6 +1,6 @@
 extends NinePatchRect
 
-#QUESTION: Pourquoi c'est des boutons les images des pots ? ça pourrait pas juste être des sprites ? 
+#QUESTION: Pourquoi c'est des boutons les images des jars ? ça pourrait pas juste être des sprites ? 
 @onready var button1 : Button = $MarginContainer/HBoxContainer/Type1/Button
 @onready var button2 : Button = $MarginContainer/HBoxContainer/Type2/Button
 @onready var button3 : Button = $MarginContainer/HBoxContainer/Type3/Button
@@ -11,7 +11,7 @@ signal buying
 
 var inventory : Inventory
 
-var pot_costs: Dictionary[int, Array] = {1: ["Clay", "Fire", "Earth"], 2: ["Stone", "Glass", "Coal"], 3: ["Obsidian", "Diamond", "Quartz"], 4: ["Singularity", "Dark Matter", "Time"]}
+var jar_costs: Dictionary[int, Array] = {1: ["Clay", "Fire", "Earth"], 2: ["Stone", "Glass", "Coal"], 3: ["Obsidian", "Diamond", "Quartz"], 4: ["Singularity", "Dark Matter", "Time"]}
 
 @onready var margin = $MarginContainer
 
@@ -33,11 +33,11 @@ func _ready() -> void:
 	
 func checkEnough() -> void:
 	for i in range(buttons.size()):
-		if inventory.enough(pot_costs[i+1]):
+		if inventory.enough(jar_costs[i+1]):
 			buttons[i].disabled = false
 		else: 
 			buttons[i].disabled = true
 
 func buy(type: int):
 	buying.emit()
-	inventory.buy(type, pot_costs[type])
+	inventory.buy(type, jar_costs[type])

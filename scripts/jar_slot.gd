@@ -1,7 +1,7 @@
 extends TextureButton
 class_name JarSlot
 
-var jar: Pot
+var jar: Jar
 var plant: Plant
 var harvestable: bool = false
 var locked: bool = false
