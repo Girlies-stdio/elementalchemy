@@ -360,14 +360,14 @@ layout_mode = 1
 panel_horizontal = 0
 panel_vertical = 0
 text = "These growth jars on these shelves allow you to generate elements. Click on a jar when it glows to collect the element!
-You will soon be able to craft more Tier 1 flower pots. More advanced elements will require better generators.
-Right click on a generator to remove it (and its element)."
+You will soon be able to craft more Tier 1 flower jars. More advanced elements will require better generators.
+Right click on a jar to remove it (or its element)."
 
 [node name="Tuto3" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
 panel_horizontal = 8
 panel_vertical = 8
-text = "The elements you collect are stored here. They can be used to generate more of the same element by growing them in the appropriate generator."
+text = "The elements you collect are stored here. They can be used to generate more of the same element by growing them in the appropriate jar."
 
 [node name="Tuto4" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
@@ -375,7 +375,7 @@ panel_horizontal = 0
 panel_vertical = 8
 text = "The Synthesizer is the heart of the lab! It can synthesize a new element by combining 3 elements. 
 Find out which combinations work !
-In the Pot Crafting tab, you can also craft new pots with the required elements."
+In the Jar Workshop, you can also craft new jars with the required elements."
 
 [node name="Tuto5" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
