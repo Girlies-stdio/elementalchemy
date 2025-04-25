@@ -6,14 +6,14 @@
 [ext_resource type="Script" uid="uid://d0o2fixek8d03" path="res://scripts/garden.gd" id="2_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://bd8gfklgd78xg" path="res://scenes/jar_slot.tscn" id="3_hptm8"]
 [ext_resource type="Texture2D" uid="uid://bny66qf2eo775" path="res://assets/background_framed.png" id="3_kry3j"]
-[ext_resource type="Texture2D" uid="uid://dtwtqtmd6y2ak" path="res://assets/jars/tier1.png" id="4_hptm8"]
+[ext_resource type="Texture2D" uid="uid://dtwtqtmd6y2ak" path="res://assets/pots/tier1.png" id="4_hptm8"]
 [ext_resource type="Texture2D" uid="uid://drnxwjo7hd82j" path="res://assets/brewing.png" id="5_6bp64"]
 [ext_resource type="PackedScene" uid="uid://cyktua4fqunq0" path="res://workbench/item_slot.tscn" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://bqyw0eywwhni8" path="res://inventory/inventory_gui.tscn" id="7_6bp64"]
 [ext_resource type="Script" uid="uid://cnevwedyaulx1" path="res://scripts/pot_shop.gd" id="8_fdnlq"]
-[ext_resource type="Texture2D" uid="uid://dwnq3i8spx4bf" path="res://assets/jars/tier2.png" id="10_jkdf5"]
-[ext_resource type="Texture2D" uid="uid://ed4sc5to8m8h" path="res://assets/jars/tier3.png" id="11_wsu2k"]
-[ext_resource type="Texture2D" uid="uid://cxa7h4dy8jl8w" path="res://assets/jars/tier4.png" id="12_k12tt"]
+[ext_resource type="Texture2D" uid="uid://dwnq3i8spx4bf" path="res://assets/pots/tier2.png" id="10_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://ed4sc5to8m8h" path="res://assets/pots/tier3.png" id="11_wsu2k"]
+[ext_resource type="Texture2D" uid="uid://cxa7h4dy8jl8w" path="res://assets/pots/tier4.png" id="12_k12tt"]
 [ext_resource type="PackedScene" uid="uid://di1ry0hal8m3v" path="res://scenes/notification_popup.tscn" id="14_3pmx8"]
 [ext_resource type="Script" uid="uid://bwj16xdptxltw" path="res://scripts/tutorial.gd" id="14_ee4r6"]
 [ext_resource type="AudioStream" uid="uid://d0mahrij0kw5m" path="res://assets/sounds/plant.wav" id="14_h1bgf"]
@@ -266,6 +266,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Earth, Fire, Clay"
 texture_normal = ExtResource("4_hptm8")
 ignore_texture_size = true
 stretch_mode = 5
@@ -274,7 +275,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-tooltip_text = "Clay, Fire, Earth"
+tooltip_text = "Earth, Fire, Clay"
 text = "Craft"
 
 [node name="Type2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer"]
@@ -285,6 +286,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Coal, Stone, Glass"
 texture_normal = ExtResource("10_jkdf5")
 ignore_texture_size = true
 stretch_mode = 5
@@ -293,7 +295,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-tooltip_text = "Rock, Glass, Coal"
+tooltip_text = "Coal, Stone, Glass"
 text = "Craft"
 
 [node name="Type3" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer"]
@@ -304,6 +306,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Obsidian, Quartz, Diamond"
 texture_normal = ExtResource("11_wsu2k")
 ignore_texture_size = true
 stretch_mode = 5
@@ -312,7 +315,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-tooltip_text = "Obsidian, Diamond, Quartz"
+tooltip_text = "Obsidian, Quartz, Diamond"
 text = "Craft"
 
 [node name="Type4" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop/MarginContainer/HBoxContainer"]
@@ -323,6 +326,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_vertical = 3
+tooltip_text = "Time, Dark Matter, Singularity"
 texture_normal = ExtResource("12_k12tt")
 ignore_texture_size = true
 stretch_mode = 5
@@ -331,7 +335,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
-tooltip_text = "Singularity, Dark Matter, Time"
+tooltip_text = "Time, Dark Matter, Singularity"
 text = "Craft"
 
 [node name="InventoryGUI" parent="HBoxContainer" instance=ExtResource("7_6bp64")]
@@ -349,29 +353,29 @@ script = ExtResource("14_ee4r6")
 
 [node name="Tuto1" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
-text = "Elementalchemy starts with the 4 basic atoms of our reality : Earth, Water, Fire and Air (as you learnt in science class of course)."
+text = "Elementalchemy starts with the 4 basic elements of our reality : Earth, Water, Fire and Air (as you learnt in science class of course)."
 
 [node name="Tuto2" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
 panel_horizontal = 0
 panel_vertical = 0
-text = "These growth jars on these shelves allow you to generate atoms. Click on a jar when it glows to collect the Atoms!
-You will soon be able to craft more Tier 1 flower pots. More advanced atoms will require better generators.
-Right click on a generator to remove it (and its atom)."
+text = "These growth jars on these shelves allow you to generate elements. Click on a jar when it glows to collect the element!
+You will soon be able to craft more Tier 1 flower pots. More advanced elements will require better generators.
+Right click on a generator to remove it (and its element)."
 
 [node name="Tuto3" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
 panel_horizontal = 8
 panel_vertical = 8
-text = "The atoms you collect are stored here. They can be used to generate more of the same atom by growing them in the appropriate generator."
+text = "The elements you collect are stored here. They can be used to generate more of the same element by growing them in the appropriate generator."
 
 [node name="Tuto4" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
 panel_horizontal = 0
 panel_vertical = 8
-text = "The Synthesizer is the heart of the lab! It can synthesize a new atom by combining 3 atoms. 
+text = "The Synthesizer is the heart of the lab! It can synthesize a new element by combining 3 elements. 
 Find out which combinations work !
-In the Pot Crafting tab, you can also craft new pots with the required atoms."
+In the Pot Crafting tab, you can also craft new pots with the required elements."
 
 [node name="Tuto5" parent="Tutorial" instance=ExtResource("16_3pmx8")]
 layout_mode = 1
@@ -414,6 +418,7 @@ volume_db = -5.0
 [connection signal="play_endgame" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="endgame" method="play"]
 [connection signal="play_plant" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="plant" method="play"]
 [connection signal="putItemBack" from="HBoxContainer/VBoxContainer/NinePatchRect/MarginContainer/Garden" to="HBoxContainer/InventoryGUI" method="putItemBack"]
+[connection signal="putItemBack" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" to="HBoxContainer/InventoryGUI" method="putItemBack"]
 [connection signal="sound_brew" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" to="brew" method="play" binds= [28.5]]
 [connection signal="sound_combine" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Lab" to="combine" method="play"]
 [connection signal="buying" from="HBoxContainer/VBoxContainer/Workbench/WorkbenchTabs/Pot Workshop" to="craft" method="play"]

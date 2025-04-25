@@ -11,6 +11,8 @@ var slots: Array[ItemSlot]
 signal sound_combine
 signal sound_brew
 
+signal putItemBack
+
 @onready var margin = $MarginContainer
 
 func _ready():
@@ -37,7 +39,7 @@ func _ready():
 func handle_slot_interaction(slot: ItemSlot):
 	if slot == output_slot:
 		# Output slot can only give items
-		if !GlobalScript.itemInHand and slot.item:
+		if slot.item:
 			GlobalInventory.insert(slot.item)
 			slot.item = null
 	else:
@@ -47,19 +49,20 @@ func handle_slot_interaction(slot: ItemSlot):
 			GlobalScript.insertInHand(slot.item)
 			GlobalScript.itemInHand.global_position = get_global_mouse_position()
 			slot.item = null
-		elif GlobalScript.itemInHand  and GlobalScript.itemInHand.item is Plant and !slot.item:
+		elif GlobalScript.itemInHand and GlobalScript.itemInHand.item is Plant and !slot.item:
 			# Place item in slot
 			slot.item = GlobalScript.itemInHand.item
 			GlobalScript.itemInHand.queue_free()
 			GlobalScript.itemInHand = null
 			sound_brew.emit()
-		elif GlobalScript.itemInHand  and GlobalScript.itemInHand.item is Plant and slot.item:
-			#Swap items
+		elif GlobalScript.itemInHand and GlobalScript.itemInHand.item is Plant and slot.item:
+			#Swap items and put the old one back into inventory
 			var temp_item : Item = slot.item
 			slot.item = GlobalScript.itemInHand.item
 			#Note: Here we edit item in hand, but we could also free it and insert a new one
 			GlobalScript.itemInHand.item = temp_item
 			GlobalScript.itemInHand.set_texture(temp_item.texture)
+			putItemBack.emit()
 			sound_brew.emit()
 
 	update_slot_visuals()
@@ -74,7 +77,7 @@ func handle_right_click(slot: ItemSlot) -> void:
 func _combine_pressed():
 	if output_slot.item:
 		# Cannot cook if output slot is occupied
-		notification_popup.show_text("You need to collect the newly synthesized atom first", 1.1)
+		notification_popup.show_text("You need to collect the newly synthesized element first", 1.1)
 		return
 	
 	# Get current ingredients
@@ -82,7 +85,7 @@ func _combine_pressed():
 	
 	# Check if all slots have ingredients
 	if null in ingredients:
-		notification_popup.show_text("You need 3 atoms to synthesize a new one", 1.0)
+		notification_popup.show_text("You need 3 elements to synthesize a new one", 1.0)
 		return
 	ingredients = ingredients.map(func(item): return item.name)
 	

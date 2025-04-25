@@ -48,21 +48,21 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_vmpge")
 theme_override_font_sizes/normal_font_size = 20
-text = "Welcome in Elementalchemy! 
+text = "Welcome to Elementalchemy! 
 
-You are part of a secret NASA mission to set up the first human outpost on the Moon. The last communication you received from Earth was a disturbing distress call: 
+You are part of a secret NASA mission to establish the first human outpost on the Moon. The last communication you received from Earth was a disturbing distress call: 
 … 
-Tonald Drump found a big red button. He couldn’t resist pressing it. The Russians are retaliating. Hang on up there 
+Tonald Drump found a big red button. He couldn’t resist pressing it. The Russians are retaliating. Hang on up there... 
 …
-You could see some suspicious dust mushrooms going up in the atmosphere from your shuttle.
+From your shuttle window you can already see suspicious mushroom-shaped dust clouds blossoming in the atmosphere.
 
 Oh well.
 
-Your shuttle just landed on the Moon Base, which was sent there piece per piece over the last decade.
+Your shuttle just landed on the Moon Base, painstakingly assembled piece by piece over the past decade.
 
 Unfortunately, the greenhouse module seems to be defective, and you won’t be able to live off of your dehydrated food rations forever. 
 
-Your last chance of surviving in this deserted Moon Base resides in its brand new Atomic Alchemy Lab! Let’s head over there to see what we have…
+Your last hope in this deserted Moon Base lies in its brand-new Atomic Alchemy Lab! Let’s head over there to see what we’ve got…
 "
 horizontal_alignment = 1
 
