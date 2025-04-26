@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwlidev7ac800" path="res://scripts/plant.gd" id="1_k7jkn"]
 [ext_resource type="Texture2D" uid="uid://dma1cqebydhu8" path="res://assets/growing/energy.png" id="1_vqrv4"]
-[ext_resource type="Texture2D" uid="uid://ds72cx7h3dlkq" path="res://assets/items/energie.png" id="3_w8e0k"]
+[ext_resource type="Texture2D" uid="uid://ds72cx7h3dlkq" path="res://assets/items/energy.png" id="3_w8e0k"]
 
 [resource]
 script = ExtResource("1_k7jkn")

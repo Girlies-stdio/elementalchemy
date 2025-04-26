@@ -51,7 +51,7 @@ theme_override_font_sizes/font_size = 18
 text = " -> "
 horizontal_alignment = 1
 
-[node name="pot" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer2"]
+[node name="jar" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 expand_mode = 2
 

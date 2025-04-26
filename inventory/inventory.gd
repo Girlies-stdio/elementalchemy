@@ -17,7 +17,7 @@ func _ready():
 		slot.amount = 0
 		slot.unlocked = false
 		slots[item] = slot
-	devCheat()
+	#devCheat()
 
 func insert(item: Item, n: int = 1) -> void:
 	var slot = slots[item]
@@ -50,14 +50,14 @@ func enough(elements: Array) -> bool:
 			return false
 	return true
 	
-func buy(potType: int, elements: Array) -> void:
+func buy(jarType: int, elements: Array) -> void:
 	if enough(elements):
 		var items = elements.map(func(s: String) -> Item: return GlobalScript.findItem(s))
 		for item in items:
 			remove(item)
 			
-		var pot = GlobalScript.ALL_ITEMS[potType - 1]
-		insert(pot)
+		var jar = GlobalScript.ALL_ITEMS[jarType - 1]
+		insert(jar)
 func devCheat() -> void:
 	for key in slots.keys():
 		insert(key)

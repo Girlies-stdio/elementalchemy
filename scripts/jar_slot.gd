@@ -1,14 +1,14 @@
 extends TextureButton
 class_name JarSlot
 
-var jar: Pot
+var jar: Jar
 var plant: Plant
 var harvestable: bool = false
 var locked: bool = false
 signal right_clicked
 
 @onready var margin = $MarginContainer
-@onready var potSprite = $MarginContainer/PotSprite
+@onready var jarSprite = $MarginContainer/JarSprite
 @onready var plantSprite = $MarginContainer/PlantSprite
 
 var timer: Timer
@@ -28,9 +28,9 @@ func _gui_input(_event):
 
 func update_gui() :
 	if jar:
-		potSprite.texture = jar.texture if !harvestable else jar.texture_ready
+		jarSprite.texture = jar.texture if !harvestable else jar.texture_ready
 	else:
-		potSprite.texture = null
+		jarSprite.texture = null
 	if plant:
 		plantSprite.texture = plant.garden_texture
 	else:
