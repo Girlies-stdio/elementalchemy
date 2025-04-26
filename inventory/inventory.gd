@@ -17,7 +17,7 @@ func _ready():
 		slot.amount = 0
 		slot.unlocked = false
 		slots[item] = slot
-	devCheat()
+	#devCheat()
 
 func insert(item: Item, n: int = 1) -> void:
 	var slot = slots[item]
