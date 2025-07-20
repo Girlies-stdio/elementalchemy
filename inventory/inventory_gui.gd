@@ -54,9 +54,17 @@ func onSlotClicked(slot: Slot):
 	if !GlobalScript.itemInHand:
 		takeItemFromSlot(slot)
 		return
+	#elif GlobalScript.itemInHand.item == slot.itemStackGui.item:
+	#	putItemBack()
+	else:
+		if inventory.get_item(slot.itemStackGui.item).amount >= 1:
+			insertItemInSlot()
+			takeItemFromSlot(slot)
 		
-func takeItemFromSlot(slot: Slot):
-	await slot.takeItem()
+		
+func takeItemFromSlot(slot: Slot) -> bool:
+	var item = await slot.takeItem()
+	return item != null
 
 func putItemBack():
 	locked = true
